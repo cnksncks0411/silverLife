@@ -1,0 +1,84 @@
+// src/assets/styles/main.scss 파일 생성
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+    // 시니어 친화적 기본 설정
+    --font-size-base: 16px;
+    --line-height-base: 1.6;
+    --font-family-base: 'Noto Sans KR', sans-serif;
+
+    // 색상 변수
+    --color-primary: #0066CC;
+    --color-secondary: #FF6600;
+    --color-accent: #009966;
+    --color-light: #F7F9FA;
+    --color-dark: #333333;
+    --color-gray: #757575;
+    --color-light-gray: #EEEEEE;
+    --color-success: #00CC66;
+    --color-error: #FF3333;
+    --color-warning: #FFCC00;
+}
+
+html {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+}
+
+body {
+    font-family: var(--font-family-base);
+    color: var(--color-dark);
+    background-color: var(--color-light);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// 시니어 친화적 버튼 스타일
+.btn {
+    @apply px-6 py-4 rounded-lg text-lg font-medium transition-all duration-200;
+
+    &-primary {
+        @apply bg-primary text-white;
+
+        &:hover {
+            @apply opacity-90;
+        }
+    }
+
+    &-secondary {
+        @apply bg-secondary text-white;
+
+        &:hover {
+            @apply opacity-90;
+        }
+    }
+
+    &-outline {
+        @apply border-2 border-primary text-primary bg-transparent;
+
+        &:hover {
+            @apply bg-primary text-white;
+        }
+    }
+}
+
+// 시니어 친화적 카드 스타일
+.card {
+    @apply bg-white rounded-xl shadow-md p-6;
+}
+
+// 시니어 친화적 입력 필드
+.input-field {
+    @apply p-4 text-lg border-2 border-light-gray rounded-lg w-full;
+
+    &:focus {
+        @apply border-primary outline-none;
+    }
+}
+
+// 접근성 포커스 스타일
+:focus {
+    @apply outline-2 outline-primary;
+}
