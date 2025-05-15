@@ -251,6 +251,7 @@ export default {
             alert('학습을 시작합니다.');
             this.progress = 10;
             localStorage.setItem(`education_progress_${this.id}`, this.progress);
+            this.$router.push(`/education/${this.id}/learn`);
         },
         continueLearning() {
             // 학습 계속하기 로직

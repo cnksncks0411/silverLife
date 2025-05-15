@@ -12,43 +12,91 @@
         </div>
 
         <!-- 교육 콘텐츠 필터 및 검색 -->
-        <div class="filter-section py-6 px-4 bg-light border-b border-light-gray">
-            <div class="container mx-auto">
-                <div class="flex flex-col md:flex-row md:items-center md:justify-between">
-                    <!-- 카테고리 필터 -->
-                    <div class="filter-buttons mb-4 md:mb-0">
-                        <button v-for="category in categories" :key="category.id" @click="selectCategory(category.id)"
-                            class="btn py-2 px-4 mr-2 mb-2 rounded-full"
-                            :class="selectedCategory === category.id ? 'bg-primary text-white' : 'bg-white text-dark border border-gray-300'">
-                            {{ category.name }}
-                        </button>
-                    </div>
-
-                    <!-- 검색 폼 -->
-                    <div class="search-form">
-                        <div class="relative">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="h-6 w-6 text-gray absolute left-4 top-1/2 transform -translate-y-1/2 z-10"
-                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                            </svg>
-                            <input v-model="searchQuery" type="text" placeholder="교육 콘텐츠 검색"
-                                class="input-field pl-12 w-full">
-                        </div>
-                    </div>
-
-                    <!-- 콘텐츠 작성 버튼 (creator 계정으로 로그인한 경우에만 표시) -->
-                    <button v-if="isCreator" @click="openContentCreator" class="btn btn-primary flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-                        </svg>
-                        콘텐츠 작성
-                    </button>
-                </div>
-            </div>
+<div class="filter-section py-6 px-4 bg-light border-b border-light-gray">
+  <div class="container mx-auto">
+    <!-- 검색 폼 - 상단에 크게 배치 -->
+    <div class="search-form mb-6">
+      <label for="search-input" class="block text-lg font-bold mb-2">콘텐츠 검색</label>
+      <div class="relative">
+        <svg xmlns="http://www.w3.org/2000/svg"
+          class="h-7 w-7 text-primary absolute left-4 top-1/2 transform -translate-y-1/2 z-10" 
+          fill="none"
+          viewBox="0 0 24 24" 
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+        <input 
+          id="search-input"
+          v-model="searchQuery" 
+          type="text" 
+          placeholder="찾으시는 콘텐츠를 입력하세요" 
+          class="input-field pl-14 w-full text-lg py-4"
+          aria-label="콘텐츠 검색"
+        >
+      </div>
+    </div>
+    
+    <!-- 카테고리 선택 - 드롭다운 방식으로 변경 -->
+    <div class="category-selection mb-6">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+        <div class="mb-4 md:mb-0">
+          <label for="category-select" class="block text-lg font-bold mb-2">카테고리 선택</label>
+          <select 
+            id="category-select"
+            v-model="selectedCategory" 
+            class="form-select text-lg py-3 px-4 pr-10 w-full md:w-64 border-2 border-gray-300 rounded-lg focus:border-primary"
+            aria-label="카테고리 선택"
+          >
+            <option 
+              v-for="category in categories" 
+              :key="category.id" 
+              :value="category.id"
+            >
+              {{ category.name }}
+            </option>
+          </select>
         </div>
+        
+        <!-- 콘텐츠 작성 버튼 (creator 계정으로 로그인한 경우에만 표시) -->
+        <button 
+          v-if="isCreator"
+          @click="openContentCreator" 
+          class="btn btn-primary text-lg py-3 px-6 flex items-center"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+          </svg>
+          콘텐츠 작성
+        </button>
+      </div>
+    </div>
+    
+    <!-- 선택된 카테고리 표시 및 다른 방식으로 카테고리 선택 가능 -->
+    <div class="selected-category mb-4">
+      <p class="text-lg mb-2">
+        <strong>선택된 카테고리:</strong> {{ getCategoryName(selectedCategory) }}
+      </p>
+      <p class="text-gray-600">다른 카테고리를 선택하세요:</p>
+    </div>
+    
+    <!-- 큰 버튼 형태의 카테고리 - 격자 형태로 배치 -->
+    <div class="category-buttons grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+      <button 
+        v-for="category in categories" 
+        :key="category.id" 
+        @click="selectCategory(category.id)"
+        class="category-btn p-4 text-center rounded-lg border-2 text-lg"
+        :class="selectedCategory === category.id 
+          ? 'border-primary bg-primary bg-opacity-10 text-primary font-bold' 
+          : 'border-gray-300 bg-white hover:border-primary hover:bg-light'"
+        :aria-selected="selectedCategory === category.id"
+      >
+        {{ category.name }}
+      </button>
+    </div>
+  </div>
+</div>
 
         <!-- 교육 콘텐츠 목록 -->
         <div class="content-list py-12 px-4">
@@ -251,7 +299,7 @@ export default {
                 { id: 'smartphone', name: '스마트폰 활용' },
                 { id: 'messenger', name: '메신저/SNS' },
                 { id: 'internet', name: '인터넷 활용' },
-                { id: 'security', name: '보안/개인정보' }
+                { id: 'security', name: '보안/개인정보' },
             ],
             selectedCategory: 'all',
             searchQuery: '',
@@ -629,16 +677,83 @@ export default {
     }
 }
 
+/* 시니어 친화적인 스타일 */
+/* 검색 입력 필드 스타일 */
 .input-field {
-    padding-left: 3rem;
-    /* pl-12 대신 더 명확한 패딩 값 */
+  font-size: 1.125rem; /* 18px */
+  padding: 1rem 1.25rem;
+  padding-left: 4rem; /* 아이콘을 위한 충분한 여백 */
+  border-width: 2px;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
 
-.input-field::placeholder {
-    color: #9CA3AF;
-    /* 회색 톤의 placeholder 색상 */
-    opacity: 1;
-    /* Firefox에서의 opacity 수정 */
+.search-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem; /* 아이콘 영역에 고정 너비 설정 */
+  height: 3rem;
+  pointer-events: none; /* 아이콘이 입력 필드 상호작용을 방해하지 않도록 */
+}
+
+.input-field:focus {
+  border-color: var(--color-primary, #0066CC);
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.3);
+  outline: none;
+}
+
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23333333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1.5rem;
+  padding-right: 2.5rem;
+}
+
+.category-btn {
+  transition: all 0.2s ease;
+  min-height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-btn:hover {
+  transform: translateY(-2px);
+}
+
+.category-btn:active {
+  transform: translateY(0);
+}
+
+/* 고대비 모드를 위한 선택 카테고리 강조 스타일 */
+.category-btn[aria-selected="true"] {
+  font-weight: bold;
+  border-width: 3px;
+  position: relative;
+}
+
+.category-btn[aria-selected="true"]::after {
+  content: "✓";
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 1rem;
+  color: var(--color-primary, #0066CC);
+}
+
+@media (max-width: 640px) {
+  .category-buttons {
+    grid-template-columns: 1fr 1fr; /* 모바일에서는 2열로 */
+  }
+  
+  .category-btn {
+    padding: 1rem 0.5rem;
+    font-size: 1rem;
+  }
 }
 
 /* 모달 애니메이션 */

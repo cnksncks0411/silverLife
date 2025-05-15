@@ -65,7 +65,7 @@ export default {
         return {
             menuItems: [
                 { label: '디지털 교육', path: '/education' },
-                { label: '키오스크 실습', path: '/kiosk' },
+                // { label: '키오스크 실습', path: '/kiosk' },
                 { label: '맞춤 식단', path: '/diet' },
                 { label: '인지력 게임', path: '/games' },
                 { label: '정책 정보', path: '/policy' }

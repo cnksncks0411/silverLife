@@ -9,6 +9,8 @@ const Register = () => import("../views/auth/Register.vue");
 // 교육 관련 페이지
 const Education = () => import("../views/education/EducationList.vue");
 const EducationDetail = () => import("../views/education/EducationDetail.vue");
+const Learning = () => import ("../views/education/Learning.vue");
+const EducationCreator = () => import ("../views/education/EducationCreator.vue");
 // 키오스크 관련 페이지
 const Kiosk = () => import("../views/kiosk/KioskList.vue");
 const KioskSimulator = () => import("../views/kiosk/KioskSimulator.vue");
@@ -55,6 +57,26 @@ const routes = [
     component: EducationDetail,
     props: true,
     meta: { title: "교육 콘텐츠 - 삶은(SilverLife)" },
+  },
+  {
+    path: '/education/:id/learn',
+    name: 'Learning',
+    component: Learning,
+    props: true,
+    meta: { title: "교육 하기 - 삶은(SilverLife)" },
+  },
+  {
+    path: '/creator/education',
+    name: 'EducationCreator',
+    component: EducationCreator,
+    meta: { title: "교육 콘텐츠 생성 - 삶은(SilverLife)" },
+  },
+  {
+    path: '/creator/education/:id/edit',
+    name: 'EducationEditor',
+    component: EducationCreator,
+    props: true,
+    meta: { title: "교육 콘텐츠 수정 - 삶은(SilverLife)" },
   },
   {
     path: "/kiosk",

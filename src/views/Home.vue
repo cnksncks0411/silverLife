@@ -48,7 +48,8 @@
             </div>
           </div>
 
-          <div class="feature-card card transform hover:scale-105 transition-transform duration-300">
+          <!-- 키오스크 실습 임시 주석 -->
+          <!-- <div class="feature-card card transform hover:scale-105 transition-transform duration-300">
             <div class="text-center mb-6">
               <div class="icon-circle mx-auto bg-secondary bg-opacity-10 p-6 rounded-full">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-secondary" fill="none" viewBox="0 0 24 24"
@@ -65,7 +66,7 @@
             <div class="text-center">
               <router-link to="/kiosk" class="btn btn-outline">자세히 보기</router-link>
             </div>
-          </div>
+          </div> -->
 
           <div class="feature-card card transform hover:scale-105 transition-transform duration-300">
             <div class="text-center mb-6">
@@ -163,34 +164,6 @@
         </div>
       </div>
     </section>
-
-    <!-- 사용자 후기 -->
-    <section class="testimonials py-16 px-4 bg-light">
-      <div class="container mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-12">사용자 후기</h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div v-for="(review, index) in userReviews" :key="index" class="card">
-            <div class="flex items-center mb-4">
-              <img :src="review.avatar" :alt="`${review.name}님의 프로필`" class="w-16 h-16 rounded-full mr-4">
-              <div>
-                <h3 class="text-xl font-bold">{{ review.name }}</h3>
-                <div class="flex">
-                  <span v-for="i in 5" :key="i" class="text-warning">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"
-                      :class="{ 'text-gray-300': i > review.rating }" viewBox="0 0 20 20" fill="currentColor">
-                      <path
-                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  </span>
-                </div>
-              </div>
-            </div>
-            <p class="text-lg text-gray">{{ review.comment }}</p>
-          </div>
-        </div>
-      </div>
-    </section>
   </div>
 </template>
 
@@ -220,29 +193,6 @@ export default {
           description: '유튜브 앱을 통해 다양한 영상 콘텐츠를 검색하고 시청하는 방법을 배웁니다.',
           category: '앱 활용',
           // thumbnail: require('@/assets/images/youtube-guide.jpg')
-        }
-      ],
-      userReviews: [
-        {
-          name: '김영자',
-          age: 68,
-          rating: 5,
-          comment: '키오스크 실습 기능이 정말 유용해요. 이제 패스트푸드점에서 주문할 때 당황하지 않아요!',
-          // avatar: require('@/assets/images/review-avatar-1.jpg')
-        },
-        {
-          name: '박정수',
-          age: 72,
-          rating: 4,
-          comment: '스마트폰 사용법 교육 콘텐츠가 매우 친절하게 설명되어 있어서 이해하기 쉬웠습니다. 덕분에 손자와 영상통화도 할 수 있게 되었어요.',
-          // avatar: require('@/assets/images/review-avatar-2.jpg')
-        },
-        {
-          name: '이미옥',
-          age: 65,
-          rating: 5,
-          comment: '인지력 향상 게임을 매일 조금씩 하고 있는데, 재밌기도 하고 머리도 맑아지는 것 같아요. 앱 디자인도 보기 좋고 글씨가 커서 편해요.',
-          // avatar: require('@/assets/images/review-avatar-3.jpg')
         }
       ]
     }
@@ -275,8 +225,7 @@ export default {
 [src*='smartphone-basics.jpg'],
 [src*='kakaotalk-usage.jpg'],
 [src*='youtube-guide.jpg'],
-[src*='app-preview.png'],
-[src*='review-avatar'] {
+[src*='app-preview.png'] {
   background-color: #f0f0f0;
   position: relative;
 
