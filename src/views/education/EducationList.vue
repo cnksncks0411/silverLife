@@ -6,7 +6,7 @@
             <div class="container mx-auto">
                 <h1 class="text-3xl md:text-4xl font-bold mb-4">디지털 교육</h1>
                 <p class="text-xl max-w-3xl">
-                    스마트폰 사용법부터 인터넷 활용, 메신저 앱 사용법까지 시니어층을 위한 맞춤형 디지털 교육 콘텐츠를 제공합니다.
+                    낯선 디지털 환경이 더 이상 두렵지 않게! 온라인 사기 예방법, 최신 트렌드 이해하기, 손주와의 소통 팁까지 - 지혜로운 시니어의 디지털 라이프를 지원합니다.
                 </p>
             </div>
         </div>
@@ -27,15 +27,25 @@
                     <!-- 검색 폼 -->
                     <div class="search-form">
                         <div class="relative">
-                            <input v-model="searchQuery" type="text" placeholder="교육 콘텐츠 검색" class="input-field pl-12">
                             <svg xmlns="http://www.w3.org/2000/svg"
-                                class="h-6 w-6 text-gray absolute left-4 top-1/2 transform -translate-y-1/2" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
+                                class="h-6 w-6 text-gray absolute left-4 top-1/2 transform -translate-y-1/2 z-10"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                             </svg>
+                            <input v-model="searchQuery" type="text" placeholder="교육 콘텐츠 검색"
+                                class="input-field pl-12 w-full">
                         </div>
                     </div>
+
+                    <!-- 콘텐츠 작성 버튼 (creator 계정으로 로그인한 경우에만 표시) -->
+                    <button v-if="isCreator" @click="openContentCreator" class="btn btn-primary flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                        </svg>
+                        콘텐츠 작성
+                    </button>
                 </div>
             </div>
         </div>
@@ -118,6 +128,114 @@
             </div>
         </div>
     </div>
+
+    <!-- 콘텐츠 작성 모달 -->
+    <div v-if="showContentCreator"
+        class="content-creator-modal fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div class="modal-backdrop fixed inset-0 bg-black bg-opacity-50" @click="showContentCreator = false"></div>
+        <div class="modal-content bg-white rounded-xl shadow-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="modal-header bg-primary text-white p-4 flex justify-between items-center">
+                <h3 class="text-xl font-bold">교육 콘텐츠 작성</h3>
+                <button @click="showContentCreator = false" class="text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body p-6">
+                <form @submit.prevent="submitContent" class="space-y-6">
+                    <div class="form-group">
+                        <label for="title" class="block text-lg mb-2">제목</label>
+                        <input type="text" id="title" v-model="newContent.title" class="modal-input-field w-full"
+                            placeholder="콘텐츠 제목을 입력하세요" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description" class="block text-lg mb-2">설명</label>
+                        <textarea id="description" v-model="newContent.description"
+                            class="modal-input-field w-full h-24 resize-none" placeholder="콘텐츠에 대한 간략한 설명을 입력하세요"
+                            required></textarea>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="form-group">
+                            <label for="category" class="block text-lg mb-2">카테고리</label>
+                            <select id="category" v-model="newContent.categoryId" class="modal-input-field w-full" required>
+                                <option value="" disabled selected>카테고리 선택</option>
+                                <option v-for="category in categories.filter(c => c.id !== 'all')" :key="category.id"
+                                    :value="category.id">
+                                    {{ category.name }}
+                                </option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="level" class="block text-lg mb-2">난이도</label>
+                            <select id="level" v-model="newContent.level" class="modal-input-field w-full" required>
+                                <option value="" disabled selected>난이도 선택</option>
+                                <option value="beginner">초급</option>
+                                <option value="intermediate">중급</option>
+                                <option value="advanced">고급</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="form-group">
+                            <label for="duration" class="block text-lg mb-2">예상 소요 시간</label>
+                            <input type="text" id="duration" v-model="newContent.duration" class="modal-input-field w-full"
+                                placeholder="예: 약 30분" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="thumbnail" class="block text-lg mb-2">썸네일 이미지</label>
+                            <div class="flex">
+                                <input type="file" id="thumbnail" @change="handleThumbnailUpload" class="hidden"
+                                    accept="image/*">
+                                <label for="thumbnail"
+                                    class="cursor-pointer px-4 py-2 bg-light border border-gray-300 rounded-lg mr-2 flex-grow">
+                                    {{ thumbnailName || '이미지 선택...' }}
+                                </label>
+                                <button type="button" @click="clearThumbnail"
+                                    class="px-3 py-2 bg-light border border-gray-300 rounded-lg"
+                                    :disabled="!thumbnailName">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <p class="text-sm text-gray-600 mt-1">권장 크기: 800x450px, 최대 2MB</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="content" class="block text-lg mb-2">교육 내용</label>
+                        <div class="border border-gray-300 rounded-lg p-2">
+                            <!-- 여기에 리치 텍스트 에디터를 통합할 수 있습니다 -->
+                            <textarea id="content" v-model="newContent.contentBody"
+                                class="modal-input-field w-full h-48 resize-none"
+                                placeholder="교육 내용을 작성하세요 (마크다운 또는 HTML 형식 지원)" required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="button-group flex justify-end space-x-4">
+                        <button type="button" @click="showContentCreator = false"
+                            class="py-3 px-6 border border-gray-300 rounded-lg">
+                            취소
+                        </button>
+                        <button type="submit" class="py-3 px-6 bg-primary text-white rounded-lg"
+                            :disabled="contentSubmitting">
+                            {{ contentSubmitting ? '저장 중...' : '콘텐츠 저장' }}
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -138,7 +256,22 @@ export default {
             selectedCategory: 'all',
             searchQuery: '',
             currentPage: 1,
-            itemsPerPage: 9
+            itemsPerPage: 9,
+
+            // 콘텐츠 작성 관련 데이터
+            isCreator: false, // creator 권한 체크
+            showContentCreator: false,
+            contentSubmitting: false,
+            thumbnailName: '',
+            thumbnailFile: null,
+            newContent: {
+                title: '',
+                description: '',
+                categoryId: '',
+                level: '',
+                duration: '',
+                contentBody: ''
+            }
         }
     },
     computed: {
@@ -191,7 +324,17 @@ export default {
             }
 
             return pages;
-        }
+        },
+        created() {
+            // URL 쿼리 파라미터에서 카테고리 가져오기
+            const categoryFromQuery = this.$route.query.category;
+            if (categoryFromQuery && this.categories.some(cat => cat.id === categoryFromQuery)) {
+                this.selectedCategory = categoryFromQuery;
+            }
+
+            this.loadContent();
+            this.checkUserRole();
+        },
     },
     methods: {
         // 더미 데이터 로드 (실제 프로젝트에서는 API 호출로 대체)
@@ -354,6 +497,108 @@ export default {
         goToPage(page) {
             this.currentPage = page;
             window.scrollTo(0, 0);
+        },
+        // 사용자 역할 확인
+        checkUserRole() {
+            // 실제 구현에서는 Vuex 상태나 API 호출을 통해 사용자 역할 확인
+            // 임시 예제에서는 로컬 스토리지 사용
+            const userRole = localStorage.getItem('user-role');
+            this.isCreator = userRole === 'creator' || userRole === 'admin';
+        },
+
+        // 콘텐츠 작성 모달 열기
+        openContentCreator() {
+            this.showContentCreator = true;
+            // 폼 초기화
+            this.newContent = {
+                title: '',
+                description: '',
+                categoryId: '',
+                level: '',
+                duration: '',
+                contentBody: ''
+            };
+            this.thumbnailName = '';
+            this.thumbnailFile = null;
+        },
+
+        // 썸네일 이미지 업로드 처리
+        handleThumbnailUpload(event) {
+            const file = event.target.files[0];
+            if (file) {
+                // 파일 크기 체크 (2MB 제한)
+                if (file.size > 2 * 1024 * 1024) {
+                    alert('이미지 크기가 2MB를 초과합니다.');
+                    event.target.value = '';
+                    return;
+                }
+
+                this.thumbnailFile = file;
+                this.thumbnailName = file.name;
+            }
+        },
+
+        // 썸네일 선택 취소
+        clearThumbnail() {
+            this.thumbnailFile = null;
+            this.thumbnailName = '';
+            // 파일 입력 필드 초기화
+            document.getElementById('thumbnail').value = '';
+        },
+
+        // 콘텐츠 저장
+        async submitContent() {
+            this.contentSubmitting = true;
+
+            try {
+                // FormData 생성 (실제 API 요청에 사용)
+                const formData = new FormData();
+                formData.append('title', this.newContent.title);
+                formData.append('description', this.newContent.description);
+                formData.append('categoryId', this.newContent.categoryId);
+                formData.append('level', this.newContent.level);
+                formData.append('duration', this.newContent.duration);
+                formData.append('contentBody', this.newContent.contentBody);
+
+                if (this.thumbnailFile) {
+                    formData.append('thumbnail', this.thumbnailFile);
+                }
+
+                // 실제 구현에서는 API 호출
+                // await axios.post('/api/education', formData);
+
+                // 임시 구현: 데이터 처리 시뮬레이션
+                await new Promise(resolve => setTimeout(resolve, 1500));
+
+                // 새 콘텐츠 ID 생성 (실제로는 서버에서 생성)
+                const newId = this.content.length > 0 ? Math.max(...this.content.map(c => c.id)) + 1 : 1;
+
+                // 새 콘텐츠 객체 생성
+                const newContentItem = {
+                    id: newId,
+                    title: this.newContent.title,
+                    description: this.newContent.description,
+                    categoryId: this.newContent.categoryId,
+                    level: this.newContent.level,
+                    duration: this.newContent.duration,
+                    // 실제로는 서버에서 처리된 URL이 반환됨
+                    thumbnail: this.thumbnailFile ? URL.createObjectURL(this.thumbnailFile) : null
+                };
+
+                // 콘텐츠 목록에 추가
+                this.content.unshift(newContentItem);
+
+                // 성공 메시지 표시
+                alert('콘텐츠가 성공적으로 등록되었습니다.');
+
+                // 모달 닫기
+                this.showContentCreator = false;
+            } catch (error) {
+                console.error('콘텐츠 저장 중 오류 발생:', error);
+                alert('콘텐츠 저장 중 오류가 발생했습니다.');
+            } finally {
+                this.contentSubmitting = false;
+            }
         }
     },
     watch: {
@@ -382,6 +627,46 @@ export default {
     to {
         transform: rotate(360deg);
     }
+}
+
+.input-field {
+    padding-left: 3rem;
+    /* pl-12 대신 더 명확한 패딩 값 */
+}
+
+.input-field::placeholder {
+    color: #9CA3AF;
+    /* 회색 톤의 placeholder 색상 */
+    opacity: 1;
+    /* Firefox에서의 opacity 수정 */
+}
+
+/* 모달 애니메이션 */
+.modal-backdrop {
+    transition: opacity 0.3s ease;
+}
+
+.modal-content {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* 리치 텍스트 에디터 스타일 */
+.ql-editor {
+    min-height: 200px;
+}
+
+.modal-input-field {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 0.5rem;
+    font-size: 1.125rem;
+    transition: border-color 0.2s;
+}
+
+.modal-input-field:focus {
+    border-color: var(--color-primary, #0066CC);
+    outline: none;
 }
 
 // 에셋 이미지가 없는 경우를 대비한 플레이스홀더 스타일

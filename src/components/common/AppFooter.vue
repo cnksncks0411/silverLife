@@ -6,7 +6,7 @@
                 <div class="footer-section">
                     <div class="logo-area mb-4">
                         <!-- <img src="@/assets/images/logo-white.svg" alt="삶은(SilverLife) 로고" class="h-10"> -->
-                        <p class="text-xl mt-3">"디지털 세상, 함께 누려요"</p>
+                        <p class="text-xl mt-3">"시니어의 디지털 나침반, 삶은(SilverLife)"</p>
                     </div>
                     <p class="text-gray-300 mt-4">
                         시니어층이 디지털 환경에 쉽게 적응하고, 건강하고 풍요로운 노후 생활을 영위할 수 있도록 지원하는 플랫폼입니다.

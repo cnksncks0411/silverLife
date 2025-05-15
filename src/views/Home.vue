@@ -4,9 +4,13 @@
     <!-- 히어로 섹션 -->
     <section class="hero bg-primary text-white py-16 px-4">
       <div class="container mx-auto text-center">
-        <h1 class="text-4xl md:text-5xl font-bold mb-6">디지털 세상, 함께 누려요</h1>
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">시니어의 디지털 나침반, 삶은(SilverLife)</h1>
         <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-          시니어층이 디지털 환경에 쉽게 적응하고, 건강하고 풍요로운 노후 생활을 영위할 수 있도록 지원하는 플랫폼입니다.
+          시니어들의 디지털 라이프스타일을 위한 특별한 공간, 삶은(SilverLife)입니다.
+          디지털 교육부터 건강 관리, 맞춤 콘텐츠까지
+          <!-- 디지털 교육부터 건강 관리, 맞춤 콘텐츠, 소셜 네트워킹, 쇼핑까지 -->
+          시니어만을 위한 온라인 커뮤니티에서 새로운 가능성을 발견하세요.
+          함께 배우고, 나누고, 즐기는 시니어 전용 디지털 세상이 여러분을 기다립니다.
         </p>
         <div class="flex flex-wrap justify-center gap-4">
           <router-link to="/register" class="btn bg-white text-primary hover:bg-gray-100">

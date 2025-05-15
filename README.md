@@ -5,14 +5,14 @@
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 개발 환경 빌드
 ```
-npm run serve
+npm run build:dev
 ```
 
-### Compiles and minifies for production
+### 프로덕션 환경 빌드
 ```
-npm run build
+npm run build:prod
 ```
 
 ### Lints and fixes files
@@ -47,4 +47,15 @@ npm install axios
 ### 기타 유용한 패키지 설치
 ```
 npm install lodash moment vue-i18n
+```
+
+## 소컬 정적 파일 서버 사용
+### serve 패키지 설치
+```
+npm install -g serve
+```
+
+### dist 폴더 서빙
+```
+serve -s dist
 ```
