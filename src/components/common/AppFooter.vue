@@ -8,9 +8,12 @@
                         <!-- <img src="@/assets/images/logo-white.svg" alt="삶은(SilverLife) 로고" class="h-10"> -->
                         <p class="text-xl mt-3">"시니어의 디지털 나침반, 삶은(SilverLife)"</p>
                     </div>
-                    <p class="text-gray-300 mt-4">
-                        시니어층이 디지털 환경에 쉽게 적응하고, 건강하고 풍요로운 노후 생활을 영위할 수 있도록 지원하는 플랫폼입니다.
-                    </p>
+                    <p class="text-gray-300 mt-4">시니어층이 디지털 환경에 쉽게 적응하고,</p>
+                    <p class="text-gray-300">건강하고 풍요로운 노후 생활을 영위할 수 있도록 지원하는 플랫폼입니다.</p>
+                    <p class="text-gray-300">가족, 친구, 동료들과 함께 하세요!</p>
+                    <p class="text-xl mt-3">[후원하기]</p>
+                    <p class="text-gray-300 mt-4">후원은 더 나은 서비스를 만드는 데 큰 도움이 됩니다.</p>
+                    <p class="text-gray-300">카카오뱅크 3333-13-8681972 한희태</p>
                 </div>
 
                 <div class="footer-section">

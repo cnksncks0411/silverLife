@@ -87,7 +87,7 @@
 
                     <!-- 사이드바 (우측 1/3) -->
                     <div class="sidebar">
-                        <div class="progress-card bg-white rounded-xl shadow-md p-6 mb-8 sticky top-6">
+                        <div class="progress-card bg-white rounded-xl shadow-md p-6 mb-8 sticky eduRun">
                             <h3 class="text-xl font-bold mb-4">학습 진행</h3>
 
                             <div class="progress-bar bg-gray-200 rounded-full h-4 mb-4">
@@ -267,6 +267,10 @@ export default {
 <style scoped>
 .page-header {
     background-image: linear-gradient(to right, var(--color-primary, #0066CC), #004999);
+}
+
+.eduRun {
+    top: 4.5rem;
 }
 
 /* 이미지 플레이스홀더 스타일 */

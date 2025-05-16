@@ -49,87 +49,123 @@ const routes = [
     path: "/education",
     name: "Education",
     component: Education,
-    meta: { title: "디지털 교육 - 삶은(SilverLife)" },
+    meta: {
+      requiresAuth: true,
+      title: "디지털 교육 - 삶은(SilverLife)"
+    },
   },
   {
     path: "/education/:id",
     name: "EducationDetail",
     component: EducationDetail,
     props: true,
-    meta: { title: "교육 콘텐츠 - 삶은(SilverLife)" },
+    meta: {
+      requiresAuth: true,
+      title: "교육 콘텐츠 - 삶은(SilverLife)"
+    },
   },
   {
     path: '/education/:id/learn',
     name: 'Learning',
     component: Learning,
     props: true,
-    meta: { title: "교육 하기 - 삶은(SilverLife)" },
+    meta: {
+      requiresAuth: true,
+      title: "교육 하기 - 삶은(SilverLife)"
+    },
   },
   {
     path: '/creator/education',
     name: 'EducationCreator',
     component: EducationCreator,
-    meta: { title: "교육 콘텐츠 생성 - 삶은(SilverLife)" },
+    meta: {
+      requiresAuth: true,
+      title: "교육 콘텐츠 생성 - 삶은(SilverLife)"
+    },
   },
   {
     path: '/creator/education/:id/edit',
     name: 'EducationEditor',
     component: EducationCreator,
     props: true,
-    meta: { title: "교육 콘텐츠 수정 - 삶은(SilverLife)" },
+    meta: {
+      requiresAuth: true,
+      title: "교육 콘텐츠 수정 - 삶은(SilverLife)"
+    },
   },
   {
     path: "/kiosk",
     name: "Kiosk",
     component: Kiosk,
-    meta: { title: "키오스크 실습 - 삶은(SilverLife)" },
+    meta: {
+      requiresAuth: true,
+      title: "키오스크 실습 - 삶은(SilverLife)"
+    },
   },
   {
     path: "/kiosk/:id",
     name: "KioskSimulator",
     component: KioskSimulator,
     props: true,
-    meta: { title: "키오스크 시뮬레이터 - 삶은(SilverLife)" },
+    meta: {
+      requiresAuth: true,
+      title: "키오스크 시뮬레이터 - 삶은(SilverLife)"
+    },
   },
   {
     path: "/diet",
     name: "Diet",
     component: Diet,
-    meta: { title: "맞춤 식단 - 삶은(SilverLife)" },
+    meta: {
+      requiresAuth: true,
+      title: "맞춤 식단 - 삶은(SilverLife)"
+    },
   },
   {
     path: "/games",
     name: "Games",
     component: Games,
-    meta: { title: "인지력 게임 - 삶은(SilverLife)" },
+    meta: {
+      requiresAuth: true,
+      title: "인지력 게임 - 삶은(SilverLife)"
+    },
   },
   {
     path: "/games/:id",
     name: "GamePlay",
     component: GamePlay,
     props: true,
-    meta: { title: "게임 플레이 - 삶은(SilverLife)" },
+    meta: {
+      requiresAuth: true,
+      title: "게임 플레이 - 삶은(SilverLife)"
+    },
   },
   {
     path: "/policy",
     name: "Policy",
     component: Policy,
-    meta: { title: "정책 정보 - 삶은(SilverLife)" },
+    meta: {
+      requiresAuth: true,
+      title: "정책 정보 - 삶은(SilverLife)"
+    },
   },
   {
     path: "/policy/:id",
     name: "PolicyDetail",
     component: PolicyDetail,
     props: true,
-    meta: { title: "정책 상세 - 삶은(SilverLife)" },
+    meta: {
+      requiresAuth: true,
+      title: "정책 상세 - 삶은(SilverLife)"
+    },
   },
   {
     path: "/profile",
     name: "Profile",
     component: Profile,
     meta: {
-      title: "내 정보 - 삶은(SilverLife)",
       requiresAuth: true,
+      title: "내 정보 - 삶은(SilverLife)",
     },
   },
   {
@@ -137,15 +173,17 @@ const routes = [
     name: "Settings",
     component: Settings,
     meta: {
-      title: "설정 - 삶은(SilverLife)",
       requiresAuth: true,
+      title: "설정 - 삶은(SilverLife)",
     },
   },
   {
     path: "/:pathMatch(.*)*",
     name: "NotFound",
     component: NotFound,
-    meta: { title: "페이지를 찾을 수 없습니다 - 삶은(SilverLife)" },
+    meta: {
+      title: "페이지를 찾을 수 없습니다 - 삶은(SilverLife)"
+    },
   },
 ];
 

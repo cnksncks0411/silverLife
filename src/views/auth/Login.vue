@@ -36,12 +36,9 @@
                     </button>
                 </form>
 
-                <div class="mt-6 text-center">
-                    <p class="text-gray-600">
-                        계정이 없으신가요?
-                        <router-link to="/register" class="text-primary hover:underline">회원가입</router-link>
-                    </p>
-                </div>
+                <button type="button" class="mt-6 w-full py-3 bg-primary text-white rounded-lg text-lg font-bold" @click="gotoRegister">
+                    회원가입
+                </button>
             </div>
         </div>
     </div>
@@ -85,6 +82,9 @@ export default {
             } finally {
                 this.loading = false;
             }
+        },
+        gotoRegister() {
+            this.$router.push('/register');
         }
     }
 }

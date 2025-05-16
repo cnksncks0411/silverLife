@@ -5,21 +5,11 @@
     <section class="hero bg-primary text-white py-16 px-4">
       <div class="container mx-auto text-center">
         <h1 class="text-4xl md:text-5xl font-bold mb-6">시니어의 디지털 나침반, 삶은(SilverLife)</h1>
-        <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-          시니어들의 디지털 라이프스타일을 위한 특별한 공간, 삶은(SilverLife)입니다.
-          디지털 교육부터 건강 관리, 맞춤 콘텐츠까지
+        <p class="text-xl md:text-2xl max-w-4xl mx-auto">시니어들의 디지털 라이프스타일을 위한 특별한 공간, 삶은(SilverLife)입니다.</p>
+        <p class="text-xl md:text-2xl max-w-4xl mx-auto">디지털 교육부터 건강 관리, 맞춤 콘텐츠까지</p>
           <!-- 디지털 교육부터 건강 관리, 맞춤 콘텐츠, 소셜 네트워킹, 쇼핑까지 -->
-          시니어만을 위한 온라인 커뮤니티에서 새로운 가능성을 발견하세요.
-          함께 배우고, 나누고, 즐기는 시니어 전용 디지털 세상이 여러분을 기다립니다.
-        </p>
-        <div class="flex flex-wrap justify-center gap-4">
-          <router-link to="/register" class="btn bg-white text-primary hover:bg-gray-100">
-            회원가입
-          </router-link>
-          <router-link to="/education" class="btn bg-secondary text-white hover:bg-opacity-90">
-            시작하기
-          </router-link>
-        </div>
+        <p class="text-xl md:text-2xl max-w-4xl mx-auto">시니어만을 위한 온라인 커뮤니티에서 새로운 가능성을 발견하세요.</p>
+        <p class="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">함께 배우고, 나누고, 즐기는 시니어 전용 디지털 세상이 여러분을 기다립니다.</p>
       </div>
     </section>
 
@@ -68,6 +58,24 @@
             </div>
           </div> -->
 
+          <div class="feature-card card transform hover:scale-105 transition-transform duration-300">
+            <div class="text-center mb-6">
+              <div class="icon-circle mx-auto bg-secondary bg-opacity-10 p-6 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-secondary" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold text-center mb-4">맞춤 식단</h3>
+            <p class="text-lg text-gray mb-6">
+              개인 건강 상태에 맞는 맞춤형 식단과 영양 정보를 제공해 건강한 식생활을 도와드립니다.
+            </p>
+            <div class="text-center">
+              <router-link to="/diet" class="btn btn-outline">자세히 보기</router-link>
+            </div>
+          </div>
           <div class="feature-card card transform hover:scale-105 transition-transform duration-300">
             <div class="text-center mb-6">
               <div class="icon-circle mx-auto bg-accent bg-opacity-10 p-6 rounded-full">
@@ -156,10 +164,6 @@
           </div>
           <div class="relative">
             <!-- <img src="@/assets/images/app-preview.png" alt="앱 미리보기" class="max-w-xs md:max-w-sm rounded-xl shadow-2xl"> -->
-            <div
-              class="absolute -top-6 -right-6 bg-accent text-white text-lg font-bold py-2 px-4 rounded-full transform rotate-12">
-              무료!
-            </div>
           </div>
         </div>
       </div>
