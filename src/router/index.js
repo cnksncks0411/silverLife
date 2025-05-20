@@ -50,7 +50,7 @@ const routes = [
     name: "Education",
     component: Education,
     meta: {
-      requiresAuth: true,
+      // requiresAuth: true,
       title: "디지털 교육 - 삶은(SilverLife)"
     },
   },
@@ -60,7 +60,7 @@ const routes = [
     component: EducationDetail,
     props: true,
     meta: {
-      requiresAuth: true,
+      // requiresAuth: true,
       title: "교육 콘텐츠 - 삶은(SilverLife)"
     },
   },
@@ -70,21 +70,21 @@ const routes = [
     component: Learning,
     props: true,
     meta: {
-      requiresAuth: true,
+      // requiresAuth: true,
       title: "교육 하기 - 삶은(SilverLife)"
     },
   },
   {
-    path: '/creator/education',
+    path: '/education/creator',
     name: 'EducationCreator',
     component: EducationCreator,
     meta: {
-      requiresAuth: true,
+      // requiresAuth: true,
       title: "교육 콘텐츠 생성 - 삶은(SilverLife)"
     },
   },
   {
-    path: '/creator/education/:id/edit',
+    path: '/education/creator/:id/edit',
     name: 'EducationEditor',
     component: EducationCreator,
     props: true,
@@ -98,7 +98,7 @@ const routes = [
     name: "Kiosk",
     component: Kiosk,
     meta: {
-      requiresAuth: true,
+      // requiresAuth: true,
       title: "키오스크 실습 - 삶은(SilverLife)"
     },
   },
@@ -108,7 +108,7 @@ const routes = [
     component: KioskSimulator,
     props: true,
     meta: {
-      requiresAuth: true,
+      // requiresAuth: true,
       title: "키오스크 시뮬레이터 - 삶은(SilverLife)"
     },
   },
@@ -117,7 +117,7 @@ const routes = [
     name: "Diet",
     component: Diet,
     meta: {
-      requiresAuth: true,
+      // requiresAuth: true,
       title: "맞춤 식단 - 삶은(SilverLife)"
     },
   },
@@ -126,7 +126,7 @@ const routes = [
     name: "Games",
     component: Games,
     meta: {
-      requiresAuth: true,
+      // requiresAuth: true,
       title: "인지력 게임 - 삶은(SilverLife)"
     },
   },
@@ -136,7 +136,7 @@ const routes = [
     component: GamePlay,
     props: true,
     meta: {
-      requiresAuth: true,
+      // requiresAuth: true,
       title: "게임 플레이 - 삶은(SilverLife)"
     },
   },
@@ -145,7 +145,7 @@ const routes = [
     name: "Policy",
     component: Policy,
     meta: {
-      requiresAuth: true,
+      // requiresAuth: true,
       title: "정책 정보 - 삶은(SilverLife)"
     },
   },
@@ -155,7 +155,7 @@ const routes = [
     component: PolicyDetail,
     props: true,
     meta: {
-      requiresAuth: true,
+      // requiresAuth: true,
       title: "정책 상세 - 삶은(SilverLife)"
     },
   },

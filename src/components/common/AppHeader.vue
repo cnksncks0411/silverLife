@@ -29,19 +29,19 @@
                     </nav>
 
                     <!-- 로그인/프로필 버튼 -->
-                    <div class="login-area ml-6">
+                    <!-- <div class="login-area ml-6">
                         <router-link v-if="!isLoggedIn" to="/login" class="btn btn-primary">
                             로그인
                         </router-link>
                         <div v-else class="relative">
                             <button class="profile-button flex items-center" @click="toggleProfileMenu"
                                 aria-label="프로필 메뉴">
-                                <!-- <img src="@/assets/images/default-avatar.png" alt="프로필 이미지"
-                                    class="h-12 w-12 rounded-full border-2 border-primary"> -->
+                                <img src="@/assets/images/default-avatar.png" alt="프로필 이미지"
+                                    class="h-12 w-12 rounded-full border-2 border-primary">
                                 <span class="ml-2 text-lg">{{ userName }}</span>
                             </button>
 
-                            <!-- 프로필 드롭다운 메뉴 -->
+                            프로필 드롭다운 메뉴
                             <div v-if="showProfileMenu"
                                 class="profile-dropdown absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-lg py-2 z-10">
                                 <router-link to="/profile" class="block px-4 py-3 text-lg hover:bg-light">
@@ -56,7 +56,7 @@
                                 </button>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
