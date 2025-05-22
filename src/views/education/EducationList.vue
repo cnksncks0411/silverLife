@@ -685,7 +685,7 @@ export default {
         checkUserRole() {
             // 실제 구현에서는 Vuex 상태나 API 호출을 통해 사용자 역할 확인
             const user = this.$store?.state?.user || {};
-            this.isCreator = user.role === 'creator' || user.role === 'admin';
+            // this.isCreator = user.role === 'creator' || user.role === 'admin';
         }
     },
 

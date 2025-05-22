@@ -84,12 +84,12 @@ const routes = [
     },
   },
   {
-    path: '/education/creator/:id/edit',
+    path: '/education/:id/edit',
     name: 'EducationEditor',
     component: EducationCreator,
     props: true,
     meta: {
-      requiresAuth: true,
+      // requiresAuth: true,
       title: "교육 콘텐츠 수정 - 삶은(SilverLife)"
     },
   },
