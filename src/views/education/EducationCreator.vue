@@ -5,7 +5,7 @@
             <div class="container mx-auto">
                 <div class="flex justify-between items-center">
                     <div class="flex items-center">
-                        <router-link to="/creator/dashboard" class="text-gray-700 mr-4">
+                        <router-link to="/education" class="text-gray-700 mr-4">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -31,7 +31,7 @@
         </header>
 
         <!-- 메인 콘텐츠 -->
-        <main class="pt-20 pb-6 px-6">
+        <main class="pt-20 pb-24 px-6">
             <div class="container mx-auto">
                 <!-- 탭 메뉴 -->
                 <div class="mb-6 border-b border-gray-200">
@@ -231,8 +231,7 @@
                             </button>
                         </div>
 
-                        <draggable v-else v-model="education.steps" group="steps" handle=".drag-handle"
-                            class="space-y-4">
+                        <div v-else class="space-y-4">
                             <div v-for="(step, index) in education.steps" :key="index"
                                 class="bg-white rounded-xl shadow-sm overflow-hidden">
                                 <div class="step-header px-6 py-4 bg-gray-50 flex justify-between items-center cursor-pointer"
@@ -536,7 +535,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </draggable>
+                        </div>
                     </div>
 
                     <!-- 관련 콘텐츠 탭 -->
@@ -655,7 +654,84 @@
                 <div class="modal-body p-6 max-h-[70vh] overflow-y-auto">
                     <!-- 미리보기 내용 -->
                     <div class="preview-content">
-                        <!-- 여기에 미리보기 내용 표시 -->
+                        <div v-if="currentPreviewStep">
+                            <!-- 단계 미리보기 -->
+                            <div class="step-preview">
+                                <h4 class="text-xl font-bold mb-4">{{ currentPreviewStep.title }}</h4>
+                                <p class="text-gray-600 mb-4">{{ currentPreviewStep.description }}</p>
+
+                                <div v-if="currentPreviewStep.imageUrl" class="mb-6">
+                                    <img :src="currentPreviewStep.imageUrl" :alt="currentPreviewStep.title"
+                                        class="w-full rounded-lg max-h-64 object-contain">
+                                </div>
+
+                                <div v-if="currentPreviewStep.hasContent" class="content-preview mb-6">
+                                    <h5 class="text-lg font-medium mb-3">학습 내용</h5>
+                                    <div class="bg-white p-4 border rounded-lg" v-html="currentPreviewStep.content">
+                                    </div>
+                                </div>
+
+                                <div v-if="currentPreviewStep.hasQuiz" class="quiz-preview mb-6">
+                                    <h5 class="text-lg font-medium mb-3">이해도 확인 퀴즈</h5>
+                                    <div class="bg-white p-4 border rounded-lg">
+                                        <p class="font-medium mb-3">{{ currentPreviewStep.quiz?.question }}</p>
+                                        <div class="space-y-2">
+                                            <div v-for="(option, idx) in currentPreviewStep.quiz?.options" :key="idx"
+                                                class="flex items-center p-2 border rounded-lg"
+                                                :class="{ 'bg-green-50 border-green-300': idx === currentPreviewStep.quiz?.correctAnswer }">
+                                                <span
+                                                    class="w-6 h-6 flex items-center justify-center rounded-full border mr-2"
+                                                    :class="{ 'bg-green-500 text-white border-green-500': idx === currentPreviewStep.quiz?.correctAnswer }">
+                                                    {{ String.fromCharCode(65 + idx) }}
+                                                </span>
+                                                {{ option }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div v-if="currentPreviewStep.hasSimulation" class="simulation-preview">
+                                    <h5 class="text-lg font-medium mb-3">실습 시뮬레이션</h5>
+                                    <div class="bg-gray-100 p-4 border rounded-lg text-center">
+                                        <p>실습 시뮬레이션 유형: {{ getSimulationTypeName(currentPreviewStep.simulationType) }}
+                                        </p>
+                                        <p class="text-sm text-gray-500 mt-2">실제 출시 시 시뮬레이션 화면이 표시됩니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div v-else>
+                            <!-- 전체 교육 미리보기 -->
+                            <div class="mb-6">
+                                <h4 class="text-xl font-bold mb-2">교육 소개</h4>
+                                <p class="text-gray-600">{{ education.description }}</p>
+                            </div>
+
+                            <div class="mb-6">
+                                <h4 class="text-xl font-bold mb-2">교육 목표</h4>
+                                <ul class="list-disc pl-5 space-y-1">
+                                    <li v-for="(goal, idx) in education.learningGoals" :key="idx" v-if="goal.trim()">{{
+                                        goal }}</li>
+                                </ul>
+                            </div>
+
+                            <div class="mb-6">
+                                <h4 class="text-xl font-bold mb-2">학습 단계</h4>
+                                <div class="space-y-4">
+                                    <div v-for="(step, idx) in education.steps" :key="idx"
+                                        class="p-4 border rounded-lg">
+                                        <div class="flex items-center mb-2">
+                                            <div
+                                                class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center mr-3">
+                                                {{ idx + 1 }}
+                                            </div>
+                                            <h5 class="font-medium">{{ step.title || `단계 ${idx + 1}` }}</h5>
+                                        </div>
+                                        <p class="text-gray-600">{{ step.description }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer p-6 border-t border-gray-200 flex justify-end">
@@ -880,9 +956,11 @@ export default {
                 this.thumbnailPreview = this.education.thumbnail;
 
                 // 단계별 접힘 상태 초기화 (첫 번째 단계는 열고 나머지는 닫음)
+                const newOpenedSteps = {};
                 this.education.steps.forEach((_, index) => {
-                    this.$set(this.openedSteps, index, index === 0);
+                    newOpenedSteps[index] = index === 0;
                 });
+                this.openedSteps = newOpenedSteps;
 
                 // 더미 관련 교육 데이터
                 this.relatedEducationItems = [
@@ -949,15 +1027,26 @@ export default {
                 simulationType: ''
             };
 
+            // 단계 추가
             this.education.steps.push(newStep);
             const newIndex = this.education.steps.length - 1;
-            this.$set(this.openedSteps, newIndex, true);
+
+            // Vue 2와 Vue 3 모두에서 동작하는 방식으로 반응형 데이터 업데이트
+            // 방법 1: Object.assign을 사용한 전체 객체 갱신
+            this.openedSteps = Object.assign({}, this.openedSteps, { [newIndex]: true });
+
+            // 또는 방법 2: 스프레드 연산자 사용
+            // this.openedSteps = { ...this.openedSteps, [newIndex]: true };
 
             // 새 단계가 추가되면 자동으로 학습 단계 탭으로 전환
             this.activeTab = 'steps';
         },
         toggleStep(index) {
-            this.$set(this.openedSteps, index, !this.openedSteps[index]);
+            // Vue 2와 Vue 3 모두에서 동작하는 방식으로 반응형 데이터 업데이트
+            this.openedSteps = {
+                ...this.openedSteps,
+                [index]: !this.openedSteps[index]
+            };
         },
         removeStep(index) {
             if (confirm('이 학습 단계를 삭제하시겠습니까?')) {
@@ -1001,7 +1090,13 @@ export default {
                 // 실제 구현에서는 파일 업로드 API 호출
                 const reader = new FileReader();
                 reader.onload = (e) => {
-                    this.$set(this.education.steps[index], 'imageUrl', e.target.result); // 실제 구현에서는 업로드된 URL로 변경
+                    // 객체 속성 업데이트 방식으로 변경
+                    const updatedSteps = [...this.education.steps];
+                    updatedSteps[index] = {
+                        ...updatedSteps[index],
+                        imageUrl: e.target.result
+                    };
+                    this.education.steps = updatedSteps;
                 };
                 reader.readAsDataURL(file);
             }
@@ -1048,7 +1143,13 @@ export default {
                     newText = text;
             }
 
-            this.$set(this.education.steps[stepIndex], 'content', newText);
+            // 객체 속성 업데이트 방식으로 변경
+            const updatedSteps = [...this.education.steps];
+            updatedSteps[stepIndex] = {
+                ...updatedSteps[stepIndex],
+                content: newText
+            };
+            this.education.steps = updatedSteps;
 
             // 에디터 포커스 유지
             this.$nextTick(() => {
@@ -1058,7 +1159,14 @@ export default {
         insertContentTemplate(stepIndex, templateCode) {
             const currentContent = this.education.steps[stepIndex].content;
             const newContent = currentContent ? `${currentContent}\n${templateCode}` : templateCode;
-            this.$set(this.education.steps[stepIndex], 'content', newContent);
+
+            // 객체 속성 업데이트 방식으로 변경
+            const updatedSteps = [...this.education.steps];
+            updatedSteps[stepIndex] = {
+                ...updatedSteps[stepIndex],
+                content: newContent
+            };
+            this.education.steps = updatedSteps;
         },
         getContentPreview(stepIndex) {
             return this.education.steps[stepIndex].content || '<p class="text-gray-400">내용이 없습니다. 왼쪽 에디터에 내용을 입력해주세요.</p>';
@@ -1077,12 +1185,18 @@ export default {
         // 퀴즈 관련 메서드
         getOrCreateQuiz(stepIndex) {
             if (!this.education.steps[stepIndex].quiz) {
-                this.$set(this.education.steps[stepIndex], 'quiz', {
-                    question: '',
-                    options: ['', ''],
-                    correctAnswer: 0,
-                    explanation: ''
-                });
+                // 객체 속성 업데이트 방식으로 변경
+                const updatedSteps = [...this.education.steps];
+                updatedSteps[stepIndex] = {
+                    ...updatedSteps[stepIndex],
+                    quiz: {
+                        question: '',
+                        options: ['', ''],
+                        correctAnswer: 0,
+                        explanation: ''
+                    }
+                };
+                this.education.steps = updatedSteps;
             }
             return this.education.steps[stepIndex].quiz;
         },
@@ -1176,6 +1290,18 @@ export default {
         closePreview() {
             this.showPreviewModal = false;
             this.currentPreviewStep = null;
+        },
+        getSimulationTypeName(type) {
+            const typeNames = {
+                'smartphone': '스마트폰 기본 조작',
+                'kiosk_food': '음식점 키오스크',
+                'kiosk_hospital': '병원 접수 키오스크',
+                'kiosk_transport': '교통 키오스크',
+                'app_messenger': '메신저 앱',
+                'app_banking': '모바일 뱅킹',
+                'app_map': '지도 앱'
+            };
+            return typeNames[type] || type;
         },
 
         // 유틸리티 메서드
@@ -1304,11 +1430,11 @@ export default {
             this.lastSavedTime = new Date().toLocaleString();
 
             alert(`교육 콘텐츠가 성공적으로 ${this.isEditMode ? '수정' : '출시'}되었습니다.`);
-            this.$router.push('/creator/dashboard');
+            this.$router.push('/education');
         },
         cancelEdit() {
             if (confirm('변경 사항이 저장되지 않을 수 있습니다. 정말 취소하시겠습니까?')) {
-                this.$router.push('/creator/dashboard');
+                this.$router.push('/education');
             }
         }
     }

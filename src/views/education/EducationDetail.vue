@@ -14,6 +14,10 @@
                     <div v-if="education.categoryId" class="bg-white text-primary py-1 px-3 rounded-full text-sm">
                         {{ getCategoryName(education.categoryId) }}
                     </div>
+                    <!-- 학습 완료 표시 -->
+                    <div v-if="isCompleted" class="bg-green-500 text-white py-1 px-3 rounded-full text-sm ml-2">
+                        ✓ 학습 완료
+                    </div>
                 </div>
                 <h1 class="text-3xl md:text-4xl font-bold mb-4">{{ education.title }}</h1>
                 <div class="flex flex-wrap items-center text-lg">
@@ -33,13 +37,23 @@
                         </svg>
                         {{ getLevelLabel(education.level) }}
                     </div>
-                    <div class="mb-2">
+                    <div class="mr-6 mb-2">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block mr-1" fill="none"
                             viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                         </svg>
-                        {{ education.viewCount || 0 }}명 학습 중
+                        좋아요 {{ education.likeCount || 0 }}개
+                    </div>
+                    <div class="mb-2">
+                        <button @click="shareContent" class="flex items-center text-white hover:text-gray-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
+                            </svg>
+                            공유하기
+                        </button>
                     </div>
                 </div>
             </div>
@@ -87,27 +101,33 @@
 
                     <!-- 사이드바 (우측 1/3) -->
                     <div class="sidebar">
-                        <div class="progress-card bg-white rounded-xl shadow-md p-6 mb-8 sticky eduRun">
-                            <h3 class="text-xl font-bold mb-4">학습 진행</h3>
-
-                            <div class="progress-bar bg-gray-200 rounded-full h-4 mb-4">
-                                <div class="bg-primary rounded-full h-4" :style="{ width: `${progress}%` }"></div>
-                            </div>
-
-                            <p class="text-lg mb-6">
-                                학습 진행률: <span class="font-bold">{{ progress }}%</span>
-                            </p>
+                        <div class="action-card bg-white rounded-xl shadow-md p-6 mb-8 sticky eduRun">
+                            <h3 class="text-xl font-bold mb-4">학습하기</h3>
 
                             <button @click="startLearning"
                                 class="w-full py-3 bg-primary text-white rounded-lg text-lg font-bold mb-4">
-                                학습 시작하기
+                                {{ isCompleted ? '다시 학습하기' : '학습 시작하기' }}
                             </button>
 
-                            <button @click="continueLearning"
-                                class="w-full py-3 border-2 border-primary text-primary rounded-lg text-lg font-bold"
-                                v-if="progress > 0">
-                                이어서 학습하기
-                            </button>
+                            <div class="flex items-center justify-between text-sm text-gray-600">
+                                <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    소요시간: {{ education.duration }}
+                                </div>
+                                <button @click="toggleLike" class="flex items-center hover:text-red-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        :class="['h-4 w-4 mr-1', isLiked ? 'fill-red-500 text-red-500' : '']"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                                    </svg>
+                                    좋아요
+                                </button>
+                            </div>
                         </div>
 
                         <div class="related-card bg-white rounded-xl shadow-md p-6">
@@ -145,7 +165,8 @@ export default {
     data() {
         return {
             education: {},
-            progress: 0,
+            isCompleted: false,
+            isLiked: false,
             loading: true,
             error: null,
             relatedEducation: []
@@ -171,7 +192,7 @@ export default {
                     level: 'beginner',
                     duration: '약 30분',
                     // thumbnail: require('@/assets/images/smartphone-basics.jpg'),
-                    viewCount: 1250,
+                    likeCount: 256,
                     steps: [
                         {
                             title: '스마트폰 기본 사용법 이해하기',
@@ -217,8 +238,9 @@ export default {
                     }
                 ];
 
-                // 학습 진행률 (로컬 스토리지에서 가져오거나 더미 데이터 사용)
-                this.progress = localStorage.getItem(`education_progress_${this.id}`) || 25;
+                // 학습 완료 상태 확인 (로컬 스토리지에서 가져오거나 더미 데이터 사용)
+                this.isCompleted = localStorage.getItem(`education_completed_${this.id}`) === 'true';
+                this.isLiked = localStorage.getItem(`education_liked_${this.id}`) === 'true';
 
                 this.loading = false;
             }, 1000);
@@ -248,14 +270,41 @@ export default {
         },
         startLearning() {
             // 학습 시작 로직
-            alert('학습을 시작합니다.');
-            this.progress = 10;
-            localStorage.setItem(`education_progress_${this.id}`, this.progress);
+            if (this.isCompleted) {
+                alert('학습을 다시 시작합니다.');
+            } else {
+                alert('학습을 시작합니다.');
+            }
             this.$router.push(`/education/${this.id}/learn`);
         },
-        continueLearning() {
-            // 학습 계속하기 로직
-            alert('이어서 학습합니다.');
+        toggleLike() {
+            this.isLiked = !this.isLiked;
+            localStorage.setItem(`education_liked_${this.id}`, this.isLiked);
+
+            // 좋아요 수 업데이트 (실제로는 API 호출)
+            if (this.isLiked) {
+                this.education.likeCount++;
+            } else {
+                this.education.likeCount--;
+            }
+        },
+        shareContent() {
+            // 공유하기 기능
+            if (navigator.share) {
+                navigator.share({
+                    title: this.education.title,
+                    text: '시니어를 위한 디지털 교육 콘텐츠를 공유합니다.',
+                    url: window.location.href
+                });
+            } else {
+                // 브라우저가 Web Share API를 지원하지 않는 경우
+                const url = window.location.href;
+                navigator.clipboard.writeText(url).then(() => {
+                    alert('링크가 클립보드에 복사되었습니다.');
+                }).catch(() => {
+                    alert('링크 복사에 실패했습니다.');
+                });
+            }
         },
         goToEducation(id) {
             this.$router.push(`/education/${id}`);

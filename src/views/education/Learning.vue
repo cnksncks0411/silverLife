@@ -48,8 +48,9 @@
                 <button v-for="(step, index) in steps" :key="index" @click="goToStep(index)" :class="[
                     'step flex flex-col items-center transition-all duration-200',
                     currentStepIndex === index ? 'text-primary font-bold transform scale-110' :
-                        currentStepIndex > index ? 'text-gray-500' : 'text-gray-400'
-                ]" :disabled="index > furthestStep" :style="{ width: `${100 / steps.length}%` }">
+                        currentStepIndex > index ? 'text-gray-500' : 'text-gray-400',
+                    !canGoToStep(index) ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'
+                ]" :disabled="!canGoToStep(index)" :style="{ width: `${100 / steps.length}%` }">
                     <div class="step-dot w-4 h-4 rounded-full mb-1" :class="[
                         index < currentStepIndex ? 'bg-primary' :
                             index === currentStepIndex ? 'bg-primary border-4 border-primary-light' : 'bg-gray-300'
@@ -97,82 +98,6 @@
                             class="step-learning-content bg-white rounded-xl shadow-md p-6 mb-6">
                             <h3 class="text-xl font-bold mb-4">학습 내용</h3>
                             <div class="content text-lg space-y-4" v-html="currentStep.content"></div>
-                        </div>
-
-                        <!-- 실습 시뮬레이션 (있는 경우) -->
-                        <div v-if="currentStep.hasSimulation"
-                            class="step-simulation bg-white rounded-xl shadow-md p-6 mb-6">
-                            <div class="flex justify-between items-center mb-4">
-                                <h3 class="text-xl font-bold">직접 실습해보기</h3>
-                                <button v-if="simulationCompleted" @click="restartSimulation"
-                                    class="text-primary hover:underline flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                                    </svg>
-                                    다시 시작하기
-                                </button>
-                            </div>
-
-                            <div
-                                class="simulation-container border border-gray-200 rounded-lg overflow-hidden relative">
-                                <!-- 실습 준비 상태 -->
-                                <div v-if="!simulationStarted && !simulationCompleted"
-                                    class="simulation-intro p-8 text-center">
-                                    <img :src="getSimulationImage()" alt="실습 이미지"
-                                        class="max-w-xs mx-auto mb-6 rounded-lg">
-                                    <h4 class="text-xl font-bold mb-3">{{ getSimulationTitle() }}</h4>
-                                    <p class="text-gray-700 mb-6">실습을 통해 직접 체험해보세요. 화면의 안내에 따라 단계별로 진행됩니다.</p>
-                                    <button @click="startSimulation"
-                                        class="px-6 py-3 bg-primary text-white rounded-lg text-lg font-medium">
-                                        실습 시작하기
-                                    </button>
-                                </div>
-
-                                <!-- 실습 진행 중 상태 -->
-                                <div v-else-if="simulationStarted && !simulationCompleted" class="simulation-progress">
-                                    <!-- 실제 구현에서는 시뮬레이션 컴포넌트 렌더링 -->
-                                    <div
-                                        class="simulation-placeholder h-96 flex items-center justify-center bg-gray-100">
-                                        <div class="text-center p-8">
-                                            <p class="text-gray-700 mb-4">시뮬레이션이 여기에 표시됩니다.</p>
-                                            <p class="text-gray-500 text-sm">실제 구현에서는 이 영역에 시뮬레이션 컴포넌트가 렌더링됩니다.</p>
-
-                                            <!-- 시뮬레이션 임시 버튼들 (개발용) -->
-                                            <div class="mt-6 space-x-4">
-                                                <button @click="simulationCompleted = true"
-                                                    class="px-4 py-2 bg-primary text-white rounded-lg">
-                                                    실습 완료 (테스트)
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- 실습 완료 상태 -->
-                                <div v-else-if="simulationCompleted" class="simulation-completed p-8 text-center">
-                                    <div
-                                        class="completion-icon w-20 h-20 mx-auto mb-4 rounded-full bg-green-100 text-green-500 flex items-center justify-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none"
-                                            viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M5 13l4 4L19 7" />
-                                        </svg>
-                                    </div>
-                                    <h4 class="text-xl font-bold mb-2">실습 완료!</h4>
-                                    <p class="text-gray-700 mb-6">훌륭합니다! 성공적으로 실습을 완료하셨습니다.</p>
-                                    <div class="flex justify-center space-x-4">
-                                        <button @click="restartSimulation"
-                                            class="px-4 py-2 border border-primary text-primary rounded-lg">
-                                            다시 실습하기
-                                        </button>
-                                        <button @click="moveToQuiz" class="px-4 py-2 bg-primary text-white rounded-lg">
-                                            다음으로 진행하기
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
 
                         <!-- 이해도 체크 퀴즈 (있는 경우) -->
@@ -233,7 +158,7 @@
                                         <div>
                                             <p class="font-medium mb-1">
                                                 {{ answerSelected === currentStep.quiz.correctAnswer ? '정답입니다!' :
-                                                '틀렸습니다.' }}
+                                                    '틀렸습니다.' }}
                                             </p>
                                             <p v-if="currentStep.quiz.explanation" class="text-sm">
                                                 {{ currentStep.quiz.explanation }}
@@ -312,6 +237,15 @@
                     </div>
 
                     <div class="buttons space-y-3">
+                        <button @click="shareCompletion"
+                            class="w-full py-3 bg-green-500 text-white rounded-lg font-medium flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
+                            </svg>
+                            학습 완료 공유하기
+                        </button>
                         <button @click="goToRecommendedCourse"
                             class="w-full py-3 bg-primary text-white rounded-lg font-medium">
                             다음 추천 강좌 시작하기
@@ -376,8 +310,6 @@ export default {
             showCompletionModal: false,
             showExitConfirmModal: false,
             isFullscreen: false,
-            simulationStarted: false,
-            simulationCompleted: false,
             recommendedCourses: [] // 추천 강좌 목록
         }
     },
@@ -396,12 +328,6 @@ export default {
             if (this.currentStep && this.currentStep.quiz && this.answerSelected === null) {
                 return false;
             }
-
-            // 실습이 있는 경우, 실습을 완료해야 다음으로 넘어갈 수 있음
-            if (this.currentStep && this.currentStep.hasSimulation && !this.simulationCompleted) {
-                return false;
-            }
-
             return true;
         }
     },
@@ -486,8 +412,6 @@ export default {
   <p><strong>지문:</strong> 지문 인식 센서에 등록된 손가락을 올립니다.</p>
   <p><strong>얼굴 인식:</strong> 전면 카메라가 얼굴을 인식할 수 있도록 합니다.</p>
 </div>`,
-                        hasSimulation: true,
-                        simulationType: 'smartphone',
                         quiz: {
                             question: '화면 잠금을 해제하는 방법이 아닌 것은?',
                             options: [
@@ -519,8 +443,6 @@ export default {
   <p><strong>스와이프(밀기):</strong> 화면 전환, 알림창 열기</p>
   <p><strong>핀치(두 손가락으로 확대/축소):</strong> 사진, 웹페이지 확대/축소</p>
 </div>`,
-                        hasSimulation: true,
-                        simulationType: 'smartphone',
                         quiz: {
                             question: '스마트폰에서 앱을 실행하기 위해 사용하는 가장 기본적인 제스처는?',
                             options: [
@@ -559,8 +481,6 @@ export default {
   <p>1. 녹색 전화기 아이콘을 오른쪽으로 스와이프하여 전화를 받습니다.</p>
   <p>2. 빨간색 전화기 아이콘을 왼쪽으로 스와이프하여 전화를 거절합니다.</p>
 </div>`,
-                        hasSimulation: true,
-                        simulationType: 'app_call',
                         quiz: {
                             question: '전화를 받기 위해 해야 하는 행동은?',
                             options: [
@@ -596,7 +516,6 @@ export default {
   <p>2. 원하는 이모티콘을 선택합니다.</p>
   <p>3. 메시지에 이모티콘이 추가됩니다.</p>
 </div>`,
-                        hasSimulation: false,
                         quiz: {
                             question: '새 메시지를 보내기 위해 가장 먼저 해야 할 일은?',
                             options: [
@@ -648,11 +567,6 @@ export default {
                     if (progress.completedQuizzes && progress.completedQuizzes[this.currentStepIndex]) {
                         this.answerSelected = progress.completedQuizzes[this.currentStepIndex];
                     }
-
-                    // 이미 완료한 시뮬레이션은 완료 상태로 표시
-                    if (progress.completedSimulations && progress.completedSimulations[this.currentStepIndex]) {
-                        this.simulationCompleted = true;
-                    }
                 } catch (e) {
                     console.error('학습 진행 상황을 불러오는 중 오류 발생:', e);
                 }
@@ -662,16 +576,10 @@ export default {
         saveProgress() {
             // 진행 상황 저장 (로컬 스토리지 사용)
             const completedQuizzes = {};
-            const completedSimulations = {};
 
             // 현재 단계의 퀴즈 정답 상태 저장
             if (this.currentStep && this.currentStep.quiz && this.answerSelected !== null) {
                 completedQuizzes[this.currentStepIndex] = this.answerSelected;
-            }
-
-            // 현재 단계의 시뮬레이션 완료 상태 저장
-            if (this.currentStep && this.currentStep.hasSimulation && this.simulationCompleted) {
-                completedSimulations[this.currentStepIndex] = true;
             }
 
             const progress = {
@@ -681,7 +589,6 @@ export default {
                 correctAnswers: this.correctAnswers,
                 timeSpent: this.timeSpent,
                 completedQuizzes,
-                completedSimulations,
                 lastUpdated: new Date().toISOString()
             };
 
@@ -717,10 +624,8 @@ export default {
         resetStepState() {
             // 단계 이동 시 상태 초기화
             this.answerSelected = null;
-            this.simulationStarted = false;
-            this.simulationCompleted = false;
 
-            // 저장된 답변이나 시뮬레이션 완료 상태가 있으면 불러오기
+            // 저장된 답변이 있으면 불러오기
             const savedProgress = localStorage.getItem(`learning_progress_${this.educationId}`);
             if (savedProgress) {
                 try {
@@ -730,20 +635,29 @@ export default {
                     if (progress.completedQuizzes && progress.completedQuizzes[this.currentStepIndex] !== undefined) {
                         this.answerSelected = progress.completedQuizzes[this.currentStepIndex];
                     }
-
-                    // 이미 완료한 시뮬레이션은 완료 상태 복원
-                    if (progress.completedSimulations && progress.completedSimulations[this.currentStepIndex]) {
-                        this.simulationCompleted = true;
-                    }
                 } catch (e) {
                     console.error('저장된 상태를 불러오는 중 오류 발생:', e);
                 }
             }
         },
 
-        goToStep(index) {
-            // 사용자가 이미 도달한 단계까지만 이동 가능
+        canGoToStep(index) {
+            // 현재 단계거나 이미 도달한 단계인지 확인
             if (index <= this.furthestStep) {
+                return true;
+            }
+
+            // 바로 다음 단계인 경우, 현재 단계의 조건을 만족했는지 확인
+            if (index === this.currentStepIndex + 1 && index <= this.furthestStep + 1) {
+                return this.canContinue;
+            }
+
+            return false;
+        },
+
+        goToStep(index) {
+            // 이동 가능한 단계인지 확인
+            if (this.canGoToStep(index)) {
                 this.currentStepIndex = index;
                 this.resetStepState();
                 this.saveProgress();
@@ -764,35 +678,12 @@ export default {
             this.saveProgress();
         },
 
-        startSimulation() {
-            this.simulationStarted = true;
-        },
-
-        restartSimulation() {
-            this.simulationStarted = true;
-            this.simulationCompleted = false;
-        },
-
-        moveToQuiz() {
-            // 시뮬레이션 다음으로 퀴즈가 있으면 퀴즈로 스크롤, 없으면 다음 버튼에 포커스
-            this.$nextTick(() => {
-                if (this.currentStep.quiz) {
-                    const quizElement = document.querySelector('.step-quiz');
-                    if (quizElement) {
-                        quizElement.scrollIntoView({ behavior: 'smooth' });
-                    }
-                } else {
-                    const nextButton = document.querySelector('footer button:last-child');
-                    if (nextButton) {
-                        nextButton.focus();
-                    }
-                }
-            });
-        },
-
         completeEducation() {
             // 학습 완료 처리
             this.saveProgress();
+
+            // 학습 완료 상태 저장
+            localStorage.setItem(`education_completed_${this.educationId}`, 'true');
 
             // 분석 데이터 저장 (실제 구현에서는 API 호출)
             const completionData = {
@@ -807,6 +698,28 @@ export default {
 
             // 완료 모달 표시
             this.showCompletionModal = true;
+        },
+
+        shareCompletion() {
+            // 학습 완료 공유하기
+            const shareText = `${this.educationTitle} 학습을 완료했습니다! 총 ${this.steps.length}개 단계를 ${this.formatTime(this.timeSpent)}만에 완주했어요. 💪`;
+            const shareUrl = `${window.location.origin}/education/${this.educationId}`;
+
+            if (navigator.share) {
+                navigator.share({
+                    title: '학습 완료!',
+                    text: shareText,
+                    url: shareUrl
+                }).catch(console.error);
+            } else {
+                // Web Share API를 지원하지 않는 경우 클립보드에 복사
+                const textToCopy = `${shareText}\n${shareUrl}`;
+                navigator.clipboard.writeText(textToCopy).then(() => {
+                    alert('학습 완료 소식이 클립보드에 복사되었습니다!');
+                }).catch(() => {
+                    alert('공유 링크 복사에 실패했습니다.');
+                });
+            }
         },
 
         goToRecommendedCourse() {
@@ -860,35 +773,6 @@ export default {
             } else {
                 return `${minutes}분`;
             }
-        },
-
-        getSimulationImage() {
-            // 시뮬레이션 유형에 따른 이미지 URL 반환
-            const simulationType = this.currentStep ? this.currentStep.simulationType : '';
-
-            // 실제 구현에서는 실제 이미지 경로 사용
-            const images = {
-                'smartphone': '/assets/images/smartphone-simulation.jpg',
-                'kiosk_food': '/assets/images/kiosk-food-simulation.jpg',
-                'kiosk_hospital': '/assets/images/kiosk-hospital-simulation.jpg',
-                'app_call': '/assets/images/call-app-simulation.jpg'
-            };
-
-            return images[simulationType] || '/assets/images/default-simulation.jpg';
-        },
-
-        getSimulationTitle() {
-            // 시뮬레이션 유형에 따른 제목 반환
-            const simulationType = this.currentStep ? this.currentStep.simulationType : '';
-
-            const titles = {
-                'smartphone': '스마트폰 화면 시뮬레이션',
-                'kiosk_food': '음식점 키오스크 시뮬레이션',
-                'kiosk_hospital': '병원 접수 키오스크 시뮬레이션',
-                'app_call': '전화 앱 시뮬레이션'
-            };
-
-            return titles[simulationType] || '학습 시뮬레이션';
         }
     }
 };
