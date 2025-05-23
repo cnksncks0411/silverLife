@@ -156,11 +156,11 @@
                                             </svg>
                                         </div>
                                         <div>
-                                            <p class="font-medium mb-1">
+                                            <p class="font-medium mb-1 highBlack">
                                                 {{ answerSelected === currentStep.quiz.correctAnswer ? '정답입니다!' :
                                                     '틀렸습니다.' }}
                                             </p>
-                                            <p v-if="currentStep.quiz.explanation" class="text-sm">
+                                            <p v-if="currentStep.quiz.explanation" class="text-sm highBlack">
                                                 {{ currentStep.quiz.explanation }}
                                             </p>
                                         </div>

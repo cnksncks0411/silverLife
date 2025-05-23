@@ -81,7 +81,7 @@ export default {
             isLoggedIn: false, // 실제로는 Vuex store에서 가져올 값
             userName: '김시니어', // 실제로는 Vuex store에서 가져올 값
             menuItems: [
-                { label: '디지털 교육', path: '/education' },
+                { label: '교육', path: '/education' },
                 // { label: '키오스크 실습', path: '/kiosk' },
                 { label: '맞춤 식단', path: '/diet' },
                 { label: '인지력 게임', path: '/games' },

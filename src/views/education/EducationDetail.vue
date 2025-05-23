@@ -293,7 +293,7 @@ export default {
             if (navigator.share) {
                 navigator.share({
                     title: this.education.title,
-                    text: '시니어를 위한 디지털 교육 콘텐츠를 공유합니다.',
+                    text: '시니어를 위한 교육 콘텐츠를 공유합니다.',
                     url: window.location.href
                 });
             } else {

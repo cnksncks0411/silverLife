@@ -4,9 +4,9 @@
         <!-- 페이지 헤더 -->
         <div class="page-header bg-primary text-white py-12 px-4">
             <div class="container mx-auto">
-                <h1 class="text-3xl md:text-4xl font-bold mb-4">디지털 교육</h1>
+                <h1 class="text-3xl md:text-4xl font-bold mb-4">교육</h1>
                 <p class="text-xl max-w-3xl">
-                    낯선 디지털 환경이 더 이상 두렵지 않게! 온라인 사기 예방법, 최신 트렌드 이해하기, 손주와의 소통 팁까지 - 지혜로운 시니어의 디지털 라이프를 지원합니다.
+                    낯선 현대 환경이 더 이상 두렵지 않게! 온라인 사기 예방법, 최신 트렌드 이해하기, 손주와의 소통 팁까지 - 지혜로운 시니어의 삶을 지원합니다.
                 </p>
             </div>
         </div>

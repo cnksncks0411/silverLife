@@ -51,7 +51,7 @@ const routes = [
     component: Education,
     meta: {
       // requiresAuth: true,
-      title: "디지털 교육 - 삶은(SilverLife)"
+      title: "교육 - 삶은(SilverLife)"
     },
   },
   {

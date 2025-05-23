@@ -15,9 +15,6 @@
                         <h1 class="text-xl font-bold">{{ isEditMode ? '교육 콘텐츠 수정' : '새 교육 콘텐츠 만들기' }}</h1>
                     </div>
                     <div class="flex items-center space-x-3">
-                        <button @click="saveAsDraft" class="px-4 py-2 border border-gray-300 rounded-lg text-gray-700">
-                            임시저장
-                        </button>
                         <button @click="previewEducation"
                             class="px-4 py-2 border border-primary text-primary rounded-lg">
                             미리보기
@@ -207,15 +204,26 @@
                     <div v-show="activeTab === 'steps'" class="space-y-6">
                         <div class="flex justify-between items-center mb-4">
                             <h2 class="text-xl font-bold">학습 단계 구성</h2>
-                            <button @click="addStep"
-                                class="flex items-center px-4 py-2 bg-primary text-white rounded-lg">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M12 4v16m8-8H4" />
-                                </svg>
-                                단계 추가
-                            </button>
+                            <div class="flex items-center space-x-2">
+                                <button @click="showTemplateModal = true"
+                                    class="flex items-center px-4 py-2 border border-gray-300 text-gray-700 rounded-lg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                    </svg>
+                                    템플릿 사용
+                                </button>
+                                <button @click="addStep"
+                                    class="flex items-center px-4 py-2 bg-primary text-white rounded-lg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 4v16m8-8H4" />
+                                    </svg>
+                                    단계 추가
+                                </button>
+                            </div>
                         </div>
 
                         <div v-if="education.steps.length === 0" class="bg-white rounded-xl shadow-sm p-8 text-center">
@@ -231,9 +239,13 @@
                             </button>
                         </div>
 
-                        <div v-else class="space-y-4">
-                            <div v-for="(step, index) in education.steps" :key="index"
-                                class="bg-white rounded-xl shadow-sm overflow-hidden">
+                        <!-- 드래그 앤 드롭 가능한 단계 목록 -->
+                        <div v-else class="space-y-4" ref="stepsContainer">
+                            <div v-for="(step, index) in education.steps" :key="step.id || index" :data-index="index"
+                                class="bg-white rounded-xl shadow-sm overflow-hidden step-item" draggable="true"
+                                @dragstart="onDragStart($event, index)" @dragover.prevent @drop="onDrop($event, index)"
+                                @dragenter.prevent>
+
                                 <div class="step-header px-6 py-4 bg-gray-50 flex justify-between items-center cursor-pointer"
                                     @click="toggleStep(index)">
                                     <div class="flex items-center">
@@ -368,67 +380,144 @@
                                                         class="form-checkbox h-5 w-5 text-primary rounded">
                                                     <span class="ml-2">이해도 확인 퀴즈 포함</span>
                                                 </label>
-                                                <label class="flex items-center cursor-pointer">
-                                                    <input type="checkbox" v-model="step.hasSimulation"
-                                                        class="form-checkbox h-5 w-5 text-primary rounded">
-                                                    <span class="ml-2">실습 시뮬레이션 포함</span>
-                                                </label>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <!-- 학습 내용 섹션 -->
+                                    <!-- 학습 내용 섹션 - 시각적 에디터 -->
                                     <div v-if="step.hasContent" class="content-section mb-8">
                                         <h4 class="font-medium text-gray-700 mb-3 pb-2 border-b border-gray-200">학습 내용
                                         </h4>
 
-                                        <div class="content-editor">
-                                            <div class="mb-4">
-                                                <div class="flex justify-between items-center mb-2">
-                                                    <label class="text-gray-700">에디터</label>
-                                                    <div class="editor-toolbar flex space-x-1">
-                                                        <button v-for="(tool, toolIndex) in editorTools"
-                                                            :key="toolIndex"
-                                                            @click="applyEditorTool(index, tool.action)"
-                                                            class="p-1.5 border rounded hover:bg-gray-100 text-gray-700"
-                                                            :title="tool.title">
-                                                            <span v-html="tool.icon"></span>
+                                        <!-- 콘텐츠 템플릿 버튼 -->
+                                        <div class="content-templates mb-4">
+                                            <div class="flex items-center space-x-2 mb-3">
+                                                <span class="text-sm font-medium text-gray-700">콘텐츠 템플릿:</span>
+                                                <button v-for="(template, tempIndex) in contentTemplates"
+                                                    :key="tempIndex" @click="insertContentTemplate(index, template)"
+                                                    class="px-3 py-1 text-xs border border-gray-300 rounded text-gray-700 hover:bg-gray-50">
+                                                    {{ template.name }}
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <!-- 시각적 콘텐츠 에디터 -->
+                                        <div class="visual-editor border border-gray-300 rounded-lg">
+                                            <!-- 툴바 -->
+                                            <div
+                                                class="editor-toolbar flex items-center space-x-2 p-3 bg-gray-50 border-b border-gray-300">
+                                                <button @click="addContentBlock(step, 'heading')"
+                                                    class="toolbar-btn px-3 py-1 text-sm border border-gray-300 rounded hover:bg-white">
+                                                    <strong>H</strong> 제목
+                                                </button>
+                                                <button @click="addContentBlock(step, 'paragraph')"
+                                                    class="toolbar-btn px-3 py-1 text-sm border border-gray-300 rounded hover:bg-white">
+                                                    P 문단
+                                                </button>
+                                                <button @click="addContentBlock(step, 'list')"
+                                                    class="toolbar-btn px-3 py-1 text-sm border border-gray-300 rounded hover:bg-white">
+                                                    • 목록
+                                                </button>
+                                                <button @click="addContentBlock(step, 'tip')"
+                                                    class="toolbar-btn px-3 py-1 text-sm border border-gray-300 rounded hover:bg-white text-blue-600">
+                                                    💡 팁
+                                                </button>
+                                                <button @click="addContentBlock(step, 'warning')"
+                                                    class="toolbar-btn px-3 py-1 text-sm border border-gray-300 rounded hover:bg-white text-yellow-600">
+                                                    ⚠️ 주의
+                                                </button>
+                                            </div>
+
+                                            <!-- 콘텐츠 블록 영역 -->
+                                            <div class="content-blocks p-4 min-h-48 bg-white">
+                                                <div v-if="!step.contentBlocks || step.contentBlocks.length === 0"
+                                                    class="text-center py-8 text-gray-500">
+                                                    <p>상단 툴바에서 콘텐츠 블록을 추가해보세요.</p>
+                                                </div>
+
+                                                <div v-for="(block, blockIndex) in step.contentBlocks"
+                                                    :key="block.id || blockIndex"
+                                                    class="content-block mb-4 p-3 border border-gray-200 rounded group hover:border-primary">
+
+                                                    <!-- 블록 컨트롤 버튼 -->
+                                                    <div
+                                                        class="block-controls flex justify-end space-x-2 mb-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                                        <button @click="moveContentBlockUp(step, blockIndex)"
+                                                            :disabled="blockIndex === 0"
+                                                            class="text-xs text-gray-500 hover:text-primary disabled:opacity-30">
+                                                            ↑
+                                                        </button>
+                                                        <button @click="moveContentBlockDown(step, blockIndex)"
+                                                            :disabled="blockIndex === step.contentBlocks.length - 1"
+                                                            class="text-xs text-gray-500 hover:text-primary disabled:opacity-30">
+                                                            ↓
+                                                        </button>
+                                                        <button @click="removeContentBlock(step, blockIndex)"
+                                                            class="text-xs text-red-500 hover:text-red-700">
+                                                            삭제
                                                         </button>
                                                     </div>
-                                                </div>
-                                                <textarea :id="`step-content-${index}`" v-model="step.content" rows="10"
-                                                    class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
-                                                    placeholder="HTML 형식으로 학습 내용을 작성할 수 있습니다. 시니어 학습자가 이해하기 쉽도록 명확하고 간결하게 작성해주세요."></textarea>
-                                            </div>
 
-                                            <div class="content-templates mb-3">
-                                                <h5 class="text-sm font-medium text-gray-700 mb-2">콘텐츠 템플릿</h5>
-                                                <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
-                                                    <button v-for="(template, tempIndex) in contentTemplates"
-                                                        :key="tempIndex"
-                                                        @click="insertContentTemplate(index, template.code)"
-                                                        class="px-3 py-2 border border-gray-300 rounded text-sm text-left hover:bg-gray-50">
-                                                        {{ template.name }}
-                                                    </button>
-                                                </div>
-                                            </div>
+                                                    <!-- 제목 블록 -->
+                                                    <div v-if="block.type === 'heading'">
+                                                        <input v-model="block.content" type="text"
+                                                            class="w-full text-xl font-bold border-none outline-none focus:bg-yellow-50 p-2 rounded"
+                                                            placeholder="제목을 입력하세요">
+                                                    </div>
 
-                                            <div class="content-preview bg-gray-50 p-4 rounded-lg">
-                                                <div class="flex justify-between items-center mb-2">
-                                                    <h5 class="text-sm font-medium text-gray-700">미리보기</h5>
-                                                    <button @click="refreshContentPreview(index)"
-                                                        class="text-primary text-sm hover:underline flex items-center">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1"
-                                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                                stroke-width="2"
-                                                                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                                                        </svg>
-                                                        새로고침
-                                                    </button>
+                                                    <!-- 문단 블록 -->
+                                                    <div v-else-if="block.type === 'paragraph'">
+                                                        <textarea v-model="block.content" rows="3"
+                                                            class="w-full text-lg border-none outline-none focus:bg-yellow-50 p-2 rounded resize-none"
+                                                            placeholder="문단 내용을 입력하세요"></textarea>
+                                                    </div>
+
+                                                    <!-- 목록 블록 -->
+                                                    <div v-else-if="block.type === 'list'">
+                                                        <div class="list-items space-y-2">
+                                                            <div v-for="(item, itemIndex) in block.items"
+                                                                :key="itemIndex" class="flex items-center space-x-2">
+                                                                <span class="text-gray-400">•</span>
+                                                                <input v-model="block.items[itemIndex]" type="text"
+                                                                    class="flex-1 border-none outline-none focus:bg-yellow-50 p-1 rounded"
+                                                                    placeholder="목록 항목을 입력하세요">
+                                                                <button @click="removeListItem(block, itemIndex)"
+                                                                    v-if="block.items.length > 1"
+                                                                    class="text-red-500 hover:text-red-700 text-sm">
+                                                                    ×
+                                                                </button>
+                                                            </div>
+                                                            <button @click="addListItem(block)"
+                                                                class="text-primary hover:text-primary-dark text-sm">
+                                                                + 항목 추가
+                                                            </button>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- 팁 블록 -->
+                                                    <div v-else-if="block.type === 'tip'"
+                                                        class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">
+                                                        <div class="flex items-center mb-2">
+                                                            <span class="text-blue-500 mr-2">💡</span>
+                                                            <span class="font-bold text-blue-700">유용한 팁</span>
+                                                        </div>
+                                                        <textarea v-model="block.content" rows="2"
+                                                            class="w-full border-none outline-none bg-transparent focus:bg-white p-2 rounded resize-none"
+                                                            placeholder="팁 내용을 입력하세요"></textarea>
+                                                    </div>
+
+                                                    <!-- 주의사항 블록 -->
+                                                    <div v-else-if="block.type === 'warning'"
+                                                        class="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400">
+                                                        <div class="flex items-center mb-2">
+                                                            <span class="text-yellow-500 mr-2">⚠️</span>
+                                                            <span class="font-bold text-yellow-700">주의하세요!</span>
+                                                        </div>
+                                                        <textarea v-model="block.content" rows="2"
+                                                            class="w-full border-none outline-none bg-transparent focus:bg-white p-2 rounded resize-none"
+                                                            placeholder="주의사항을 입력하세요"></textarea>
+                                                    </div>
                                                 </div>
-                                                <div class="preview-content p-3 bg-white border rounded-lg min-h-[100px]"
-                                                    v-html="getContentPreview(index)"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -496,41 +585,6 @@
                                                 v-model="getOrCreateQuiz(index).explanation" rows="2"
                                                 class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                                                 placeholder="정답을 설명해주세요. 학습자가 오답을 선택했을 때 도움이 되는 설명을 작성하면 좋습니다."></textarea>
-                                        </div>
-                                    </div>
-
-                                    <!-- 실습 시뮬레이션 섹션 -->
-                                    <div v-if="step.hasSimulation" class="simulation-section">
-                                        <h4 class="font-medium text-gray-700 mb-3 pb-2 border-b border-gray-200">실습
-                                            시뮬레이션</h4>
-
-                                        <div class="simulation-selector mb-4">
-                                            <label class="block text-gray-700 font-medium mb-2">시뮬레이션 유형</label>
-                                            <select v-model="step.simulationType"
-                                                class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
-                                                <option value="" disabled>시뮬레이션 유형 선택</option>
-                                                <option value="smartphone">스마트폰 기본 조작</option>
-                                                <option value="kiosk_food">음식점 키오스크</option>
-                                                <option value="kiosk_hospital">병원 접수 키오스크</option>
-                                                <option value="kiosk_transport">교통 키오스크</option>
-                                                <option value="app_messenger">메신저 앱</option>
-                                                <option value="app_banking">모바일 뱅킹</option>
-                                                <option value="app_map">지도 앱</option>
-                                            </select>
-                                        </div>
-
-                                        <div class="simulation-note bg-yellow-50 p-4 rounded-lg text-sm">
-                                            <p class="flex items-start">
-                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                    class="h-5 w-5 mr-2 text-yellow-500 flex-shrink-0 mt-0.5"
-                                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2"
-                                                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                                </svg>
-                                                <span>실습 시뮬레이션을 추가하려면 개발팀과 협의가 필요합니다. 시뮬레이션 유형을 선택하고 저장하면 개발팀에서 검토 후
-                                                    시뮬레이션을 구현합니다.</span>
-                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -627,15 +681,35 @@
                     <button @click="cancelEdit" class="px-4 py-2 border border-gray-300 rounded-lg text-gray-700">
                         취소
                     </button>
-                    <button @click="saveAsDraft" class="px-4 py-2 border border-primary text-primary rounded-lg">
-                        임시저장
-                    </button>
                     <button @click="publishEducation" class="px-4 py-2 bg-primary text-white rounded-lg">
                         {{ isEditMode ? '수정완료' : '출시하기' }}
                     </button>
                 </div>
             </div>
         </footer>
+
+        <!-- 템플릿 선택 모달 -->
+        <div v-if="showTemplateModal" class="template-modal fixed inset-0 z-50 flex items-center justify-center">
+            <div class="modal-overlay absolute inset-0 bg-black bg-opacity-50" @click="showTemplateModal = false"></div>
+            <div
+                class="modal-content bg-white rounded-xl shadow-xl w-full max-w-2xl mx-4 relative z-10 max-h-96 overflow-y-auto">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-4">단계 템플릿 선택</h3>
+                    <div class="templates-grid grid grid-cols-1 gap-4">
+                        <div v-for="template in stepTemplates" :key="template.id" @click="applyTemplate(template)"
+                            class="template-card p-4 border border-gray-200 rounded-lg hover:border-primary cursor-pointer transition-all">
+                            <h4 class="font-bold mb-2">{{ template.title }}</h4>
+                            <p class="text-gray-600 text-sm">{{ template.description }}</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-end mt-6">
+                        <button @click="showTemplateModal = false" class="btn btn-outline">
+                            취소
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- 미리보기 모달 -->
         <div v-if="showPreviewModal" class="preview-modal fixed inset-0 z-50 overflow-auto">
@@ -665,9 +739,36 @@
                                         class="w-full rounded-lg max-h-64 object-contain">
                                 </div>
 
-                                <div v-if="currentPreviewStep.hasContent" class="content-preview mb-6">
+                                <div v-if="currentPreviewStep.hasContent && currentPreviewStep.contentBlocks"
+                                    class="content-preview mb-6">
                                     <h5 class="text-lg font-medium mb-3">학습 내용</h5>
-                                    <div class="bg-white p-4 border rounded-lg" v-html="currentPreviewStep.content">
+                                    <div class="bg-white p-4 border rounded-lg">
+                                        <div v-for="block in currentPreviewStep.contentBlocks" :key="block.id"
+                                            class="mb-4">
+                                            <h4 v-if="block.type === 'heading'" class="font-bold text-xl mb-2">{{
+                                                block.content }}</h4>
+                                            <p v-else-if="block.type === 'paragraph'" class="mb-2">{{ block.content }}
+                                            </p>
+                                            <ul v-else-if="block.type === 'list'" class="list-disc pl-5 mb-2">
+                                                <li v-for="item in block.items" :key="item">{{ item }}</li>
+                                            </ul>
+                                            <div v-else-if="block.type === 'tip'"
+                                                class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400 mb-2">
+                                                <div class="flex items-center mb-2">
+                                                    <span class="text-blue-500 mr-2">💡</span>
+                                                    <span class="font-bold text-blue-700">유용한 팁</span>
+                                                </div>
+                                                <p>{{ block.content }}</p>
+                                            </div>
+                                            <div v-else-if="block.type === 'warning'"
+                                                class="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400 mb-2">
+                                                <div class="flex items-center mb-2">
+                                                    <span class="text-yellow-500 mr-2">⚠️</span>
+                                                    <span class="font-bold text-yellow-700">주의하세요!</span>
+                                                </div>
+                                                <p>{{ block.content }}</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -687,15 +788,6 @@
                                                 {{ option }}
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-
-                                <div v-if="currentPreviewStep.hasSimulation" class="simulation-preview">
-                                    <h5 class="text-lg font-medium mb-3">실습 시뮬레이션</h5>
-                                    <div class="bg-gray-100 p-4 border rounded-lg text-center">
-                                        <p>실습 시뮬레이션 유형: {{ getSimulationTypeName(currentPreviewStep.simulationType) }}
-                                        </p>
-                                        <p class="text-sm text-gray-500 mt-2">실제 출시 시 시뮬레이션 화면이 표시됩니다.</p>
                                     </div>
                                 </div>
                             </div>
@@ -757,6 +849,9 @@ export default {
         return {
             isEditMode: false,
             activeTab: 'basic',
+            draggedIndex: null,
+            nextStepId: 1,
+            nextBlockId: 1,
             education: {
                 title: '',
                 description: '',
@@ -776,64 +871,94 @@ export default {
             relatedEducationItems: [],
             lastSavedTime: '저장되지 않음',
             showPreviewModal: false,
+            showTemplateModal: false,
             currentPreviewStep: null,
             tabs: [
                 { id: 'basic', name: '기본 정보' },
                 { id: 'steps', name: '학습 단계' },
                 { id: 'related', name: '관련 콘텐츠' }
             ],
-            editorTools: [
-                {
-                    title: '제목 추가',
-                    icon: '<span class="font-bold">H</span>',
-                    action: 'heading'
-                },
-                {
-                    title: '강조 텍스트',
-                    icon: '<span class="font-bold">B</span>',
-                    action: 'bold'
-                },
-                {
-                    title: '목록 추가',
-                    icon: '<span class="font-bold">•</span>',
-                    action: 'list'
-                },
-                {
-                    title: '이미지 추가',
-                    icon: '<span class="font-bold">🖼️</span>',
-                    action: 'image'
-                }
-            ],
             contentTemplates: [
                 {
-                    name: '기본 학습 콘텐츠',
-                    code: `<div class="content-block mb-6">
-  <h4 class="font-bold text-xl mb-2">제목을 입력하세요</h4>
-  <p>내용을 입력하세요.</p>
-</div>`
+                    name: '기본 설명',
+                    contentBlocks: [
+                        { type: 'heading', content: '기능 소개' },
+                        { type: 'paragraph', content: '이 기능은 무엇인지, 왜 필요한지에 대해 설명합니다.' }
+                    ]
                 },
                 {
-                    name: '단계별 설명',
-                    code: `<div class="content-block mb-6">
-  <h4 class="font-bold text-xl mb-2">순서대로 따라해보세요</h4>
-  <p>1. 첫 번째 단계</p>
-  <p>2. 두 번째 단계</p>
-  <p>3. 세 번째 단계</p>
-</div>`
+                    name: '단계별 가이드',
+                    contentBlocks: [
+                        { type: 'heading', content: '단계별 진행 방법' },
+                        { type: 'list', items: ['1단계: 준비하기', '2단계: 실행하기', '3단계: 완료하기'] }
+                    ]
                 },
                 {
-                    name: '주의사항 박스',
-                    code: `<div class="content-block mb-6 p-4 bg-yellow-50 rounded-lg border-l-4 border-yellow-400">
-  <h4 class="font-bold text-xl mb-2">주의하세요!</h4>
-  <p>주의사항 내용을 입력하세요.</p>
-</div>`
+                    name: '주의사항',
+                    contentBlocks: [
+                        { type: 'warning', content: '이 기능을 사용할 때 주의해야 할 점들을 확인하세요.' },
+                        { type: 'tip', content: '더 쉽게 사용할 수 있는 유용한 팁을 알려드립니다.' }
+                    ]
+                }
+            ],
+            stepTemplates: [
+                {
+                    id: 'basic_intro',
+                    title: '기본 소개 템플릿',
+                    description: '새로운 기능이나 앱을 처음 소개할 때 사용하는 템플릿',
+                    step: {
+                        title: '',
+                        description: '',
+                        durationMinutes: 5,
+                        imageUrl: '',
+                        hasContent: true,
+                        hasQuiz: true,
+                        contentBlocks: [
+                            { type: 'heading', content: '기능 소개' },
+                            { type: 'paragraph', content: '이 기능은 무엇인지, 왜 필요한지에 대해 설명합니다.' },
+                            { type: 'heading', content: '사용 방법' },
+                            { type: 'list', items: ['1단계: 앱을 실행합니다', '2단계: 원하는 메뉴를 선택합니다', '3단계: 기능을 실행합니다'] }
+                        ]
+                    }
                 },
                 {
-                    name: '팁 박스',
-                    code: `<div class="content-block mb-6 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-400">
-  <h4 class="font-bold text-xl mb-2">유용한 팁</h4>
-  <p>팁 내용을 입력하세요.</p>
-</div>`
+                    id: 'step_by_step',
+                    title: '단계별 가이드 템플릿',
+                    description: '복잡한 과정을 순서대로 설명할 때 사용하는 템플릿',
+                    step: {
+                        title: '',
+                        description: '',
+                        durationMinutes: 10,
+                        imageUrl: '',
+                        hasContent: true,
+                        hasQuiz: false,
+                        contentBlocks: [
+                            { type: 'heading', content: '준비하기' },
+                            { type: 'paragraph', content: '시작하기 전에 필요한 준비사항을 확인해보세요.' },
+                            { type: 'heading', content: '실행하기' },
+                            { type: 'list', items: ['첫 번째 단계', '두 번째 단계', '세 번째 단계'] },
+                            { type: 'tip', content: '더 쉽게 진행할 수 있는 유용한 팁입니다.' }
+                        ]
+                    }
+                },
+                {
+                    id: 'safety_guide',
+                    title: '안전 가이드 템플릿',
+                    description: '보안이나 안전에 관련된 내용을 설명할 때 사용하는 템플릿',
+                    step: {
+                        title: '',
+                        description: '',
+                        durationMinutes: 8,
+                        imageUrl: '',
+                        hasContent: true,
+                        hasQuiz: true,
+                        contentBlocks: [
+                            { type: 'warning', content: '이 기능을 사용할 때 주의해야 할 점들을 알아보세요.' },
+                            { type: 'heading', content: '안전한 사용법' },
+                            { type: 'list', items: ['개인정보를 입력할 때는 주변을 확인하세요', '의심스러운 메시지는 클릭하지 마세요', '정기적으로 비밀번호를 변경하세요'] },
+                            { type: 'tip', content: '문제가 발생했을 때는 즉시 해당 기관에 문의하세요.' }
+                        ]
+                    }
                 }
             ]
         }
@@ -856,7 +981,6 @@ export default {
             this.isEditMode = true;
             this.fetchEducationData();
         } else {
-            // 새 교육 콘텐츠 생성 시 기본 목표와 빈 학습 단계 초기화
             this.addGoal();
         }
     },
@@ -864,123 +988,51 @@ export default {
         fetchEducationData() {
             // 실제 구현에서는 API 호출
             setTimeout(() => {
-                // 더미 데이터
+                // 더미 데이터 (편집 모드용)
                 this.education = {
                     id: parseInt(this.id),
                     title: '스마트폰 기본 사용법',
-                    description: '스마트폰의 기본적인 사용법을 초보자도 쉽게 배울 수 있는 교육 내용입니다. 전원 켜고 끄기, 화면 잠금 해제, 앱 실행 방법 등을 다룹니다.',
+                    description: '스마트폰의 기본적인 사용법을 초보자도 쉽게 배울 수 있는 교육 내용입니다.',
                     categoryId: 'smartphone',
                     level: 'beginner',
                     duration: '약 30분',
                     thumbnail: '',
                     learningGoals: [
                         '스마트폰 전원 켜고 끄는 방법을 익힐 수 있다',
-                        '화면 잠금을 해제하는 방법을 알 수 있다',
-                        '앱을 실행하고 종료하는 방법을 배울 수 있다'
+                        '화면 잠금을 해제하는 방법을 알 수 있다'
                     ],
                     steps: [
                         {
+                            id: 1,
                             title: '스마트폰 켜고 끄기',
                             description: '스마트폰의 전원 버튼 위치와 전원을 켜고 끄는 방법을 배웁니다.',
                             durationMinutes: 5,
                             imageUrl: '',
                             hasContent: true,
                             hasQuiz: true,
-                            hasSimulation: false,
-                            content: `<div class="content-block mb-6">
-  <h4 class="font-bold text-xl mb-2">전원 버튼 찾기</h4>
-  <p>대부분의 스마트폰은 오른쪽 측면이나 상단에 전원 버튼이 있습니다. 길쭉한 직사각형 모양의 버튼입니다.</p>
-</div>
-<div class="content-block mb-6">
-  <h4 class="font-bold text-xl mb-2">전원 켜기</h4>
-  <p>전원 버튼을 2~3초간 길게 누르면 화면에 로고가 나타나며 전원이 켜집니다.</p>
-</div>
-<div class="content-block mb-6">
-  <h4 class="font-bold text-xl mb-2">전원 끄기</h4>
-  <p>1. 전원 버튼을 2~3초간 길게 누릅니다.</p>
-  <p>2. 화면에 '전원 끄기' 옵션이 나타납니다.</p>
-  <p>3. '전원 끄기'를 터치하면 스마트폰이 꺼집니다.</p>
-</div>`,
+                            contentBlocks: [
+                                { id: 1, type: 'heading', content: '전원 버튼 찾기' },
+                                { id: 2, type: 'paragraph', content: '대부분의 스마트폰은 오른쪽 측면이나 상단에 전원 버튼이 있습니다.' },
+                                { id: 3, type: 'tip', content: '전원 버튼은 보통 가장 큰 버튼입니다.' }
+                            ],
                             quiz: {
                                 question: '스마트폰을 켜려면 전원 버튼을 어떻게 눌러야 할까요?',
-                                options: [
-                                    '빠르게 여러 번 누른다',
-                                    '2~3초간 길게 누른다',
-                                    '두 번 연속 누른다',
-                                    '볼륨 버튼과 함께 누른다'
-                                ],
+                                options: ['빠르게 여러 번 누른다', '2~3초간 길게 누른다', '두 번 연속 누른다', '볼륨 버튼과 함께 누른다'],
                                 correctAnswer: 1,
                                 explanation: '스마트폰을 켜려면 전원 버튼을 2~3초간 길게 눌러야 합니다.'
                             }
-                        },
-                        {
-                            title: '화면 잠금 해제하기',
-                            description: '스마트폰 화면 잠금을 해제하는 다양한 방법을 배웁니다.',
-                            durationMinutes: 8,
-                            imageUrl: '',
-                            hasContent: true,
-                            hasQuiz: true,
-                            hasSimulation: true,
-                            simulationType: 'smartphone',
-                            content: `<div class="content-block mb-6">
-  <h4 class="font-bold text-xl mb-2">화면 깨우기</h4>
-  <p>전원 버튼을 짧게 누르면 화면이 켜집니다. 일부 스마트폰은 화면을 두 번 탭하면 켜지기도 합니다.</p>
-</div>
-<div class="content-block mb-6">
-  <h4 class="font-bold text-xl mb-2">잠금 해제 방법</h4>
-  <p><strong>패턴:</strong> 미리 설정한 패턴대로 점들을 연결합니다.</p>
-  <p><strong>PIN:</strong> 숫자 비밀번호를 입력합니다.</p>
-  <p><strong>지문:</strong> 지문 인식 센서에 등록된 손가락을 올립니다.</p>
-  <p><strong>얼굴 인식:</strong> 전면 카메라가 얼굴을 인식할 수 있도록 합니다.</p>
-</div>`,
-                            quiz: {
-                                question: '화면 잠금을 해제하는 방법이 아닌 것은?',
-                                options: [
-                                    '패턴 그리기',
-                                    'PIN 번호 입력',
-                                    '지문 인식',
-                                    '음성 명령'
-                                ],
-                                correctAnswer: 3,
-                                explanation: '일반적으로 화면 잠금 해제는 패턴, PIN, 지문, 얼굴 인식 등을 사용합니다. 음성 명령은 일반적인 잠금 해제 방법이 아닙니다.'
-                            }
                         }
                     ],
-                    relatedIds: [2, 3]
+                    relatedIds: []
                 };
 
-                // durationMinutes 초기화
                 this.durationMinutes = parseInt(this.education.duration.replace(/[^0-9]/g, '')) || 30;
-
-                // 썸네일 미리보기 설정
                 this.thumbnailPreview = this.education.thumbnail;
 
-                // 단계별 접힘 상태 초기화 (첫 번째 단계는 열고 나머지는 닫음)
-                const newOpenedSteps = {};
-                this.education.steps.forEach((_, index) => {
-                    newOpenedSteps[index] = index === 0;
-                });
-                this.openedSteps = newOpenedSteps;
-
-                // 더미 관련 교육 데이터
-                this.relatedEducationItems = [
-                    {
-                        id: 2,
-                        title: '카카오톡 사용하기',
-                        categoryId: 'messenger',
-                        level: 'beginner',
-                        thumbnail: '',
-                        duration: '약 40분'
-                    },
-                    {
-                        id: 3,
-                        title: '유튜브로 영상 즐기기',
-                        categoryId: 'internet',
-                        level: 'beginner',
-                        thumbnail: '',
-                        duration: '약 25분'
-                    }
-                ];
+                // 첫 번째 단계만 열어둠
+                this.openedSteps = { 0: true };
+                this.nextStepId = this.education.steps.length + 1;
+                this.nextBlockId = 10; // 임의의 시작값
 
                 this.lastSavedTime = '2023-08-15 14:30:45';
             }, 500);
@@ -990,23 +1042,25 @@ export default {
         openFilePicker() {
             this.$refs.thumbnailInput.click();
         },
+
         handleThumbnailUpload(event) {
             const file = event.target.files[0];
             if (file) {
-                // 실제 구현에서는 파일 업로드 API 호출
                 const reader = new FileReader();
                 reader.onload = (e) => {
                     this.thumbnailPreview = e.target.result;
-                    this.education.thumbnail = e.target.result; // 실제 구현에서는 업로드된 URL로 변경
+                    this.education.thumbnail = e.target.result;
                 };
                 reader.readAsDataURL(file);
             }
         },
+
         addGoal() {
             if (this.education.learningGoals.length < 4) {
                 this.education.learningGoals.push('');
             }
         },
+
         removeGoal(index) {
             if (this.education.learningGoals.length > 1) {
                 this.education.learningGoals.splice(index, 1);
@@ -1016,43 +1070,49 @@ export default {
         // 학습 단계 관련 메서드
         addStep() {
             const newStep = {
+                id: this.nextStepId++,
                 title: '',
                 description: '',
                 durationMinutes: 5,
                 imageUrl: '',
                 hasContent: true,
                 hasQuiz: false,
-                hasSimulation: false,
-                content: '',
-                simulationType: ''
+                contentBlocks: []
             };
 
-            // 단계 추가
             this.education.steps.push(newStep);
             const newIndex = this.education.steps.length - 1;
-
-            // Vue 2와 Vue 3 모두에서 동작하는 방식으로 반응형 데이터 업데이트
-            // 방법 1: Object.assign을 사용한 전체 객체 갱신
-            this.openedSteps = Object.assign({}, this.openedSteps, { [newIndex]: true });
-
-            // 또는 방법 2: 스프레드 연산자 사용
-            // this.openedSteps = { ...this.openedSteps, [newIndex]: true };
-
-            // 새 단계가 추가되면 자동으로 학습 단계 탭으로 전환
+            this.openedSteps = { ...this.openedSteps, [newIndex]: true };
             this.activeTab = 'steps';
         },
+
+        applyTemplate(template) {
+            const newStep = {
+                id: this.nextStepId++,
+                ...JSON.parse(JSON.stringify(template.step)),
+                contentBlocks: template.step.contentBlocks.map(block => ({
+                    ...block,
+                    id: this.nextBlockId++
+                }))
+            };
+
+            this.education.steps.push(newStep);
+            const newIndex = this.education.steps.length - 1;
+            this.openedSteps = { ...this.openedSteps, [newIndex]: true };
+            this.showTemplateModal = false;
+            this.activeTab = 'steps';
+        },
+
         toggleStep(index) {
-            // Vue 2와 Vue 3 모두에서 동작하는 방식으로 반응형 데이터 업데이트
             this.openedSteps = {
                 ...this.openedSteps,
                 [index]: !this.openedSteps[index]
             };
         },
+
         removeStep(index) {
             if (confirm('이 학습 단계를 삭제하시겠습니까?')) {
                 this.education.steps.splice(index, 1);
-
-                // 단계 삭제 후 openedSteps 객체 정리
                 const newOpenedSteps = {};
                 this.education.steps.forEach((_, i) => {
                     newOpenedSteps[i] = this.openedSteps[i < index ? i : i + 1] || false;
@@ -1060,37 +1120,44 @@ export default {
                 this.openedSteps = newOpenedSteps;
             }
         },
+
         duplicateStep(index) {
             const originalStep = this.education.steps[index];
             const duplicatedStep = JSON.parse(JSON.stringify(originalStep));
+            duplicatedStep.id = this.nextStepId++;
             duplicatedStep.title = `${duplicatedStep.title} (복사본)`;
 
-            // 복제된 단계를 원본 바로 다음에 삽입
+            if (duplicatedStep.contentBlocks) {
+                duplicatedStep.contentBlocks = duplicatedStep.contentBlocks.map(block => ({
+                    ...block,
+                    id: this.nextBlockId++
+                }));
+            }
+
             this.education.steps.splice(index + 1, 0, duplicatedStep);
 
-            // openedSteps 업데이트
             const newOpenedSteps = {};
             this.education.steps.forEach((_, i) => {
                 if (i <= index) {
                     newOpenedSteps[i] = this.openedSteps[i];
                 } else if (i === index + 1) {
-                    newOpenedSteps[i] = true; // 복제된 단계는 열어둠
+                    newOpenedSteps[i] = true;
                 } else {
                     newOpenedSteps[i] = this.openedSteps[i - 1] || false;
                 }
             });
             this.openedSteps = newOpenedSteps;
         },
+
         openStepImagePicker(index) {
             this.$refs[`stepImageInput-${index}`][0].click();
         },
+
         handleStepImageUpload(event, index) {
             const file = event.target.files[0];
             if (file) {
-                // 실제 구현에서는 파일 업로드 API 호출
                 const reader = new FileReader();
                 reader.onload = (e) => {
-                    // 객체 속성 업데이트 방식으로 변경
                     const updatedSteps = [...this.education.steps];
                     updatedSteps[index] = {
                         ...updatedSteps[index],
@@ -1102,90 +1169,96 @@ export default {
             }
         },
 
-        // 콘텐츠 에디터 관련 메서드
-        applyEditorTool(stepIndex, action) {
-            const textArea = document.getElementById(`step-content-${stepIndex}`);
-            const start = textArea.selectionStart;
-            const end = textArea.selectionEnd;
-            const text = this.education.steps[stepIndex].content;
-            let newText = '';
+        // 드래그 앤 드롭 메서드
+        onDragStart(event, index) {
+            this.draggedIndex = index;
+            event.dataTransfer.effectAllowed = 'move';
+        },
 
-            switch (action) {
-                case 'heading':
-                    newText = text.substring(0, start) +
-                        '<h4 class="font-bold text-xl mb-2">제목을 입력하세요</h4>' +
-                        text.substring(end);
-                    break;
-                case 'bold':
-                    if (start !== end) {
-                        // 선택된 텍스트가 있으면 그것을 강조
-                        newText = text.substring(0, start) +
-                            `<strong>${text.substring(start, end)}</strong>` +
-                            text.substring(end);
-                    } else {
-                        // 선택된 텍스트가 없으면 플레이스홀더 추가
-                        newText = text.substring(0, start) +
-                            '<strong>강조할 텍스트</strong>' +
-                            text.substring(end);
-                    }
-                    break;
-                case 'list':
-                    newText = text.substring(0, start) +
-                        '<ul class="list-disc pl-5 mb-4">\n  <li>항목 1</li>\n  <li>항목 2</li>\n  <li>항목 3</li>\n</ul>' +
-                        text.substring(end);
-                    break;
-                case 'image':
-                    newText = text.substring(0, start) +
-                        '<div class="image-container mb-4">\n  <img src="" alt="이미지 설명" class="w-full rounded-lg">\n</div>' +
-                        text.substring(end);
-                    break;
-                default:
-                    newText = text;
+        onDrop(event, dropIndex) {
+            event.preventDefault();
+
+            if (this.draggedIndex !== null && this.draggedIndex !== dropIndex) {
+                const draggedStep = this.education.steps[this.draggedIndex];
+
+                this.education.steps.splice(this.draggedIndex, 1);
+                const adjustedDropIndex = this.draggedIndex < dropIndex ? dropIndex - 1 : dropIndex;
+                this.education.steps.splice(adjustedDropIndex, 0, draggedStep);
+
+                // openedSteps 재정렬
+                const newOpenedSteps = {};
+                this.education.steps.forEach((_, i) => {
+                    const originalIndex = i === adjustedDropIndex ? this.draggedIndex :
+                        (i < adjustedDropIndex ? i : i + 1);
+                    newOpenedSteps[i] = this.openedSteps[originalIndex] || false;
+                });
+                this.openedSteps = newOpenedSteps;
             }
 
-            // 객체 속성 업데이트 방식으로 변경
-            const updatedSteps = [...this.education.steps];
-            updatedSteps[stepIndex] = {
-                ...updatedSteps[stepIndex],
-                content: newText
-            };
-            this.education.steps = updatedSteps;
+            this.draggedIndex = null;
+        },
 
-            // 에디터 포커스 유지
-            this.$nextTick(() => {
-                textArea.focus();
-            });
-        },
-        insertContentTemplate(stepIndex, templateCode) {
-            const currentContent = this.education.steps[stepIndex].content;
-            const newContent = currentContent ? `${currentContent}\n${templateCode}` : templateCode;
+        // 콘텐츠 블록 관리
+        addContentBlock(step, type) {
+            if (!step.contentBlocks) {
+                step.contentBlocks = [];
+            }
 
-            // 객체 속성 업데이트 방식으로 변경
-            const updatedSteps = [...this.education.steps];
-            updatedSteps[stepIndex] = {
-                ...updatedSteps[stepIndex],
-                content: newContent
+            const newBlock = {
+                id: this.nextBlockId++,
+                type: type,
+                content: '',
+                items: type === 'list' ? [''] : undefined
             };
-            this.education.steps = updatedSteps;
+
+            step.contentBlocks.push(newBlock);
         },
-        getContentPreview(stepIndex) {
-            return this.education.steps[stepIndex].content || '<p class="text-gray-400">내용이 없습니다. 왼쪽 에디터에 내용을 입력해주세요.</p>';
+
+        insertContentTemplate(stepIndex, template) {
+            const step = this.education.steps[stepIndex];
+            if (!step.contentBlocks) {
+                step.contentBlocks = [];
+            }
+
+            const newBlocks = template.contentBlocks.map(block => ({
+                ...block,
+                id: this.nextBlockId++
+            }));
+
+            step.contentBlocks.push(...newBlocks);
         },
-        refreshContentPreview(stepIndex) {
-            // 미리보기 새로고침 (실제로는 Vue 반응성으로 자동 갱신되므로 여기서는 시각적 피드백만 제공)
-            const previewElement = document.querySelector(`.preview-content`);
-            if (previewElement) {
-                previewElement.classList.add('bg-blue-50');
-                setTimeout(() => {
-                    previewElement.classList.remove('bg-blue-50');
-                }, 300);
+
+        removeContentBlock(step, blockIndex) {
+            step.contentBlocks.splice(blockIndex, 1);
+        },
+
+        moveContentBlockUp(step, blockIndex) {
+            if (blockIndex > 0) {
+                const block = step.contentBlocks.splice(blockIndex, 1)[0];
+                step.contentBlocks.splice(blockIndex - 1, 0, block);
+            }
+        },
+
+        moveContentBlockDown(step, blockIndex) {
+            if (blockIndex < step.contentBlocks.length - 1) {
+                const block = step.contentBlocks.splice(blockIndex, 1)[0];
+                step.contentBlocks.splice(blockIndex + 1, 0, block);
+            }
+        },
+
+        addListItem(block) {
+            block.items.push('');
+        },
+
+        removeListItem(block, itemIndex) {
+            if (block.items.length > 1) {
+                block.items.splice(itemIndex, 1);
             }
         },
 
         // 퀴즈 관련 메서드
         getOrCreateQuiz(stepIndex) {
             if (!this.education.steps[stepIndex].quiz) {
-                // 객체 속성 업데이트 방식으로 변경
                 const updatedSteps = [...this.education.steps];
                 updatedSteps[stepIndex] = {
                     ...updatedSteps[stepIndex],
@@ -1200,22 +1273,21 @@ export default {
             }
             return this.education.steps[stepIndex].quiz;
         },
+
         addQuizOption(stepIndex) {
             const quiz = this.getOrCreateQuiz(stepIndex);
             if (quiz.options.length < 6) {
                 quiz.options.push('');
             }
         },
+
         removeQuizOption(stepIndex, optionIndex) {
             const quiz = this.getOrCreateQuiz(stepIndex);
             if (quiz.options.length > 2) {
                 quiz.options.splice(optionIndex, 1);
-
-                // 만약 삭제된 옵션이 정답이었다면 정답을 첫 번째 옵션으로 변경
                 if (quiz.correctAnswer === optionIndex) {
                     quiz.correctAnswer = 0;
                 } else if (quiz.correctAnswer > optionIndex) {
-                    // 삭제된 옵션 이후의 정답 인덱스를 조정
                     quiz.correctAnswer--;
                 }
             }
@@ -1225,9 +1297,7 @@ export default {
         searchRelatedEducation() {
             if (!this.relatedSearchKeyword.trim()) return;
 
-            // 실제 구현에서는 API 호출
             setTimeout(() => {
-                // 더미 검색 결과
                 this.relatedSearchResults = [
                     {
                         id: 2,
@@ -1244,35 +1314,20 @@ export default {
                         level: 'beginner',
                         thumbnail: '',
                         duration: '약 25분'
-                    },
-                    {
-                        id: 4,
-                        title: '인터넷 브라우저 사용하기',
-                        categoryId: 'internet',
-                        level: 'beginner',
-                        thumbnail: '',
-                        duration: '약 35분'
-                    },
-                    {
-                        id: 5,
-                        title: '사진 촬영과 관리',
-                        categoryId: 'smartphone',
-                        level: 'intermediate',
-                        thumbnail: '',
-                        duration: '약 45분'
                     }
                 ].filter(item =>
                     item.title.toLowerCase().includes(this.relatedSearchKeyword.toLowerCase())
                 );
             }, 300);
         },
+
         addRelatedEducation(item) {
-            // 이미 추가된 항목인지 확인
             if (!this.education.relatedIds.includes(item.id)) {
                 this.education.relatedIds.push(item.id);
                 this.relatedEducationItems.push(item);
             }
         },
+
         removeRelatedEducation(id) {
             this.education.relatedIds = this.education.relatedIds.filter(itemId => itemId !== id);
             this.relatedEducationItems = this.relatedEducationItems.filter(item => item.id !== id);
@@ -1283,25 +1338,15 @@ export default {
             this.showPreviewModal = true;
             this.currentPreviewStep = null;
         },
+
         previewStep(stepIndex) {
             this.showPreviewModal = true;
             this.currentPreviewStep = this.education.steps[stepIndex];
         },
+
         closePreview() {
             this.showPreviewModal = false;
             this.currentPreviewStep = null;
-        },
-        getSimulationTypeName(type) {
-            const typeNames = {
-                'smartphone': '스마트폰 기본 조작',
-                'kiosk_food': '음식점 키오스크',
-                'kiosk_hospital': '병원 접수 키오스크',
-                'kiosk_transport': '교통 키오스크',
-                'app_messenger': '메신저 앱',
-                'app_banking': '모바일 뱅킹',
-                'app_map': '지도 앱'
-            };
-            return typeNames[type] || type;
         },
 
         // 유틸리티 메서드
@@ -1315,6 +1360,7 @@ export default {
             };
             return categories[categoryId] || '기타';
         },
+
         getLevelName(level) {
             const levels = {
                 'beginner': '초급',
@@ -1326,7 +1372,6 @@ export default {
 
         // 저장 관련 메서드
         validateForm() {
-            // 기본 정보 검증
             if (!this.education.title.trim()) {
                 alert('교육 제목을 입력해주세요.');
                 this.activeTab = 'basic';
@@ -1340,7 +1385,7 @@ export default {
             }
 
             if (this.education.learningGoals.some(goal => !goal.trim())) {
-                alert('비어있는 교육 목표가 있습니다. 내용을 입력하거나 삭제해주세요.');
+                alert('비어있는 교육 목표가 있습니다.');
                 this.activeTab = 'basic';
                 return false;
             }
@@ -1351,7 +1396,6 @@ export default {
                 return false;
             }
 
-            // 단계별 검증
             for (let i = 0; i < this.education.steps.length; i++) {
                 const step = this.education.steps[i];
 
@@ -1369,16 +1413,8 @@ export default {
                     return false;
                 }
 
-                if (step.hasContent && !step.content.trim()) {
-                    alert(`${i + 1}번 단계의 학습 내용을 입력해주세요.`);
-                    this.activeTab = 'steps';
-                    this.openedSteps[i] = true;
-                    return false;
-                }
-
                 if (step.hasQuiz) {
                     const quiz = step.quiz || {};
-
                     if (!quiz.question || !quiz.question.trim()) {
                         alert(`${i + 1}번 단계의 퀴즈 질문을 입력해주세요.`);
                         this.activeTab = 'steps';
@@ -1393,45 +1429,51 @@ export default {
                         return false;
                     }
                 }
-
-                if (step.hasSimulation && !step.simulationType) {
-                    alert(`${i + 1}번 단계의 시뮬레이션 유형을 선택해주세요.`);
-                    this.activeTab = 'steps';
-                    this.openedSteps[i] = true;
-                    return false;
-                }
             }
 
             return true;
         },
-        saveAsDraft() {
-            // 기본 검증 (제목만 필수)
-            if (!this.education.title.trim()) {
-                alert('최소한 교육 제목은 입력해주세요.');
-                this.activeTab = 'basic';
-                return;
-            }
 
-            // 실제 구현에서는 API 호출
-            console.log('임시저장:', this.education);
-
-            // 저장 시간 업데이트
-            this.lastSavedTime = new Date().toLocaleString();
-
-            alert('임시저장되었습니다.');
-        },
         publishEducation() {
             if (!this.validateForm()) return;
 
-            // 실제 구현에서는 API 호출
-            console.log('출시하기:', this.education);
+            // 콘텐츠 블록을 HTML로 변환하여 저장
+            const processedSteps = this.education.steps.map(step => ({
+                ...step,
+                content: this.convertBlocksToHTML(step.contentBlocks || [])
+            }));
 
-            // 저장 시간 업데이트
+            const educationData = {
+                ...this.education,
+                steps: processedSteps
+            };
+
+            console.log('출시하기:', educationData);
             this.lastSavedTime = new Date().toLocaleString();
-
             alert(`교육 콘텐츠가 성공적으로 ${this.isEditMode ? '수정' : '출시'}되었습니다.`);
             this.$router.push('/education');
         },
+
+        convertBlocksToHTML(blocks) {
+            return blocks.map(block => {
+                switch (block.type) {
+                    case 'heading':
+                        return `<div class="content-block mb-6"><h4 class="font-bold text-xl mb-2">${block.content}</h4></div>`;
+                    case 'paragraph':
+                        return `<div class="content-block mb-6"><p>${block.content}</p></div>`;
+                    case 'list':
+                        const listItems = block.items.map(item => `<p>${item}</p>`).join('');
+                        return `<div class="content-block mb-6">${listItems}</div>`;
+                    case 'tip':
+                        return `<div class="content-block mb-6 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-400"><h4 class="font-bold text-xl mb-2">💡 유용한 팁</h4><p>${block.content}</p></div>`;
+                    case 'warning':
+                        return `<div class="content-block mb-6 p-4 bg-yellow-50 rounded-lg border-l-4 border-yellow-400"><h4 class="font-bold text-xl mb-2">⚠️ 주의하세요!</h4><p>${block.content}</p></div>`;
+                    default:
+                        return '';
+                }
+            }).join('');
+        },
+
         cancelEdit() {
             if (confirm('변경 사항이 저장되지 않을 수 있습니다. 정말 취소하시겠습니까?')) {
                 this.$router.push('/education');
@@ -1456,23 +1498,113 @@ export default {
     border-color: var(--color-primary, #0066CC);
 }
 
-/* 드래그 핸들 스타일 */
+.step-item {
+    transition: all 0.2s ease;
+    cursor: move;
+}
+
+.step-item:hover {
+    border-color: var(--color-primary, #0066CC);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.step-item.dragging {
+    opacity: 0.5;
+    transform: rotate(2deg);
+}
+
 .drag-handle {
     cursor: move;
 }
 
-/* 모달 애니메이션 */
+.visual-editor {
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.editor-toolbar {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.toolbar-btn {
+    transition: all 0.2s ease;
+}
+
+.toolbar-btn:hover {
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.content-block {
+    transition: all 0.2s ease;
+}
+
+.content-block:hover {
+    border-color: var(--color-primary, #0066CC);
+}
+
+.block-controls {
+    transition: opacity 0.2s ease;
+}
+
+.template-modal,
 .preview-modal {
     animation: fadeIn 0.2s ease-out;
+}
+
+.template-card {
+    transition: all 0.2s ease;
+}
+
+.template-card:hover {
+    border-color: var(--color-primary, #0066CC);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 @keyframes fadeIn {
     from {
         opacity: 0;
+        transform: translateY(-10px);
     }
 
     to {
         opacity: 1;
+        transform: translateY(0);
     }
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .editor-toolbar {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .toolbar-btn {
+        font-size: 0.75rem;
+        padding: 0.5rem;
+    }
+}
+
+/* 접근성 */
+.btn:focus,
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+    outline: 2px solid var(--color-primary, #0066CC);
+    outline-offset: 2px;
+}
+
+/* 폼 유효성 검사 스타일 */
+.form-input:invalid,
+.form-textarea:invalid,
+.form-select:invalid {
+    border-color: #ef4444;
+}
+
+.form-input:valid,
+.form-textarea:valid,
+.form-select:valid {
+    border-color: #10b981;
 }
 </style>

@@ -6,9 +6,9 @@
                 <div class="footer-section">
                     <div class="logo-area mb-4">
                         <!-- <img src="@/assets/images/logo-white.svg" alt="삶은(SilverLife) 로고" class="h-10"> -->
-                        <p class="text-xl mt-3">"시니어의 디지털 나침반, 삶은(SilverLife)"</p>
+                        <p class="text-xl mt-3">"시니어 삶의 나침반, 삶은(SilverLife)"</p>
                     </div>
-                    <p class="text-gray-300 mt-4">시니어층이 디지털 환경에 쉽게 적응하고,</p>
+                    <p class="text-gray-300 mt-4">시니어층이 현대 환경에 쉽게 적응하고,</p>
                     <p class="text-gray-300">건강하고 풍요로운 노후 생활을 영위할 수 있도록 지원하는 플랫폼입니다.</p>
                     <p class="text-gray-300">가족, 친구, 동료들과 함께 하세요!</p>
                     <p class="text-xl mt-3">[후원하기]</p>
@@ -67,7 +67,7 @@ export default {
     data() {
         return {
             menuItems: [
-                { label: '디지털 교육', path: '/education' },
+                { label: '교육', path: '/education' },
                 // { label: '키오스크 실습', path: '/kiosk' },
                 { label: '맞춤 식단', path: '/diet' },
                 { label: '인지력 게임', path: '/games' },
