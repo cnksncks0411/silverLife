@@ -16696,7 +16696,3857 @@
         }
       ],
 
-      
+      "FBJF5DE": [
+      {
+        "id": 1,
+        "name": "여성 골관절질환 소량다회 감량 A",
+        "targetCalories": 1400,
+        "season": "all",
+        "meal1": [
+          {"name": "현미밥", "portion": "1/4공기", "calories": 65},
+          {"name": "멸치다시마국", "portion": "1그릇", "calories": 25}
+        ],
+        "meal2": [
+          {"name": "바나나", "portion": "1/2개", "calories": 45},
+          {"name": "아몬드", "portion": "6개", "calories": 42}
+        ],
+        "meal3": [
+          {"name": "현미밥", "portion": "1/3공기", "calories": 90},
+          {"name": "연어구이", "portion": "80g", "calories": 160},
+          {"name": "시금치나물", "portion": "1접시", "calories": 20},
+          {"name": "미역국", "portion": "1그릇", "calories": 30}
+        ],
+        "meal4": [
+          {"name": "저지방우유", "portion": "150ml", "calories": 68},
+          {"name": "견과류", "portion": "6g", "calories": 36}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "1/4공기", "calories": 65},
+          {"name": "두부찜", "portion": "100g", "calories": 80},
+          {"name": "애호박볶음", "portion": "1접시", "calories": 30},
+          {"name": "콩나물국", "portion": "1그릇", "calories": 25}
+        ],
+        "totalCalories": 1381
+      },
+      {
+        "id": 2,
+        "name": "여성 골관절질환 소량다회 감량 B",
+        "targetCalories": 1400,
+        "season": "spring",
+        "meal1": [
+          {"name": "잡곡밥", "portion": "1/4공기", "calories": 68},
+          {"name": "된장국", "portion": "1그릇", "calories": 40}
+        ],
+        "meal2": [
+          {"name": "딸기", "portion": "6개", "calories": 21},
+          {"name": "호두", "portion": "4개", "calories": 72}
+        ],
+        "meal3": [
+          {"name": "현미밥", "portion": "1/3공기", "calories": 90},
+          {"name": "닭가슴살구이", "portion": "80g", "calories": 130},
+          {"name": "취나물", "portion": "1접시", "calories": 18},
+          {"name": "냉이국", "portion": "1그릇", "calories": 28}
+        ],
+        "meal4": [
+          {"name": "요구르트", "portion": "1개", "calories": 60},
+          {"name": "견과류", "portion": "6g", "calories": 36}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "1/4공기", "calories": 65},
+          {"name": "고등어구이", "portion": "70g", "calories": 140},
+          {"name": "도라지무침", "portion": "1접시", "calories": 22},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20}
+        ],
+        "totalCalories": 1410
+      },
+      {
+        "id": 3,
+        "name": "여성 골관절질환 소량다회 감량 C",
+        "targetCalories": 1400,
+        "season": "summer",
+        "meal1": [
+          {"name": "보리밥", "portion": "1/4공기", "calories": 62},
+          {"name": "냉된장국", "portion": "1그릇", "calories": 30}
+        ],
+        "meal2": [
+          {"name": "수박", "portion": "1조각", "calories": 45},
+          {"name": "견과류", "portion": "6g", "calories": 36}
+        ],
+        "meal3": [
+          {"name": "냉면", "portion": "1/2그릇", "calories": 210},
+          {"name": "삶은달걀", "portion": "1개", "calories": 70},
+          {"name": "오이채", "portion": "1접시", "calories": 20}
+        ],
+        "meal4": [
+          {"name": "토마토", "portion": "1개", "calories": 35},
+          {"name": "치즈", "portion": "1/2장", "calories": 40}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "1/4공기", "calories": 65},
+          {"name": "생선찜", "portion": "80g", "calories": 140},
+          {"name": "상추쌈", "portion": "5장", "calories": 10},
+          {"name": "가지국", "portion": "1그릇", "calories": 35}
+        ],
+        "totalCalories": 1398
+      }
+      ],
+
+      "FBJF5MA": [
+      {
+        "id": 1,
+        "name": "여성 골관절질환 소량다회 유지 A",
+        "targetCalories": 1600,
+        "season": "all",
+        "meal1": [
+          {"name": "현미밥", "portion": "1/3공기", "calories": 90},
+          {"name": "멸치다시마국", "portion": "1그릇", "calories": 25}
+        ],
+        "meal2": [
+          {"name": "바나나", "portion": "3/4개", "calories": 68},
+          {"name": "아몬드", "portion": "8개", "calories": 55}
+        ],
+        "meal3": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "연어구이", "portion": "100g", "calories": 200},
+          {"name": "시금치나물", "portion": "1접시", "calories": 20},
+          {"name": "미역국", "portion": "1그릇", "calories": 30}
+        ],
+        "meal4": [
+          {"name": "저지방우유", "portion": "200ml", "calories": 90},
+          {"name": "견과류", "portion": "8g", "calories": 48}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "1/3공기", "calories": 90},
+          {"name": "두부찜", "portion": "120g", "calories": 96},
+          {"name": "애호박볶음", "portion": "1접시", "calories": 30},
+          {"name": "콩나물국", "portion": "1그릇", "calories": 25}
+        ],
+        "totalCalories": 1597
+      },
+      {
+        "id": 2,
+        "name": "여성 골관절질환 소량다회 유지 B",
+        "targetCalories": 1600,
+        "season": "spring",
+        "meal1": [
+          {"name": "잡곡밥", "portion": "1/3공기", "calories": 95},
+          {"name": "된장국", "portion": "1그릇", "calories": 40}
+        ],
+        "meal2": [
+          {"name": "딸기", "portion": "10개", "calories": 35},
+          {"name": "호두", "portion": "5개", "calories": 90}
+        ],
+        "meal3": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "닭가슴살구이", "portion": "100g", "calories": 165},
+          {"name": "취나물", "portion": "1접시", "calories": 18},
+          {"name": "냉이국", "portion": "1그릇", "calories": 28}
+        ],
+        "meal4": [
+          {"name": "요구르트", "portion": "1개", "calories": 60},
+          {"name": "견과류", "portion": "8g", "calories": 48}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "1/3공기", "calories": 90},
+          {"name": "고등어구이", "portion": "90g", "calories": 180},
+          {"name": "도라지무침", "portion": "1접시", "calories": 22},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20}
+        ],
+        "totalCalories": 1621
+      },
+      {
+        "id": 3,
+        "name": "여성 골관절질환 소량다회 유지 C",
+        "targetCalories": 1600,
+        "season": "summer",
+        "meal1": [
+          {"name": "보리밥", "portion": "1/3공기", "calories": 85},
+          {"name": "냉된장국", "portion": "1그릇", "calories": 30}
+        ],
+        "meal2": [
+          {"name": "수박", "portion": "2조각", "calories": 90},
+          {"name": "견과류", "portion": "8g", "calories": 48}
+        ],
+        "meal3": [
+          {"name": "냉면", "portion": "2/3그릇", "calories": 280},
+          {"name": "삶은달걀", "portion": "1개", "calories": 70},
+          {"name": "오이채", "portion": "1접시", "calories": 20}
+        ],
+        "meal4": [
+          {"name": "토마토", "portion": "1개", "calories": 35},
+          {"name": "치즈", "portion": "1장", "calories": 80}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "1/3공기", "calories": 90},
+          {"name": "생선찜", "portion": "100g", "calories": 170},
+          {"name": "상추쌈", "portion": "5장", "calories": 10},
+          {"name": "가지국", "portion": "1그릇", "calories": 35}
+        ],
+        "totalCalories": 1643
+      }
+      ],
+
+      "FBJF5SU": [
+      {
+        "id": 1,
+        "name": "여성 골관절질환 소량다회 증량 A",
+        "targetCalories": 1800,
+        "season": "all",
+        "meal1": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "멸치다시마국", "portion": "1그릇", "calories": 25}
+        ],
+        "meal2": [
+          {"name": "바나나", "portion": "1개", "calories": 90},
+          {"name": "아몬드", "portion": "10개", "calories": 70}
+        ],
+        "meal3": [
+          {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+          {"name": "연어구이", "portion": "120g", "calories": 240},
+          {"name": "시금치나물", "portion": "1접시", "calories": 20},
+          {"name": "미역국", "portion": "1그릇", "calories": 30}
+        ],
+        "meal4": [
+          {"name": "저지방우유", "portion": "250ml", "calories": 112},
+          {"name": "견과류", "portion": "10g", "calories": 60}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "두부찜", "portion": "150g", "calories": 120},
+          {"name": "애호박볶음", "portion": "1접시", "calories": 30},
+          {"name": "콩나물국", "portion": "1그릇", "calories": 25}
+        ],
+        "totalCalories": 1822
+      },
+      {
+        "id": 2,
+        "name": "여성 골관절질환 소량다회 증량 B",
+        "targetCalories": 1800,
+        "season": "spring",
+        "meal1": [
+          {"name": "잡곡밥", "portion": "1/2공기", "calories": 135},
+          {"name": "된장국", "portion": "1그릇", "calories": 40}
+        ],
+        "meal2": [
+          {"name": "딸기", "portion": "12개", "calories": 42},
+          {"name": "호두", "portion": "6개", "calories": 108}
+        ],
+        "meal3": [
+          {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+          {"name": "닭가슴살구이", "portion": "120g", "calories": 200},
+          {"name": "취나물", "portion": "1접시", "calories": 18},
+          {"name": "냉이국", "portion": "1그릇", "calories": 28}
+        ],
+        "meal4": [
+          {"name": "요구르트", "portion": "1개", "calories": 60},
+          {"name": "견과류", "portion": "10g", "calories": 60}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "고등어구이", "portion": "110g", "calories": 220},
+          {"name": "도라지무침", "portion": "1접시", "calories": 22},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20}
+        ],
+        "totalCalories": 1823
+      },
+      {
+        "id": 3,
+        "name": "여성 골관절질환 소량다회 증량 C",
+        "targetCalories": 1800,
+        "season": "summer",
+        "meal1": [
+          {"name": "보리밥", "portion": "1/2공기", "calories": 125},
+          {"name": "냉된장국", "portion": "1그릇", "calories": 30}
+        ],
+        "meal2": [
+          {"name": "수박", "portion": "3조각", "calories": 135},
+          {"name": "견과류", "portion": "10g", "calories": 60}
+        ],
+        "meal3": [
+          {"name": "냉면", "portion": "1그릇", "calories": 420},
+          {"name": "삶은달걀", "portion": "1개", "calories": 70},
+          {"name": "오이채", "portion": "1접시", "calories": 20}
+        ],
+        "meal4": [
+          {"name": "토마토", "portion": "1개", "calories": 35},
+          {"name": "치즈", "portion": "1.5장", "calories": 120}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "생선찜", "portion": "120g", "calories": 200},
+          {"name": "상추쌈", "portion": "5장", "calories": 10},
+          {"name": "가지국", "portion": "1그릇", "calories": 35}
+        ],
+        "totalCalories": 1820
+      }
+      ],
+
+      "FBJF5HE": [
+      {
+        "id": 1,
+        "name": "여성 골관절질환 소량다회 건강 A",
+        "targetCalories": 1700,
+        "season": "all",
+        "meal1": [
+          {"name": "현미밥", "portion": "2/5공기", "calories": 110},
+          {"name": "멸치다시마국", "portion": "1그릇", "calories": 25}
+        ],
+        "meal2": [
+          {"name": "바나나", "portion": "3/4개", "calories": 68},
+          {"name": "아몬드", "portion": "8개", "calories": 55}
+        ],
+        "meal3": [
+          {"name": "현미밥", "portion": "3/5공기", "calories": 160},
+          {"name": "연어구이", "portion": "110g", "calories": 220},
+          {"name": "시금치나물", "portion": "1접시", "calories": 20},
+          {"name": "미역국", "portion": "1그릇", "calories": 30}
+        ],
+        "meal4": [
+          {"name": "저지방우유", "portion": "200ml", "calories": 90},
+          {"name": "견과류", "portion": "8g", "calories": 48}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "2/5공기", "calories": 110},
+          {"name": "두부찜", "portion": "130g", "calories": 104},
+          {"name": "애호박볶음", "portion": "1접시", "calories": 30},
+          {"name": "콩나물국", "portion": "1그릇", "calories": 25}
+        ],
+        "totalCalories": 1695
+      },
+      {
+        "id": 2,
+        "name": "여성 골관절질환 소량다회 건강 B",
+        "targetCalories": 1700,
+        "season": "spring",
+        "meal1": [
+          {"name": "잡곡밥", "portion": "2/5공기", "calories": 115},
+          {"name": "된장국", "portion": "1그릇", "calories": 40}
+        ],
+        "meal2": [
+          {"name": "딸기", "portion": "10개", "calories": 35},
+          {"name": "호두", "portion": "5개", "calories": 90}
+        ],
+        "meal3": [
+          {"name": "현미밥", "portion": "3/5공기", "calories": 160},
+          {"name": "닭가슴살구이", "portion": "110g", "calories": 180},
+          {"name": "취나물", "portion": "1접시", "calories": 18},
+          {"name": "냉이국", "portion": "1그릇", "calories": 28}
+        ],
+        "meal4": [
+          {"name": "요구르트", "portion": "1개", "calories": 60},
+          {"name": "견과류", "portion": "8g", "calories": 48}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "2/5공기", "calories": 110},
+          {"name": "고등어구이", "portion": "100g", "calories": 200},
+          {"name": "도라지무침", "portion": "1접시", "calories": 22},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20}
+        ],
+        "totalCalories": 1726
+      },
+      {
+        "id": 3,
+        "name": "여성 골관절질환 소량다회 건강 C",
+        "targetCalories": 1700,
+        "season": "summer",
+        "meal1": [
+          {"name": "보리밥", "portion": "2/5공기", "calories": 105},
+          {"name": "냉된장국", "portion": "1그릇", "calories": 30}
+        ],
+        "meal2": [
+          {"name": "수박", "portion": "2조각", "calories": 90},
+          {"name": "견과류", "portion": "8g", "calories": 48}
+        ],
+        "meal3": [
+          {"name": "냉면", "portion": "3/4그릇", "calories": 315},
+          {"name": "삶은달걀", "portion": "1개", "calories": 70},
+          {"name": "오이채", "portion": "1접시", "calories": 20}
+        ],
+        "meal4": [
+          {"name": "토마토", "portion": "1개", "calories": 35},
+          {"name": "치즈", "portion": "1장", "calories": 80}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "2/5공기", "calories": 110},
+          {"name": "생선찜", "portion": "110g", "calories": 185},
+          {"name": "상추쌈", "portion": "5장", "calories": 10},
+          {"name": "가지국", "portion": "1그릇", "calories": 35}
+        ],
+        "totalCalories": 1693
+      }
+      ],
+
+      "FBJS2DE": [
+        {
+          "id": 1,
+          "name": "여성 골관절질환 간편식 감량 A",
+          "targetCalories": 1400,
+          "season": "all",
+          "meal1": [
+            {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+            {"name": "멸치다시마국", "portion": "1그릇", "calories": 25},
+            {"name": "연어구이", "portion": "90g", "calories": 180},
+            {"name": "시금치나물", "portion": "1접시", "calories": 20},
+            {"name": "김치", "portion": "적당량", "calories": 15}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+            {"name": "두부찜", "portion": "120g", "calories": 96},
+            {"name": "애호박볶음", "portion": "1접시", "calories": 30},
+            {"name": "콩나물국", "portion": "1그릇", "calories": 25}
+          ],
+          "snack": [
+            {"name": "바나나", "portion": "1/2개", "calories": 45},
+            {"name": "견과류", "portion": "10g", "calories": 60},
+            {"name": "저지방우유", "portion": "150ml", "calories": 68}
+          ],
+          "totalCalories": 1424
+        },
+        {
+          "id": 2,
+          "name": "여성 골관절질환 간편식 감량 B",
+          "targetCalories": 1400,
+          "season": "spring",
+          "meal1": [
+            {"name": "잡곡밥", "portion": "1/2공기", "calories": 135},
+            {"name": "된장국", "portion": "1그릇", "calories": 40},
+            {"name": "닭가슴살구이", "portion": "100g", "calories": 165},
+            {"name": "취나물", "portion": "1접시", "calories": 18},
+            {"name": "열무김치", "portion": "적당량", "calories": 12}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+            {"name": "고등어구이", "portion": "80g", "calories": 160},
+            {"name": "도라지무침", "portion": "1접시", "calories": 22},
+            {"name": "냉이국", "portion": "1그릇", "calories": 28}
+          ],
+          "snack": [
+            {"name": "딸기", "portion": "10개", "calories": 35},
+            {"name": "호두", "portion": "5개", "calories": 90},
+            {"name": "요구르트", "portion": "1개", "calories": 60}
+          ],
+          "totalCalories": 1395
+        },
+        {
+          "id": 3,
+          "name": "여성 골관절질환 간편식 감량 C",
+          "targetCalories": 1400,
+          "season": "summer",
+          "meal1": [
+            {"name": "냉면", "portion": "2/3그릇", "calories": 280},
+            {"name": "삶은달걀", "portion": "1개", "calories": 70},
+            {"name": "오이채", "portion": "1접시", "calories": 20}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+            {"name": "생선찜", "portion": "100g", "calories": 170},
+            {"name": "상추쌈", "portion": "5장", "calories": 10},
+            {"name": "가지국", "portion": "1그릇", "calories": 35}
+          ],
+          "snack": [
+            {"name": "수박", "portion": "2조각", "calories": 90},
+            {"name": "견과류", "portion": "10g", "calories": 60},
+            {"name": "보리차", "portion": "1잔", "calories": 0}
+          ],
+          "totalCalories": 1365
+        }
+      ],
+
+      "FBJS2MA": [
+        {
+          "id": 1,
+          "name": "여성 골관절질환 간편식 유지 A",
+          "targetCalories": 1600,
+          "season": "all",
+          "meal1": [
+            {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+            {"name": "멸치다시마국", "portion": "1그릇", "calories": 25},
+            {"name": "연어구이", "portion": "110g", "calories": 220},
+            {"name": "시금치나물", "portion": "1접시", "calories": 20},
+            {"name": "김치", "portion": "적당량", "calories": 15}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+            {"name": "두부찜", "portion": "150g", "calories": 120},
+            {"name": "애호박볶음", "portion": "1접시", "calories": 30},
+            {"name": "콩나물국", "portion": "1그릇", "calories": 25}
+          ],
+          "snack": [
+            {"name": "바나나", "portion": "1개", "calories": 90},
+            {"name": "견과류", "portion": "12g", "calories": 72},
+            {"name": "저지방우유", "portion": "200ml", "calories": 90}
+          ],
+          "totalCalories": 1567
+        },
+        {
+          "id": 2,
+          "name": "여성 골관절질환 간편식 유지 B",
+          "targetCalories": 1600,
+          "season": "spring",
+          "meal1": [
+            {"name": "잡곡밥", "portion": "2/3공기", "calories": 185},
+            {"name": "된장국", "portion": "1그릇", "calories": 40},
+            {"name": "닭가슴살구이", "portion": "120g", "calories": 200},
+            {"name": "취나물", "portion": "1접시", "calories": 18},
+            {"name": "열무김치", "portion": "적당량", "calories": 12}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+            {"name": "고등어구이", "portion": "100g", "calories": 200},
+            {"name": "도라지무침", "portion": "1접시", "calories": 22},
+            {"name": "냉이국", "portion": "1그릇", "calories": 28}
+          ],
+          "snack": [
+            {"name": "딸기", "portion": "15개", "calories": 50},
+            {"name": "호두", "portion": "6개", "calories": 108},
+            {"name": "요구르트", "portion": "1개", "calories": 60}
+          ],
+          "totalCalories": 1603
+        },
+        {
+          "id": 3,
+          "name": "여성 골관절질환 간편식 유지 C",
+          "targetCalories": 1600,
+          "season": "summer",
+          "meal1": [
+            {"name": "냉면", "portion": "1그릇", "calories": 420},
+            {"name": "삶은달걀", "portion": "1개", "calories": 70},
+            {"name": "오이채", "portion": "1접시", "calories": 20}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+            {"name": "생선찜", "portion": "120g", "calories": 200},
+            {"name": "상추쌈", "portion": "5장", "calories": 10},
+            {"name": "가지국", "portion": "1그릇", "calories": 35}
+          ],
+          "snack": [
+            {"name": "수박", "portion": "3조각", "calories": 135},
+            {"name": "견과류", "portion": "12g", "calories": 72},
+            {"name": "보리차", "portion": "1잔", "calories": 0}
+          ],
+          "totalCalories": 1642
+        }
+      ],
+
+      "FBJS2SU": [
+        {
+          "id": 1,
+          "name": "여성 골관절질환 간편식 증량 A",
+          "targetCalories": 1800,
+          "season": "all",
+          "meal1": [
+            {"name": "현미밥", "portion": "3/4공기", "calories": 200},
+            {"name": "멸치다시마국", "portion": "1그릇", "calories": 25},
+            {"name": "연어구이", "portion": "130g", "calories": 260},
+            {"name": "시금치나물", "portion": "1접시", "calories": 20},
+            {"name": "김치", "portion": "적당량", "calories": 15}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "3/4공기", "calories": 200},
+            {"name": "두부찜", "portion": "180g", "calories": 144},
+            {"name": "애호박볶음", "portion": "1접시", "calories": 30},
+            {"name": "콩나물국", "portion": "1그릇", "calories": 25}
+          ],
+          "snack": [
+            {"name": "바나나", "portion": "1개", "calories": 90},
+            {"name": "견과류", "portion": "15g", "calories": 90},
+            {"name": "저지방우유", "portion": "250ml", "calories": 112}
+          ],
+          "totalCalories": 1811
+        },
+        {
+          "id": 2,
+          "name": "여성 골관절질환 간편식 증량 B",
+          "targetCalories": 1800,
+          "season": "spring",
+          "meal1": [
+            {"name": "잡곡밥", "portion": "3/4공기", "calories": 205},
+            {"name": "된장국", "portion": "1그릇", "calories": 40},
+            {"name": "닭가슴살구이", "portion": "140g", "calories": 230},
+            {"name": "취나물", "portion": "1접시", "calories": 18},
+            {"name": "열무김치", "portion": "적당량", "calories": 12}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "3/4공기", "calories": 200},
+            {"name": "고등어구이", "portion": "120g", "calories": 240},
+            {"name": "도라지무침", "portion": "1접시", "calories": 22},
+            {"name": "냉이국", "portion": "1그릇", "calories": 28}
+          ],
+          "snack": [
+            {"name": "딸기", "portion": "15개", "calories": 50},
+            {"name": "호두", "portion": "8개", "calories": 144},
+            {"name": "요구르트", "portion": "1개", "calories": 60}
+          ],
+          "totalCalories": 1849
+        },
+        {
+          "id": 3,
+          "name": "여성 골관절질환 간편식 증량 C",
+          "targetCalories": 1800,
+          "season": "summer",
+          "meal1": [
+            {"name": "냉면", "portion": "1.2그릇", "calories": 504},
+            {"name": "삶은달걀", "portion": "1개", "calories": 70},
+            {"name": "오이채", "portion": "1접시", "calories": 20}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "3/4공기", "calories": 200},
+            {"name": "생선찜", "portion": "140g", "calories": 240},
+            {"name": "상추쌈", "portion": "5장", "calories": 10},
+            {"name": "가지국", "portion": "1그릇", "calories": 35}
+          ],
+          "snack": [
+            {"name": "수박", "portion": "3조각", "calories": 135},
+            {"name": "견과류", "portion": "15g", "calories": 90},
+            {"name": "보리차", "portion": "1잔", "calories": 0}
+          ],
+          "totalCalories": 1804
+        }
+      ],
+
+      "FBJS2HE": [
+        {
+          "id": 1,
+          "name": "여성 골관절질환 간편식 건강 A",
+          "targetCalories": 1700,
+          "season": "all",
+          "meal1": [
+            {"name": "현미밥", "portion": "3/5공기", "calories": 160},
+            {"name": "멸치다시마국", "portion": "1그릇", "calories": 25},
+            {"name": "연어구이", "portion": "120g", "calories": 240},
+            {"name": "시금치나물", "portion": "1접시", "calories": 20},
+            {"name": "김치", "portion": "적당량", "calories": 15}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "3/5공기", "calories": 160},
+            {"name": "두부찜", "portion": "160g", "calories": 128},
+            {"name": "애호박볶음", "portion": "1접시", "calories": 30},
+            {"name": "콩나물국", "portion": "1그릇", "calories": 25}
+          ],
+          "snack": [
+            {"name": "바나나", "portion": "3/4개", "calories": 68},
+            {"name": "견과류", "portion": "12g", "calories": 72},
+            {"name": "저지방우유", "portion": "200ml", "calories": 90}
+          ],
+          "totalCalories": 1633
+        },
+        {
+          "id": 2,
+          "name": "여성 골관절질환 간편식 건강 B",
+          "targetCalories": 1700,
+          "season": "spring",
+          "meal1": [
+            {"name": "잡곡밥", "portion": "3/5공기", "calories": 165},
+            {"name": "된장국", "portion": "1그릇", "calories": 40},
+            {"name": "닭가슴살구이", "portion": "130g", "calories": 215},
+            {"name": "취나물", "portion": "1접시", "calories": 18},
+            {"name": "열무김치", "portion": "적당량", "calories": 12}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "3/5공기", "calories": 160},
+            {"name": "고등어구이", "portion": "110g", "calories": 220},
+            {"name": "도라지무침", "portion": "1접시", "calories": 22},
+            {"name": "냉이국", "portion": "1그릇", "calories": 28}
+          ],
+          "snack": [
+            {"name": "딸기", "portion": "12개", "calories": 42},
+            {"name": "호두", "portion": "7개", "calories": 126},
+            {"name": "요구르트", "portion": "1개", "calories": 60}
+          ],
+          "totalCalories": 1708
+        },
+        {
+          "id": 3,
+          "name": "여성 골관절질환 간편식 건강 C",
+          "targetCalories": 1700,
+          "season": "summer",
+          "meal1": [
+            {"name": "냉면", "portion": "1그릇", "calories": 420},
+            {"name": "삶은달걀", "portion": "1개", "calories": 70},
+            {"name": "오이채", "portion": "1접시", "calories": 20}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "3/5공기", "calories": 160},
+            {"name": "생선찜", "portion": "130g", "calories": 220},
+            {"name": "상추쌈", "portion": "5장", "calories": 10},
+            {"name": "가지국", "portion": "1그릇", "calories": 35}
+          ],
+          "snack": [
+            {"name": "수박", "portion": "3조각", "calories": 135},
+            {"name": "견과류", "portion": "12g", "calories": 72},
+            {"name": "보리차", "portion": "1잔", "calories": 0}
+          ],
+          "totalCalories": 1642
+        }
+      ],
+
+      "FHDR3DE": [
+      {
+        "id": 1,
+        "name": "여성 고혈압/당뇨병 감량 A",
+        "targetCalories": 1300,
+        "season": "all",
+        "breakfast": [
+          {"name": "현미밥", "portion": "1/3공기", "calories": 90},
+          {"name": "무염된장국", "portion": "1그릇", "calories": 30},
+          {"name": "두부찜", "portion": "80g", "calories": 64},
+          {"name": "시금치나물", "portion": "1접시", "calories": 20}
+        ],
+        "lunch": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20},
+          {"name": "닭가슴살구이", "portion": "80g", "calories": 130},
+          {"name": "브로콜리볶음", "portion": "1접시", "calories": 35},
+          {"name": "오이무침", "portion": "1접시", "calories": 15}
+        ],
+        "dinner": [
+          {"name": "현미밥", "portion": "1/3공기", "calories": 90},
+          {"name": "조개맑은국", "portion": "1그릇", "calories": 25},
+          {"name": "생선구이", "portion": "80g", "calories": 140},
+          {"name": "애호박볶음", "portion": "1접시", "calories": 30}
+        ],
+        "snack": [
+          {"name": "사과", "portion": "1/2개", "calories": 40},
+          {"name": "아몬드", "portion": "5개", "calories": 35},
+          {"name": "무가당두유", "portion": "150ml", "calories": 60}
+        ],
+        "totalCalories": 1284
+      },
+      {
+        "id": 2,
+        "name": "여성 고혈압/당뇨병 감량 B",
+        "targetCalories": 1300,
+        "season": "spring",
+        "breakfast": [
+          {"name": "잡곡밥", "portion": "1/3공기", "calories": 95},
+          {"name": "무염된장국", "portion": "1그릇", "calories": 30},
+          {"name": "계란찜", "portion": "1접시", "calories": 80},
+          {"name": "취나물", "portion": "1접시", "calories": 18}
+        ],
+        "lunch": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20},
+          {"name": "생선찜", "portion": "90g", "calories": 150},
+          {"name": "아스파라거스", "portion": "1접시", "calories": 25},
+          {"name": "도라지무침", "portion": "1접시", "calories": 22}
+        ],
+        "lunch": [
+          {"name": "현미밥", "portion": "1/3공기", "calories": 90},
+          {"name": "냉이국", "portion": "1그릇", "calories": 28},
+          {"name": "두부조림", "portion": "100g", "calories": 90},
+          {"name": "콩나물무침", "portion": "1접시", "calories": 25}
+        ],
+        "snack": [
+          {"name": "딸기", "portion": "8개", "calories": 28},
+          {"name": "호두", "portion": "3개", "calories": 54},
+          {"name": "무가당요구르트", "portion": "1개", "calories": 50}
+        ],
+        "totalCalories": 1315
+      },
+      {
+        "id": 3,
+        "name": "여성 고혈압/당뇨병 감량 C",
+        "targetCalories": 1300,
+        "season": "summer",
+        "breakfast": [
+          {"name": "보리밥", "portion": "1/3공기", "calories": 85},
+          {"name": "냉된장국", "portion": "1그릇", "calories": 25},
+          {"name": "두부샐러드", "portion": "80g", "calories": 68}
+        ],
+        "lunch": [
+          {"name": "메밀소바", "portion": "1/2그릇", "calories": 180},
+          {"name": "삶은달걀", "portion": "1개", "calories": 70},
+          {"name": "오이채", "portion": "1접시", "calories": 20}
+        ],
+        "dinner": [
+          {"name": "현미밥", "portion": "1/3공기", "calories": 90},
+          {"name": "가지국", "portion": "1그릇", "calories": 35},
+          {"name": "닭가슴살샐러드", "portion": "80g", "calories": 100},
+          {"name": "상추쌈", "portion": "5장", "calories": 10}
+        ],
+        "snack": [
+          {"name": "수박", "portion": "1조각", "calories": 45},
+          {"name": "견과류", "portion": "8g", "calories": 48},
+          {"name": "보리차", "portion": "1잔", "calories": 0}
+        ],
+        "totalCalories": 1276
+      }
+      ],
+
+      "FHDR3MA": [
+      {
+        "id": 1,
+        "name": "여성 고혈압/당뇨병 유지 A",
+        "targetCalories": 1500,
+        "season": "all",
+        "breakfast": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "무염된장국", "portion": "1그릇", "calories": 30},
+          {"name": "두부찜", "portion": "100g", "calories": 80},
+          {"name": "시금치나물", "portion": "1접시", "calories": 20}
+        ],
+        "lunch": [
+          {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20},
+          {"name": "닭가슴살구이", "portion": "100g", "calories": 165},
+          {"name": "브로콜리볶음", "portion": "1접시", "calories": 35},
+          {"name": "오이무침", "portion": "1접시", "calories": 15}
+        ],
+        "dinner": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "조개맑은국", "portion": "1그릇", "calories": 25},
+          {"name": "생선구이", "portion": "100g", "calories": 175},
+          {"name": "애호박볶음", "portion": "1접시", "calories": 30}
+        ],
+        "snack": [
+          {"name": "사과", "portion": "1/2개", "calories": 40},
+          {"name": "아몬드", "portion": "7개", "calories": 49},
+          {"name": "무가당두유", "portion": "200ml", "calories": 80}
+        ],
+        "totalCalories": 1504
+      },
+      {
+        "id": 2,
+        "name": "여성 고혈압/당뇨병 유지 B",
+        "targetCalories": 1500,
+        "season": "spring",
+        "breakfast": [
+          {"name": "잡곡밥", "portion": "1/2공기", "calories": 135},
+          {"name": "무염된장국", "portion": "1그릇", "calories": 30},
+          {"name": "계란찜", "portion": "1접시", "calories": 80},
+          {"name": "취나물", "portion": "1접시", "calories": 18}
+        ],
+        "lunch": [
+          {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20},
+          {"name": "생선찜", "portion": "110g", "calories": 185},
+          {"name": "아스파라거스", "portion": "1접시", "calories": 25},
+          {"name": "도라지무침", "portion": "1접시", "calories": 22}
+        ],
+        "dinner": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "냉이국", "portion": "1그릇", "calories": 28},
+          {"name": "두부조림", "portion": "120g", "calories": 108},
+          {"name": "콩나물무침", "portion": "1접시", "calories": 25}
+        ],
+        "snack": [
+          {"name": "딸기", "portion": "10개", "calories": 35},
+          {"name": "호두", "portion": "4개", "calories": 72},
+          {"name": "무가당요구르트", "portion": "1개", "calories": 50}
+        ],
+        "totalCalories": 1543
+      },
+      {
+        "id": 3,
+        "name": "여성 고혈압/당뇨병 유지 C",
+        "targetCalories": 1500,
+        "season": "summer",
+        "breakfast": [
+          {"name": "보리밥", "portion": "1/2공기", "calories": 125},
+          {"name": "냉된장국", "portion": "1그릇", "calories": 25},
+          {"name": "두부샐러드", "portion": "100g", "calories": 85}
+        ],
+        "lunch": [
+          {"name": "메밀소바", "portion": "2/3그릇", "calories": 240},
+          {"name": "삶은달걀", "portion": "1개", "calories": 70},
+          {"name": "오이채", "portion": "1접시", "calories": 20}
+        ],
+        "dinner": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "가지국", "portion": "1그릇", "calories": 35},
+          {"name": "닭가슴살샐러드", "portion": "100g", "calories": 125},
+          {"name": "상추쌈", "portion": "5장", "calories": 10}
+        ],
+        "snack": [
+          {"name": "수박", "portion": "2조각", "calories": 90},
+          {"name": "견과류", "portion": "10g", "calories": 60},
+          {"name": "보리차", "portion": "1잔", "calories": 0}
+        ],
+        "totalCalories": 1515
+      }
+      ],
+
+      "FHDR3SU": [
+      {
+        "id": 1,
+        "name": "여성 고혈압/당뇨병 증량 A",
+        "targetCalories": 1700,
+        "season": "all",
+        "breakfast": [
+          {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+          {"name": "무염된장국", "portion": "1그릇", "calories": 30},
+          {"name": "두부찜", "portion": "120g", "calories": 96},
+          {"name": "시금치나물", "portion": "1접시", "calories": 20}
+        ],
+        "lunch": [
+          {"name": "현미밥", "portion": "3/4공기", "calories": 200},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20},
+          {"name": "닭가슴살구이", "portion": "120g", "calories": 200},
+          {"name": "브로콜리볶음", "portion": "1접시", "calories": 35},
+          {"name": "오이무침", "portion": "1접시", "calories": 15}
+        ],
+        "dinner": [
+          {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+          {"name": "조개맑은국", "portion": "1그릇", "calories": 25},
+          {"name": "생선구이", "portion": "120g", "calories": 210},
+          {"name": "애호박볶음", "portion": "1접시", "calories": 30}
+        ],
+        "snack": [
+          {"name": "사과", "portion": "1개", "calories": 80},
+          {"name": "아몬드", "portion": "10개", "calories": 70},
+          {"name": "무가당두유", "portion": "250ml", "calories": 100}
+        ],
+        "totalCalories": 1691
+      },
+      {
+        "id": 2,
+        "name": "여성 고혈압/당뇨병 증량 B",
+        "targetCalories": 1700,
+        "season": "spring",
+        "breakfast": [
+          {"name": "잡곡밥", "portion": "2/3공기", "calories": 185},
+          {"name": "무염된장국", "portion": "1그릇", "calories": 30},
+          {"name": "계란찜", "portion": "1접시", "calories": 80},
+          {"name": "취나물", "portion": "1접시", "calories": 18}
+        ],
+        "lunch": [
+          {"name": "현미밥", "portion": "3/4공기", "calories": 200},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20},
+          {"name": "생선찜", "portion": "130g", "calories": 220},
+          {"name": "아스파라거스", "portion": "1접시", "calories": 25},
+          {"name": "도라지무침", "portion": "1접시", "calories": 22}
+        ],
+        "dinner": [
+          {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+          {"name": "냉이국", "portion": "1그릇", "calories": 28},
+          {"name": "두부조림", "portion": "150g", "calories": 135},
+          {"name": "콩나물무침", "portion": "1접시", "calories": 25}
+        ],
+        "snack": [
+          {"name": "딸기", "portion": "12개", "calories": 42},
+          {"name": "호두", "portion": "5개", "calories": 90},
+          {"name": "무가당요구르트", "portion": "1개", "calories": 50}
+        ],
+        "totalCalories": 1750
+      },
+      {
+        "id": 3,
+        "name": "여성 고혈압/당뇨병 증량 C",
+        "targetCalories": 1700,
+        "season": "summer",
+        "breakfast": [
+          {"name": "보리밥", "portion": "2/3공기", "calories": 165},
+          {"name": "냉된장국", "portion": "1그릇", "calories": 25},
+          {"name": "두부샐러드", "portion": "120g", "calories": 102}
+        ],
+        "lunch": [
+          {"name": "메밀소바", "portion": "1그릇", "calories": 360},
+          {"name": "삶은달걀", "portion": "1개", "calories": 70},
+          {"name": "오이채", "portion": "1접시", "calories": 20}
+        ],
+        "dinner": [
+          {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+          {"name": "가지국", "portion": "1그릇", "calories": 35},
+          {"name": "닭가슴살샐러드", "portion": "120g", "calories": 150},
+          {"name": "상추쌈", "portion": "5장", "calories": 10}
+        ],
+        "snack": [
+          {"name": "수박", "portion": "2조각", "calories": 90},
+          {"name": "견과류", "portion": "12g", "calories": 72},
+          {"name": "보리차", "portion": "1잔", "calories": 0}
+        ],
+        "totalCalories": 1679
+      }
+      ],
+
+      "FHDR3HE": [
+      {
+        "id": 1,
+        "name": "여성 고혈압/당뇨병 건강 A",
+        "targetCalories": 1600,
+        "season": "all",
+        "breakfast": [
+          {"name": "현미밥", "portion": "3/5공기", "calories": 160},
+          {"name": "무염된장국", "portion": "1그릇", "calories": 30},
+          {"name": "두부찜", "portion": "110g", "calories": 88},
+          {"name": "시금치나물", "portion": "1접시", "calories": 20}
+        ],
+        "lunch": [
+          {"name": "현미밥", "portion": "7/10공기", "calories": 190},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20},
+          {"name": "닭가슴살구이", "portion": "110g", "calories": 180},
+          {"name": "브로콜리볶음", "portion": "1접시", "calories": 35},
+          {"name": "오이무침", "portion": "1접시", "calories": 15}
+        ],
+        "dinner": [
+          {"name": "현미밥", "portion": "3/5공기", "calories": 160},
+          {"name": "조개맑은국", "portion": "1그릇", "calories": 25},
+          {"name": "생선구이", "portion": "110g", "calories": 190},
+          {"name": "애호박볶음", "portion": "1접시", "calories": 30}
+        ],
+        "snack": [
+          {"name": "사과", "portion": "3/4개", "calories": 60},
+          {"name": "아몬드", "portion": "8개", "calories": 55},
+          {"name": "무가당두유", "portion": "200ml", "calories": 80}
+        ],
+        "totalCalories": 1598
+      },
+      {
+        "id": 2,
+        "name": "여성 고혈압/당뇨병 건강 B",
+        "targetCalories": 1600,
+        "season": "spring",
+        "breakfast": [
+          {"name": "잡곡밥", "portion": "3/5공기", "calories": 165},
+          {"name": "무염된장국", "portion": "1그릇", "calories": 30},
+          {"name": "계란찜", "portion": "1접시", "calories": 80},
+          {"name": "취나물", "portion": "1접시", "calories": 18}
+        ],
+        "lunch": [
+          {"name": "현미밥", "portion": "7/10공기", "calories": 190},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20},
+          {"name": "생선찜", "portion": "120g", "calories": 200},
+          {"name": "아스파라거스", "portion": "1접시", "calories": 25},
+          {"name": "도라지무침", "portion": "1접시", "calories": 22}
+        ],
+        "dinner": [
+          {"name": "현미밥", "portion": "3/5공기", "calories": 160},
+          {"name": "냉이국", "portion": "1그릇", "calories": 28},
+          {"name": "두부조림", "portion": "130g", "calories": 117},
+          {"name": "콩나물무침", "portion": "1접시", "calories": 25}
+        ],
+        "snack": [
+          {"name": "딸기", "portion": "10개", "calories": 35},
+          {"name": "호두", "portion": "4개", "calories": 72},
+          {"name": "무가당요구르트", "portion": "1개", "calories": 50}
+        ],
+        "totalCalories": 1637
+      },
+      {
+        "id": 3,
+        "name": "여성 고혈압/당뇨병 건강 C",
+        "targetCalories": 1600,
+        "season": "summer",
+        "breakfast": [
+          {"name": "보리밥", "portion": "3/5공기", "calories": 150},
+          {"name": "냉된장국", "portion": "1그릇", "calories": 25},
+          {"name": "두부샐러드", "portion": "110g", "calories": 94}
+        ],
+        "lunch": [
+          {"name": "메밀소바", "portion": "4/5그릇", "calories": 288},
+          {"name": "삶은달걀", "portion": "1개", "calories": 70},
+          {"name": "오이채", "portion": "1접시", "calories": 20}
+        ],
+        "dinner": [
+          {"name": "현미밥", "portion": "3/5공기", "calories": 160},
+          {"name": "가지국", "portion": "1그릇", "calories": 35},
+          {"name": "닭가슴살샐러드", "portion": "110g", "calories": 140},
+          {"name": "상추쌈", "portion": "5장", "calories": 10}
+        ],
+        "snack": [
+          {"name": "수박", "portion": "2조각", "calories": 90},
+          {"name": "견과류", "portion": "10g", "calories": 60},
+          {"name": "보리차", "portion": "1잔", "calories": 0}
+        ],
+        "totalCalories": 1572
+      }
+      ],
+
+      "FHDF5DE": [
+      {
+        "id": 1,
+        "name": "여성 고혈압/당뇨병 소량다회 감량 A",
+        "targetCalories": 1300,
+        "season": "all",
+        "meal1": [
+          {"name": "현미밥", "portion": "1/4공기", "calories": 65},
+          {"name": "무염된장국", "portion": "1그릇", "calories": 30}
+        ],
+        "meal2": [
+          {"name": "사과", "portion": "1/2개", "calories": 40},
+          {"name": "아몬드", "portion": "4개", "calories": 28}
+        ],
+        "meal3": [
+          {"name": "현미밥", "portion": "1/3공기", "calories": 90},
+          {"name": "닭가슴살구이", "portion": "70g", "calories": 115},
+          {"name": "브로콜리볶음", "portion": "1접시", "calories": 35},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20}
+        ],
+        "meal4": [
+          {"name": "무가당요구르트", "portion": "1개", "calories": 50},
+          {"name": "견과류", "portion": "5g", "calories": 30}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "1/4공기", "calories": 65},
+          {"name": "생선구이", "portion": "80g", "calories": 140},
+          {"name": "시금치나물", "portion": "1접시", "calories": 20},
+          {"name": "조개맑은국", "portion": "1그릇", "calories": 25}
+        ],
+        "totalCalories": 1273
+      },
+      {
+        "id": 2,
+        "name": "여성 고혈압/당뇨병 소량다회 감량 B",
+        "targetCalories": 1300,
+        "season": "spring",
+        "meal1": [
+          {"name": "잡곡밥", "portion": "1/4공기", "calories": 68},
+          {"name": "무염된장국", "portion": "1그릇", "calories": 30}
+        ],
+        "meal2": [
+          {"name": "딸기", "portion": "6개", "calories": 21},
+          {"name": "호두", "portion": "3개", "calories": 54}
+        ],
+        "meal3": [
+          {"name": "현미밥", "portion": "1/3공기", "calories": 90},
+          {"name": "생선찜", "portion": "80g", "calories": 135},
+          {"name": "아스파라거스", "portion": "1접시", "calories": 25},
+          {"name": "냉이국", "portion": "1그릇", "calories": 28}
+        ],
+        "meal4": [
+          {"name": "무가당두유", "portion": "150ml", "calories": 60},
+          {"name": "견과류", "portion": "5g", "calories": 30}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "1/4공기", "calories": 65},
+          {"name": "두부찜", "portion": "100g", "calories": 80},
+          {"name": "취나물", "portion": "1접시", "calories": 18},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20}
+        ],
+        "totalCalories": 1324
+      },
+      {
+        "id": 3,
+        "name": "여성 고혈압/당뇨병 소량다회 감량 C",
+        "targetCalories": 1300,
+        "season": "summer",
+        "meal1": [
+          {"name": "보리밥", "portion": "1/4공기", "calories": 62},
+          {"name": "냉된장국", "portion": "1그릇", "calories": 25}
+        ],
+        "meal2": [
+          {"name": "수박", "portion": "1조각", "calories": 45},
+          {"name": "견과류", "portion": "5g", "calories": 30}
+        ],
+        "meal3": [
+          {"name": "메밀소바", "portion": "1/2그릇", "calories": 180},
+          {"name": "삶은달걀", "portion": "1개", "calories": 70},
+          {"name": "오이채", "portion": "1접시", "calories": 20}
+        ],
+        "meal4": [
+          {"name": "토마토", "portion": "1개", "calories": 35},
+          {"name": "무염치즈", "portion": "1/2장", "calories": 40}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "1/4공기", "calories": 65},
+          {"name": "닭가슴살샐러드", "portion": "70g", "calories": 90},
+          {"name": "상추쌈", "portion": "5장", "calories": 10},
+          {"name": "가지국", "portion": "1그릇", "calories": 35}
+        ],
+        "totalCalories": 1307
+      }
+      ],
+
+      "FHDF5MA": [
+      {
+        "id": 1,
+        "name": "여성 고혈압/당뇨병 소량다회 유지 A",
+        "targetCalories": 1500,
+        "season": "all",
+        "meal1": [
+          {"name": "현미밥", "portion": "1/3공기", "calories": 90},
+          {"name": "무염된장국", "portion": "1그릇", "calories": 30}
+        ],
+        "meal2": [
+          {"name": "사과", "portion": "1/2개", "calories": 40},
+          {"name": "아몬드", "portion": "6개", "calories": 42}
+        ],
+        "meal3": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "닭가슴살구이", "portion": "90g", "calories": 150},
+          {"name": "브로콜리볶음", "portion": "1접시", "calories": 35},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20}
+        ],
+        "meal4": [
+          {"name": "무가당요구르트", "portion": "1개", "calories": 50},
+          {"name": "견과류", "portion": "7g", "calories": 42}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "1/3공기", "calories": 90},
+          {"name": "생선구이", "portion": "100g", "calories": 175},
+          {"name": "시금치나물", "portion": "1접시", "calories": 20},
+          {"name": "조개맑은국", "portion": "1그릇", "calories": 25}
+        ],
+        "totalCalories": 1489
+      },
+      {
+        "id": 2,
+        "name": "여성 고혈압/당뇨병 소량다회 유지 B",
+        "targetCalories": 1500,
+        "season": "spring",
+        "meal1": [
+          {"name": "잡곡밥", "portion": "1/3공기", "calories": 95},
+          {"name": "무염된장국", "portion": "1그릇", "calories": 30}
+        ],
+        "meal2": [
+          {"name": "딸기", "portion": "8개", "calories": 28},
+          {"name": "호두", "portion": "4개", "calories": 72}
+        ],
+        "meal3": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "생선찜", "portion": "100g", "calories": 170},
+          {"name": "아스파라거스", "portion": "1접시", "calories": 25},
+          {"name": "냉이국", "portion": "1그릇", "calories": 28}
+        ],
+        "meal4": [
+          {"name": "무가당두유", "portion": "180ml", "calories": 72},
+          {"name": "견과류", "portion": "7g", "calories": 42}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "1/3공기", "calories": 90},
+          {"name": "두부찜", "portion": "120g", "calories": 96},
+          {"name": "취나물", "portion": "1접시", "calories": 18},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20}
+        ],
+        "totalCalories": 1516
+      },
+      {
+        "id": 3,
+        "name": "여성 고혈압/당뇨병 소량다회 유지 C",
+        "targetCalories": 1500,
+        "season": "summer",
+        "meal1": [
+          {"name": "보리밥", "portion": "1/3공기", "calories": 85},
+          {"name": "냉된장국", "portion": "1그릇", "calories": 25}
+        ],
+        "meal2": [
+          {"name": "수박", "portion": "1조각", "calories": 45},
+          {"name": "견과류", "portion": "7g", "calories": 42}
+        ],
+        "meal3": [
+          {"name": "메밀소바", "portion": "2/3그릇", "calories": 240},
+          {"name": "삶은달걀", "portion": "1개", "calories": 70},
+          {"name": "오이채", "portion": "1접시", "calories": 20}
+        ],
+        "meal4": [
+          {"name": "토마토", "portion": "1개", "calories": 35},
+          {"name": "무염치즈", "portion": "1장", "calories": 80}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "1/3공기", "calories": 90},
+          {"name": "닭가슴살샐러드", "portion": "90g", "calories": 115},
+          {"name": "상추쌈", "portion": "5장", "calories": 10},
+          {"name": "가지국", "portion": "1그릇", "calories": 35}
+        ],
+        "totalCalories": 1492
+      }
+      ],
+
+      "FHDF5SU": [
+      {
+        "id": 1,
+        "name": "여성 고혈압/당뇨병 소량다회 증량 A",
+        "targetCalories": 1700,
+        "season": "all",
+        "meal1": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "무염된장국", "portion": "1그릇", "calories": 30}
+        ],
+        "meal2": [
+          {"name": "사과", "portion": "3/4개", "calories": 60},
+          {"name": "아몬드", "portion": "8개", "calories": 55}
+        ],
+        "meal3": [
+          {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+          {"name": "닭가슴살구이", "portion": "110g", "calories": 180},
+          {"name": "브로콜리볶음", "portion": "1접시", "calories": 35},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20}
+        ],
+        "meal4": [
+          {"name": "무가당요구르트", "portion": "1개", "calories": 50},
+          {"name": "견과류", "portion": "9g", "calories": 54}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "생선구이", "portion": "120g", "calories": 210},
+          {"name": "시금치나물", "portion": "1접시", "calories": 20},
+          {"name": "조개맑은국", "portion": "1그릇", "calories": 25}
+        ],
+        "totalCalories": 1679
+      },
+      {
+        "id": 2,
+        "name": "여성 고혈압/당뇨병 소량다회 증량 B",
+        "targetCalories": 1700,
+        "season": "spring",
+        "meal1": [
+          {"name": "잡곡밥", "portion": "1/2공기", "calories": 135},
+          {"name": "무염된장국", "portion": "1그릇", "calories": 30}
+        ],
+        "meal2": [
+          {"name": "딸기", "portion": "10개", "calories": 35},
+          {"name": "호두", "portion": "5개", "calories": 90}
+        ],
+        "meal3": [
+          {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+          {"name": "생선찜", "portion": "120g", "calories": 200},
+          {"name": "아스파라거스", "portion": "1접시", "calories": 25},
+          {"name": "냉이국", "portion": "1그릇", "calories": 28}
+        ],
+        "meal4": [
+          {"name": "무가당두유", "portion": "200ml", "calories": 80},
+          {"name": "견과류", "portion": "9g", "calories": 54}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "두부찜", "portion": "150g", "calories": 120},
+          {"name": "취나물", "portion": "1접시", "calories": 18},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20}
+        ],
+        "totalCalories": 1745
+      },
+      {
+        "id": 3,
+        "name": "여성 고혈압/당뇨병 소량다회 증량 C",
+        "targetCalories": 1700,
+        "season": "summer",
+        "meal1": [
+          {"name": "보리밥", "portion": "1/2공기", "calories": 125},
+          {"name": "냉된장국", "portion": "1그릇", "calories": 25}
+        ],
+        "meal2": [
+          {"name": "수박", "portion": "2조각", "calories": 90},
+          {"name": "견과류", "portion": "9g", "calories": 54}
+        ],
+        "meal3": [
+          {"name": "메밀소바", "portion": "1그릇", "calories": 360},
+          {"name": "삶은달걀", "portion": "1개", "calories": 70},
+          {"name": "오이채", "portion": "1접시", "calories": 20}
+        ],
+        "meal4": [
+          {"name": "토마토", "portion": "1개", "calories": 35},
+          {"name": "무염치즈", "portion": "1.5장", "calories": 120}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "닭가슴살샐러드", "portion": "110g", "calories": 140},
+          {"name": "상추쌈", "portion": "5장", "calories": 10},
+          {"name": "가지국", "portion": "1그릇", "calories": 35}
+        ],
+        "totalCalories": 1714
+      }
+      ],
+
+      "FHDF5HE": [
+      {
+        "id": 1,
+        "name": "여성 고혈압/당뇨병 소량다회 건강 A",
+        "targetCalories": 1600,
+        "season": "all",
+        "meal1": [
+          {"name": "현미밥", "portion": "2/5공기", "calories": 110},
+          {"name": "무염된장국", "portion": "1그릇", "calories": 30}
+        ],
+        "meal2": [
+          {"name": "사과", "portion": "2/3개", "calories": 53},
+          {"name": "아몬드", "portion": "7개", "calories": 49}
+        ],
+        "meal3": [
+          {"name": "현미밥", "portion": "3/5공기", "calories": 160},
+          {"name": "닭가슴살구이", "portion": "100g", "calories": 165},
+          {"name": "브로콜리볶음", "portion": "1접시", "calories": 35},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20}
+        ],
+        "meal4": [
+          {"name": "무가당요구르트", "portion": "1개", "calories": 50},
+          {"name": "견과류", "portion": "8g", "calories": 48}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "2/5공기", "calories": 110},
+          {"name": "생선구이", "portion": "110g", "calories": 190},
+          {"name": "시금치나물", "portion": "1접시", "calories": 20},
+          {"name": "조개맑은국", "portion": "1그릇", "calories": 25}
+        ],
+        "totalCalories": 1565
+      },
+      {
+        "id": 2,
+        "name": "여성 고혈압/당뇨병 소량다회 건강 B",
+        "targetCalories": 1600,
+        "season": "spring",
+        "meal1": [
+          {"name": "잡곡밥", "portion": "2/5공기", "calories": 115},
+          {"name": "무염된장국", "portion": "1그릇", "calories": 30}
+        ],
+        "meal2": [
+          {"name": "딸기", "portion": "9개", "calories": 32},
+          {"name": "호두", "portion": "4개", "calories": 72}
+        ],
+        "meal3": [
+          {"name": "현미밥", "portion": "3/5공기", "calories": 160},
+          {"name": "생선찜", "portion": "110g", "calories": 185},
+          {"name": "아스파라거스", "portion": "1접시", "calories": 25},
+          {"name": "냉이국", "portion": "1그릇", "calories": 28}
+        ],
+        "meal4": [
+          {"name": "무가당두유", "portion": "180ml", "calories": 72},
+          {"name": "견과류", "portion": "8g", "calories": 48}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "2/5공기", "calories": 110},
+          {"name": "두부찜", "portion": "130g", "calories": 104},
+          {"name": "취나물", "portion": "1접시", "calories": 18},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20}
+        ],
+        "totalCalories": 1619
+      },
+      {
+        "id": 3,
+        "name": "여성 고혈압/당뇨병 소량다회 건강 C",
+        "targetCalories": 1600,
+        "season": "summer",
+        "meal1": [
+          {"name": "보리밥", "portion": "2/5공기", "calories": 105},
+          {"name": "냉된장국", "portion": "1그릇", "calories": 25}
+        ],
+        "meal2": [
+          {"name": "수박", "portion": "1.5조각", "calories": 67},
+          {"name": "견과류", "portion": "8g", "calories": 48}
+        ],
+        "meal3": [
+          {"name": "메밀소바", "portion": "4/5그릇", "calories": 288},
+          {"name": "삶은달걀", "portion": "1개", "calories": 70},
+          {"name": "오이채", "portion": "1접시", "calories": 20}
+        ],
+        "meal4": [
+          {"name": "토마토", "portion": "1개", "calories": 35},
+          {"name": "무염치즈", "portion": "1장", "calories": 80}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "2/5공기", "calories": 110},
+          {"name": "닭가슴살샐러드", "portion": "100g", "calories": 125},
+          {"name": "상추쌈", "portion": "5장", "calories": 10},
+          {"name": "가지국", "portion": "1그릇", "calories": 35}
+        ],
+        "totalCalories": 1618
+      }
+      ],
+
+      "FHDS2DE": [
+        {
+          "id": 1,
+          "name": "여성 고혈압/당뇨병 간편식 감량 A",
+          "targetCalories": 1300,
+          "season": "all",
+          "meal1": [
+            {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+            {"name": "무염된장국", "portion": "1그릇", "calories": 30},
+            {"name": "닭가슴살구이", "portion": "90g", "calories": 150},
+            {"name": "브로콜리볶음", "portion": "1접시", "calories": 35},
+            {"name": "오이무침", "portion": "1접시", "calories": 15}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+            {"name": "생선구이", "portion": "100g", "calories": 175},
+            {"name": "시금치나물", "portion": "1접시", "calories": 20},
+            {"name": "조개맑은국", "portion": "1그릇", "calories": 25}
+          ],
+          "snack": [
+            {"name": "사과", "portion": "1/2개", "calories": 40},
+            {"name": "견과류", "portion": "8g", "calories": 48},
+            {"name": "무가당두유", "portion": "150ml", "calories": 60}
+          ],
+          "totalCalories": 1308
+        },
+        {
+          "id": 2,
+          "name": "여성 고혈압/당뇨병 간편식 감량 B",
+          "targetCalories": 1300,
+          "season": "spring",
+          "meal1": [
+            {"name": "잡곡밥", "portion": "1/2공기", "calories": 135},
+            {"name": "무염된장국", "portion": "1그릇", "calories": 30},
+            {"name": "생선찜", "portion": "100g", "calories": 170},
+            {"name": "아스파라거스", "portion": "1접시", "calories": 25},
+            {"name": "도라지무침", "portion": "1접시", "calories": 22}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+            {"name": "두부찜", "portion": "120g", "calories": 96},
+            {"name": "취나물", "portion": "1접시", "calories": 18},
+            {"name": "냉이국", "portion": "1그릇", "calories": 28}
+          ],
+          "snack": [
+            {"name": "딸기", "portion": "8개", "calories": 28},
+            {"name": "호두", "portion": "4개", "calories": 72},
+            {"name": "무가당요구르트", "portion": "1개", "calories": 50}
+          ],
+          "totalCalories": 1304
+        },
+        {
+          "id": 3,
+          "name": "여성 고혈압/당뇨병 간편식 감량 C",
+          "targetCalories": 1300,
+          "season": "summer",
+          "meal1": [
+            {"name": "메밀소바", "portion": "2/3그릇", "calories": 240},
+            {"name": "삶은달걀", "portion": "1개", "calories": 70},
+            {"name": "오이채", "portion": "1접시", "calories": 20}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+            {"name": "닭가슴살샐러드", "portion": "90g", "calories": 115},
+            {"name": "상추쌈", "portion": "5장", "calories": 10},
+            {"name": "가지국", "portion": "1그릇", "calories": 35}
+          ],
+          "snack": [
+            {"name": "수박", "portion": "1조각", "calories": 45},
+            {"name": "견과류", "portion": "8g", "calories": 48},
+            {"name": "보리차", "portion": "1잔", "calories": 0}
+          ],
+          "totalCalories": 1313
+        }
+      ],
+
+      "FHDS2MA": [
+        {
+          "id": 1,
+          "name": "여성 고혈압/당뇨병 간편식 유지 A",
+          "targetCalories": 1500,
+          "season": "all",
+          "meal1": [
+            {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+            {"name": "무염된장국", "portion": "1그릇", "calories": 30},
+            {"name": "닭가슴살구이", "portion": "110g", "calories": 180},
+            {"name": "브로콜리볶음", "portion": "1접시", "calories": 35},
+            {"name": "오이무침", "portion": "1접시", "calories": 15}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+            {"name": "생선구이", "portion": "120g", "calories": 210},
+            {"name": "시금치나물", "portion": "1접시", "calories": 20},
+            {"name": "조개맑은국", "portion": "1그릇", "calories": 25}
+          ],
+          "snack": [
+            {"name": "사과", "portion": "2/3개", "calories": 53},
+            {"name": "견과류", "portion": "10g", "calories": 60},
+            {"name": "무가당두유", "portion": "200ml", "calories": 80}
+          ],
+          "totalCalories": 1568
+        },
+        {
+          "id": 2,
+          "name": "여성 고혈압/당뇨병 간편식 유지 B",
+          "targetCalories": 1500,
+          "season": "spring",
+          "meal1": [
+            {"name": "잡곡밥", "portion": "2/3공기", "calories": 185},
+            {"name": "무염된장국", "portion": "1그릇", "calories": 30},
+            {"name": "생선찜", "portion": "120g", "calories": 200},
+            {"name": "아스파라거스", "portion": "1접시", "calories": 25},
+            {"name": "도라지무침", "portion": "1접시", "calories": 22}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+            {"name": "두부찜", "portion": "150g", "calories": 120},
+            {"name": "취나물", "portion": "1접시", "calories": 18},
+            {"name": "냉이국", "portion": "1그릇", "calories": 28}
+          ],
+          "snack": [
+            {"name": "딸기", "portion": "10개", "calories": 35},
+            {"name": "호두", "portion": "5개", "calories": 90},
+            {"name": "무가당요구르트", "portion": "1개", "calories": 50}
+          ],
+          "totalCalories": 1483
+        },
+        {
+          "id": 3,
+          "name": "여성 고혈압/당뇨병 간편식 유지 C",
+          "targetCalories": 1500,
+          "season": "summer",
+          "meal1": [
+            {"name": "메밀소바", "portion": "1그릇", "calories": 360},
+            {"name": "삶은달걀", "portion": "1개", "calories": 70},
+            {"name": "오이채", "portion": "1접시", "calories": 20}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+            {"name": "닭가슴살샐러드", "portion": "110g", "calories": 140},
+            {"name": "상추쌈", "portion": "5장", "calories": 10},
+            {"name": "가지국", "portion": "1그릇", "calories": 35}
+          ],
+          "snack": [
+            {"name": "수박", "portion": "2조각", "calories": 90},
+            {"name": "견과류", "portion": "10g", "calories": 60},
+            {"name": "보리차", "portion": "1잔", "calories": 0}
+          ],
+          "totalCalories": 1465
+        }
+      ],
+
+      "FHDS2SU": [
+        {
+          "id": 1,
+          "name": "여성 고혈압/당뇨병 간편식 증량 A",
+          "targetCalories": 1700,
+          "season": "all",
+          "meal1": [
+            {"name": "현미밥", "portion": "3/4공기", "calories": 200},
+            {"name": "무염된장국", "portion": "1그릇", "calories": 30},
+            {"name": "닭가슴살구이", "portion": "130g", "calories": 215},
+            {"name": "브로콜리볶음", "portion": "1접시", "calories": 35},
+            {"name": "오이무침", "portion": "1접시", "calories": 15}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "3/4공기", "calories": 200},
+            {"name": "생선구이", "portion": "140g", "calories": 245},
+            {"name": "시금치나물", "portion": "1접시", "calories": 20},
+            {"name": "조개맑은국", "portion": "1그릇", "calories": 25}
+          ],
+          "snack": [
+            {"name": "사과", "portion": "1개", "calories": 80},
+            {"name": "견과류", "portion": "12g", "calories": 72},
+            {"name": "무가당두유", "portion": "250ml", "calories": 100}
+          ],
+          "totalCalories": 1737
+        },
+        {
+          "id": 2,
+          "name": "여성 고혈압/당뇨병 간편식 증량 B",
+          "targetCalories": 1700,
+          "season": "spring",
+          "meal1": [
+            {"name": "잡곡밥", "portion": "3/4공기", "calories": 205},
+            {"name": "무염된장국", "portion": "1그릇", "calories": 30},
+            {"name": "생선찜", "portion": "140g", "calories": 235},
+            {"name": "아스파라거스", "portion": "1접시", "calories": 25},
+            {"name": "도라지무침", "portion": "1접시", "calories": 22}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "3/4공기", "calories": 200},
+            {"name": "두부찜", "portion": "180g", "calories": 144},
+            {"name": "취나물", "portion": "1접시", "calories": 18},
+            {"name": "냉이국", "portion": "1그릇", "calories": 28}
+          ],
+          "snack": [
+            {"name": "딸기", "portion": "12개", "calories": 42},
+            {"name": "호두", "portion": "6개", "calories": 108},
+            {"name": "무가당요구르트", "portion": "1개", "calories": 50}
+          ],
+          "totalCalories": 1707
+        },
+        {
+          "id": 3,
+          "name": "여성 고혈압/당뇨병 간편식 증량 C",
+          "targetCalories": 1700,
+          "season": "summer",
+          "meal1": [
+            {"name": "메밀소바", "portion": "1.2그릇", "calories": 432},
+            {"name": "삶은달걀", "portion": "1개", "calories": 70},
+            {"name": "오이채", "portion": "1접시", "calories": 20}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "3/4공기", "calories": 200},
+            {"name": "닭가슴살샐러드", "portion": "130g", "calories": 165},
+            {"name": "상추쌈", "portion": "5장", "calories": 10},
+            {"name": "가지국", "portion": "1그릇", "calories": 35}
+          ],
+          "snack": [
+            {"name": "수박", "portion": "3조각", "calories": 135},
+            {"name": "견과류", "portion": "12g", "calories": 72},
+            {"name": "보리차", "portion": "1잔", "calories": 0}
+          ],
+          "totalCalories": 1739
+        }
+      ],
+
+      "FHDS2HE": [
+        {
+          "id": 1,
+          "name": "여성 고혈압/당뇨병 간편식 건강 A",
+          "targetCalories": 1600,
+          "season": "all",
+          "meal1": [
+            {"name": "현미밥", "portion": "7/10공기", "calories": 190},
+            {"name": "무염된장국", "portion": "1그릇", "calories": 30},
+            {"name": "닭가슴살구이", "portion": "120g", "calories": 200},
+            {"name": "브로콜리볶음", "portion": "1접시", "calories": 35},
+            {"name": "오이무침", "portion": "1접시", "calories": 15}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "7/10공기", "calories": 190},
+            {"name": "생선구이", "portion": "130g", "calories": 225},
+            {"name": "시금치나물", "portion": "1접시", "calories": 20},
+            {"name": "조개맑은국", "portion": "1그릇", "calories": 25}
+          ],
+          "snack": [
+            {"name": "사과", "portion": "3/4개", "calories": 60},
+            {"name": "견과류", "portion": "10g", "calories": 60},
+            {"name": "무가당두유", "portion": "200ml", "calories": 80}
+          ],
+          "totalCalories": 1630
+        },
+        {
+          "id": 2,
+          "name": "여성 고혈압/당뇨병 간편식 건강 B",
+          "targetCalories": 1600,
+          "season": "spring",
+          "meal1": [
+            {"name": "잡곡밥", "portion": "7/10공기", "calories": 195},
+            {"name": "무염된장국", "portion": "1그릇", "calories": 30},
+            {"name": "생선찜", "portion": "130g", "calories": 220},
+            {"name": "아스파라거스", "portion": "1접시", "calories": 25},
+            {"name": "도라지무침", "portion": "1접시", "calories": 22}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "7/10공기", "calories": 190},
+            {"name": "두부찜", "portion": "160g", "calories": 128},
+            {"name": "취나물", "portion": "1접시", "calories": 18},
+            {"name": "냉이국", "portion": "1그릇", "calories": 28}
+          ],
+          "snack": [
+            {"name": "딸기", "portion": "10개", "calories": 35},
+            {"name": "호두", "portion": "5개", "calories": 90},
+            {"name": "무가당요구르트", "portion": "1개", "calories": 50}
+          ],
+          "totalCalories": 1531
+        },
+        {
+          "id": 3,
+          "name": "여성 고혈압/당뇨병 간편식 건강 C",
+          "targetCalories": 1600,
+          "season": "summer",
+          "meal1": [
+            {"name": "메밀소바", "portion": "1그릇", "calories": 360},
+            {"name": "삶은달걀", "portion": "1개", "calories": 70},
+            {"name": "오이채", "portion": "1접시", "calories": 20}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "7/10공기", "calories": 190},
+            {"name": "닭가슴살샐러드", "portion": "120g", "calories": 150},
+            {"name": "상추쌈", "portion": "5장", "calories": 10},
+            {"name": "가지국", "portion": "1그릇", "calories": 35}
+          ],
+          "snack": [
+            {"name": "수박", "portion": "2조각", "calories": 90},
+            {"name": "견과류", "portion": "10g", "calories": 60},
+            {"name": "보리차", "portion": "1잔", "calories": 0}
+          ],
+          "totalCalories": 1485
+        }
+      ],
+
+      "FCVR3DE": [
+      {
+        "id": 1,
+        "name": "여성 심혈관 복합질환 감량 A",
+        "targetCalories": 1200,
+        "season": "all",
+        "breakfast": [
+          {"name": "현미밥", "portion": "1/3공기", "calories": 90},
+          {"name": "무염다시마국", "portion": "1그릇", "calories": 20},
+          {"name": "두부찜", "portion": "80g", "calories": 64},
+          {"name": "시금치나물", "portion": "1접시", "calories": 20}
+        ],
+        "lunch": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20},
+          {"name": "닭가슴살구이", "portion": "70g", "calories": 115},
+          {"name": "브로콜리찜", "portion": "1접시", "calories": 30},
+          {"name": "오이무침", "portion": "1접시", "calories": 15}
+        ],
+        "dinner": [
+          {"name": "현미밥", "portion": "1/3공기", "calories": 90},
+          {"name": "조개맑은국", "portion": "1그릇", "calories": 25},
+          {"name": "생선찜", "portion": "80g", "calories": 135},
+          {"name": "애호박찜", "portion": "1접시", "calories": 25}
+        ],
+        "snack": [
+          {"name": "사과", "portion": "1/2개", "calories": 40},
+          {"name": "견과류", "portion": "5g", "calories": 30},
+          {"name": "무가당두유", "portion": "150ml", "calories": 60}
+        ],
+        "totalCalories": 1229
+      },
+      {
+        "id": 2,
+        "name": "여성 심혈관 복합질환 감량 B",
+        "targetCalories": 1200,
+        "season": "spring",
+        "breakfast": [
+          {"name": "잡곡밥", "portion": "1/3공기", "calories": 95},
+          {"name": "무염된장국", "portion": "1그릇", "calories": 25},
+          {"name": "계란찜", "portion": "1접시", "calories": 80},
+          {"name": "취나물", "portion": "1접시", "calories": 18}
+        ],
+        "lunch": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20},
+          {"name": "생선찜", "portion": "80g", "calories": 135},
+          {"name": "아스파라거스", "portion": "1접시", "calories": 25},
+          {"name": "도라지무침", "portion": "1접시", "calories": 22}
+        ],
+        "dinner": [
+          {"name": "현미밥", "portion": "1/3공기", "calories": 90},
+          {"name": "냉이국", "portion": "1그릇", "calories": 28},
+          {"name": "두부조림", "portion": "100g", "calories": 90},
+          {"name": "콩나물무침", "portion": "1접시", "calories": 25}
+        ],
+        "snack": [
+          {"name": "딸기", "portion": "6개", "calories": 21},
+          {"name": "호두", "portion": "3개", "calories": 54},
+          {"name": "무가당요구르트", "portion": "1개", "calories": 50}
+        ],
+        "totalCalories": 1218
+      },
+      {
+        "id": 3,
+        "name": "여성 심혈관 복합질환 감량 C",
+        "targetCalories": 1200,
+        "season": "summer",
+        "breakfast": [
+          {"name": "보리밥", "portion": "1/3공기", "calories": 85},
+          {"name": "냉된장국", "portion": "1그릇", "calories": 20},
+          {"name": "두부샐러드", "portion": "80g", "calories": 68}
+        ],
+        "lunch": [
+          {"name": "메밀소바", "portion": "1/2그릇", "calories": 180},
+          {"name": "삶은달걀", "portion": "1개", "calories": 70},
+          {"name": "오이채", "portion": "1접시", "calories": 20}
+        ],
+        "dinner": [
+          {"name": "현미밥", "portion": "1/3공기", "calories": 90},
+          {"name": "가지국", "portion": "1그릇", "calories": 35},
+          {"name": "닭가슴살샐러드", "portion": "70g", "calories": 90},
+          {"name": "상추쌈", "portion": "5장", "calories": 10}
+        ],
+        "snack": [
+          {"name": "수박", "portion": "1조각", "calories": 45},
+          {"name": "견과류", "portion": "5g", "calories": 30},
+          {"name": "보리차", "portion": "1잔", "calories": 0}
+        ],
+        "totalCalories": 1243
+      }
+      ],
+
+      "FCVR3MA": [
+      {
+        "id": 1,
+        "name": "여성 심혈관 복합질환 유지 A",
+        "targetCalories": 1400,
+        "season": "all",
+        "breakfast": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "무염다시마국", "portion": "1그릇", "calories": 20},
+          {"name": "두부찜", "portion": "100g", "calories": 80},
+          {"name": "시금치나물", "portion": "1접시", "calories": 20}
+        ],
+        "lunch": [
+          {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20},
+          {"name": "닭가슴살구이", "portion": "90g", "calories": 150},
+          {"name": "브로콜리찜", "portion": "1접시", "calories": 30},
+          {"name": "오이무침", "portion": "1접시", "calories": 15}
+        ],
+        "dinner": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "조개맑은국", "portion": "1그릇", "calories": 25},
+          {"name": "생선찜", "portion": "100g", "calories": 170},
+          {"name": "애호박찜", "portion": "1접시", "calories": 25}
+        ],
+        "snack": [
+          {"name": "사과", "portion": "1/2개", "calories": 40},
+          {"name": "견과류", "portion": "7g", "calories": 42},
+          {"name": "무가당두유", "portion": "200ml", "calories": 80}
+        ],
+        "totalCalories": 1437
+      },
+      {
+        "id": 2,
+        "name": "여성 심혈관 복합질환 유지 B",
+        "targetCalories": 1400,
+        "season": "spring",
+        "breakfast": [
+          {"name": "잡곡밥", "portion": "1/2공기", "calories": 135},
+          {"name": "무염된장국", "portion": "1그릇", "calories": 25},
+          {"name": "계란찜", "portion": "1접시", "calories": 80},
+          {"name": "취나물", "portion": "1접시", "calories": 18}
+        ],
+        "lunch": [
+          {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20},
+          {"name": "생선찜", "portion": "100g", "calories": 170},
+          {"name": "아스파라거스", "portion": "1접시", "calories": 25},
+          {"name": "도라지무침", "portion": "1접시", "calories": 22}
+        ],
+        "dinner": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "냉이국", "portion": "1그릇", "calories": 28},
+          {"name": "두부조림", "portion": "120g", "calories": 108},
+          {"name": "콩나물무침", "portion": "1접시", "calories": 25}
+        ],
+        "snack": [
+          {"name": "딸기", "portion": "8개", "calories": 28},
+          {"name": "호두", "portion": "4개", "calories": 72},
+          {"name": "무가당요구르트", "portion": "1개", "calories": 50}
+        ],
+        "totalCalories": 1416
+      },
+      {
+        "id": 3,
+        "name": "여성 심혈관 복합질환 유지 C",
+        "targetCalories": 1400,
+        "season": "summer",
+        "breakfast": [
+          {"name": "보리밥", "portion": "1/2공기", "calories": 125},
+          {"name": "냉된장국", "portion": "1그릇", "calories": 20},
+          {"name": "두부샐러드", "portion": "100g", "calories": 85}
+        ],
+        "lunch": [
+          {"name": "메밀소바", "portion": "2/3그릇", "calories": 240},
+          {"name": "삶은달걀", "portion": "1개", "calories": 70},
+          {"name": "오이채", "portion": "1접시", "calories": 20}
+        ],
+        "dinner": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "가지국", "portion": "1그릇", "calories": 35},
+          {"name": "닭가슴살샐러드", "portion": "90g", "calories": 115},
+          {"name": "상추쌈", "portion": "5장", "calories": 10}
+        ],
+        "snack": [
+          {"name": "수박", "portion": "1조각", "calories": 45},
+          {"name": "견과류", "portion": "7g", "calories": 42},
+          {"name": "보리차", "portion": "1잔", "calories": 0}
+        ],
+        "totalCalories": 1437
+      }
+      ],
+
+      "FCVR3SU": [
+      {
+        "id": 1,
+        "name": "여성 심혈관 복합질환 증량 A",
+        "targetCalories": 1600,
+        "season": "all",
+        "breakfast": [
+          {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+          {"name": "무염다시마국", "portion": "1그릇", "calories": 20},
+          {"name": "두부찜", "portion": "120g", "calories": 96},
+          {"name": "시금치나물", "portion": "1접시", "calories": 20}
+        ],
+        "lunch": [
+          {"name": "현미밥", "portion": "3/4공기", "calories": 200},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20},
+          {"name": "닭가슴살구이", "portion": "110g", "calories": 180},
+          {"name": "브로콜리찜", "portion": "1접시", "calories": 30},
+          {"name": "오이무침", "portion": "1접시", "calories": 15}
+        ],
+        "dinner": [
+          {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+          {"name": "조개맑은국", "portion": "1그릇", "calories": 25},
+          {"name": "생선찜", "portion": "120g", "calories": 200},
+          {"name": "애호박찜", "portion": "1접시", "calories": 25}
+        ],
+        "snack": [
+          {"name": "사과", "portion": "3/4개", "calories": 60},
+          {"name": "견과류", "portion": "9g", "calories": 54},
+          {"name": "무가당두유", "portion": "250ml", "calories": 100}
+        ],
+        "totalCalories": 1605
+      },
+      {
+        "id": 2,
+        "name": "여성 심혈관 복합질환 증량 B",
+        "targetCalories": 1600,
+        "season": "spring",
+        "breakfast": [
+          {"name": "잡곡밥", "portion": "2/3공기", "calories": 185},
+          {"name": "무염된장국", "portion": "1그릇", "calories": 25},
+          {"name": "계란찜", "portion": "1접시", "calories": 80},
+          {"name": "취나물", "portion": "1접시", "calories": 18}
+        ],
+        "lunch": [
+          {"name": "현미밥", "portion": "3/4공기", "calories": 200},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20},
+          {"name": "생선찜", "portion": "120g", "calories": 200},
+          {"name": "아스파라거스", "portion": "1접시", "calories": 25},
+          {"name": "도라지무침", "portion": "1접시", "calories": 22}
+        ],
+        "dinner": [
+          {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+          {"name": "냉이국", "portion": "1그릇", "calories": 28},
+          {"name": "두부조림", "portion": "150g", "calories": 135},
+          {"name": "콩나물무침", "portion": "1접시", "calories": 25}
+        ],
+        "snack": [
+          {"name": "딸기", "portion": "10개", "calories": 35},
+          {"name": "호두", "portion": "5개", "calories": 90},
+          {"name": "무가당요구르트", "portion": "1개", "calories": 50}
+        ],
+        "totalCalories": 1618
+      },
+      {
+        "id": 3,
+        "name": "여성 심혈관 복합질환 증량 C",
+        "targetCalories": 1600,
+        "season": "summer",
+        "breakfast": [
+          {"name": "보리밥", "portion": "2/3공기", "calories": 165},
+          {"name": "냉된장국", "portion": "1그릇", "calories": 20},
+          {"name": "두부샐러드", "portion": "120g", "calories": 102}
+        ],
+        "lunch": [
+          {"name": "메밀소바", "portion": "1그릇", "calories": 360},
+          {"name": "삶은달걀", "portion": "1개", "calories": 70},
+          {"name": "오이채", "portion": "1접시", "calories": 20}
+        ],
+        "dinner": [
+          {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+          {"name": "가지국", "portion": "1그릇", "calories": 35},
+          {"name": "닭가슴살샐러드", "portion": "110g", "calories": 140},
+          {"name": "상추쌈", "portion": "5장", "calories": 10}
+        ],
+        "snack": [
+          {"name": "수박", "portion": "2조각", "calories": 90},
+          {"name": "견과류", "portion": "9g", "calories": 54},
+          {"name": "보리차", "portion": "1잔", "calories": 0}
+        ],
+        "totalCalories": 1646
+      }
+      ],
+
+      "FCVR3HE": [
+      {
+        "id": 1,
+        "name": "여성 심혈관 복합질환 건강 A",
+        "targetCalories": 1500,
+        "season": "all",
+        "breakfast": [
+          {"name": "현미밥", "portion": "3/5공기", "calories": 160},
+          {"name": "무염다시마국", "portion": "1그릇", "calories": 20},
+          {"name": "두부찜", "portion": "110g", "calories": 88},
+          {"name": "시금치나물", "portion": "1접시", "calories": 20}
+        ],
+        "lunch": [
+          {"name": "현미밥", "portion": "7/10공기", "calories": 190},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20},
+          {"name": "닭가슴살구이", "portion": "100g", "calories": 165},
+          {"name": "브로콜리찜", "portion": "1접시", "calories": 30},
+          {"name": "오이무침", "portion": "1접시", "calories": 15}
+        ],
+        "dinner": [
+          {"name": "현미밥", "portion": "3/5공기", "calories": 160},
+          {"name": "조개맑은국", "portion": "1그릇", "calories": 25},
+          {"name": "생선찜", "portion": "110g", "calories": 185},
+          {"name": "애호박찜", "portion": "1접시", "calories": 25}
+        ],
+        "snack": [
+          {"name": "사과", "portion": "2/3개", "calories": 53},
+          {"name": "견과류", "portion": "8g", "calories": 48},
+          {"name": "무가당두유", "portion": "200ml", "calories": 80}
+        ],
+        "totalCalories": 1534
+      },
+      {
+        "id": 2,
+        "name": "여성 심혈관 복합질환 건강 B",
+        "targetCalories": 1500,
+        "season": "spring",
+        "breakfast": [
+          {"name": "잡곡밥", "portion": "3/5공기", "calories": 165},
+          {"name": "무염된장국", "portion": "1그릇", "calories": 25},
+          {"name": "계란찜", "portion": "1접시", "calories": 80},
+          {"name": "취나물", "portion": "1접시", "calories": 18}
+        ],
+        "lunch": [
+          {"name": "현미밥", "portion": "7/10공기", "calories": 190},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20},
+          {"name": "생선찜", "portion": "110g", "calories": 185},
+          {"name": "아스파라거스", "portion": "1접시", "calories": 25},
+          {"name": "도라지무침", "portion": "1접시", "calories": 22}
+        ],
+        "dinner": [
+          {"name": "현미밥", "portion": "3/5공기", "calories": 160},
+          {"name": "냉이국", "portion": "1그릇", "calories": 28},
+          {"name": "두부조림", "portion": "130g", "calories": 117},
+          {"name": "콩나물무침", "portion": "1접시", "calories": 25}
+        ],
+        "snack": [
+          {"name": "딸기", "portion": "8개", "calories": 28},
+          {"name": "호두", "portion": "4개", "calories": 72},
+          {"name": "무가당요구르트", "portion": "1개", "calories": 50}
+        ],
+        "totalCalories": 1510
+      },
+      {
+        "id": 3,
+        "name": "여성 심혈관 복합질환 건강 C",
+        "targetCalories": 1500,
+        "season": "summer",
+        "breakfast": [
+          {"name": "보리밥", "portion": "3/5공기", "calories": 150},
+          {"name": "냉된장국", "portion": "1그릇", "calories": 20},
+          {"name": "두부샐러드", "portion": "110g", "calories": 94}
+        ],
+        "lunch": [
+          {"name": "메밀소바", "portion": "4/5그릇", "calories": 288},
+          {"name": "삶은달걀", "portion": "1개", "calories": 70},
+          {"name": "오이채", "portion": "1접시", "calories": 20}
+        ],
+        "dinner": [
+          {"name": "현미밥", "portion": "3/5공기", "calories": 160},
+          {"name": "가지국", "portion": "1그릇", "calories": 35},
+          {"name": "닭가슴살샐러드", "portion": "100g", "calories": 125},
+          {"name": "상추쌈", "portion": "5장", "calories": 10}
+        ],
+        "snack": [
+          {"name": "수박", "portion": "1.5조각", "calories": 67},
+          {"name": "견과류", "portion": "8g", "calories": 48},
+          {"name": "보리차", "portion": "1잔", "calories": 0}
+        ],
+        "totalCalories": 1487
+      }
+      ],
+
+      "FCVF5DE": [
+      {
+        "id": 1,
+        "name": "여성 심혈관 복합질환 소량다회 감량 A",
+        "targetCalories": 1200,
+        "season": "all",
+        "meal1": [
+          {"name": "현미밥", "portion": "1/4공기", "calories": 65},
+          {"name": "무염다시마국", "portion": "1그릇", "calories": 20}
+        ],
+        "meal2": [
+          {"name": "사과", "portion": "1/2개", "calories": 40},
+          {"name": "견과류", "portion": "4g", "calories": 24}
+        ],
+        "meal3": [
+          {"name": "현미밥", "portion": "1/3공기", "calories": 90},
+          {"name": "닭가슴살찜", "portion": "60g", "calories": 100},
+          {"name": "브로콜리찜", "portion": "1접시", "calories": 30},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20}
+        ],
+        "meal4": [
+          {"name": "무가당요구르트", "portion": "1개", "calories": 50},
+          {"name": "견과류", "portion": "4g", "calories": 24}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "1/4공기", "calories": 65},
+          {"name": "생선찜", "portion": "70g", "calories": 120},
+          {"name": "시금치나물", "portion": "1접시", "calories": 20},
+          {"name": "조개맑은국", "portion": "1그릇", "calories": 25}
+        ],
+        "totalCalories": 1193
+      },
+      {
+        "id": 2,
+        "name": "여성 심혈관 복합질환 소량다회 감량 B",
+        "targetCalories": 1200,
+        "season": "spring",
+        "meal1": [
+          {"name": "잡곡밥", "portion": "1/4공기", "calories": 68},
+          {"name": "무염된장국", "portion": "1그릇", "calories": 25}
+        ],
+        "meal2": [
+          {"name": "딸기", "portion": "5개", "calories": 18},
+          {"name": "호두", "portion": "2개", "calories": 36}
+        ],
+        "meal3": [
+          {"name": "현미밥", "portion": "1/3공기", "calories": 90},
+          {"name": "생선찜", "portion": "70g", "calories": 120},
+          {"name": "아스파라거스", "portion": "1접시", "calories": 25},
+          {"name": "냉이국", "portion": "1그릇", "calories": 28}
+        ],
+        "meal4": [
+          {"name": "무가당두유", "portion": "150ml", "calories": 60},
+          {"name": "견과류", "portion": "4g", "calories": 24}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "1/4공기", "calories": 65},
+          {"name": "두부찜", "portion": "80g", "calories": 64},
+          {"name": "취나물", "portion": "1접시", "calories": 18},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20}
+        ],
+        "totalCalories": 1201
+      },
+      {
+        "id": 3,
+        "name": "여성 심혈관 복합질환 소량다회 감량 C",
+        "targetCalories": 1200,
+        "season": "summer",
+        "meal1": [
+          {"name": "보리밥", "portion": "1/4공기", "calories": 62},
+          {"name": "냉된장국", "portion": "1그릇", "calories": 20}
+        ],
+        "meal2": [
+          {"name": "수박", "portion": "1조각", "calories": 45},
+          {"name": "견과류", "portion": "4g", "calories": 24}
+        ],
+        "meal3": [
+          {"name": "메밀소바", "portion": "1/2그릇", "calories": 180},
+          {"name": "삶은달걀", "portion": "1개", "calories": 70},
+          {"name": "오이채", "portion": "1접시", "calories": 20}
+        ],
+        "meal4": [
+          {"name": "토마토", "portion": "1개", "calories": 35},
+          {"name": "무염치즈", "portion": "1/2장", "calories": 40}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "1/4공기", "calories": 65},
+          {"name": "닭가슴살샐러드", "portion": "60g", "calories": 75},
+          {"name": "상추쌈", "portion": "5장", "calories": 10},
+          {"name": "가지국", "portion": "1그릇", "calories": 35}
+        ],
+        "totalCalories": 1201
+      }
+      ],
+
+      "FCVF5MA": [
+      {
+        "id": 1,
+        "name": "여성 심혈관 복합질환 소량다회 유지 A",
+        "targetCalories": 1400,
+        "season": "all",
+        "meal1": [
+          {"name": "현미밥", "portion": "1/3공기", "calories": 90},
+          {"name": "무염다시마국", "portion": "1그릇", "calories": 20}
+        ],
+        "meal2": [
+          {"name": "사과", "portion": "1/2개", "calories": 40},
+          {"name": "견과류", "portion": "6g", "calories": 36}
+        ],
+        "meal3": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "닭가슴살찜", "portion": "80g", "calories": 130},
+          {"name": "브로콜리찜", "portion": "1접시", "calories": 30},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20}
+        ],
+        "meal4": [
+          {"name": "무가당요구르트", "portion": "1개", "calories": 50},
+          {"name": "견과류", "portion": "6g", "calories": 36}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "1/3공기", "calories": 90},
+          {"name": "생선찜", "portion": "90g", "calories": 155},
+          {"name": "시금치나물", "portion": "1접시", "calories": 20},
+          {"name": "조개맑은국", "portion": "1그릇", "calories": 25}
+        ],
+        "totalCalories": 1422
+      },
+      {
+        "id": 2,
+        "name": "여성 심혈관 복합질환 소량다회 유지 B",
+        "targetCalories": 1400,
+        "season": "spring",
+        "meal1": [
+          {"name": "잡곡밥", "portion": "1/3공기", "calories": 95},
+          {"name": "무염된장국", "portion": "1그릇", "calories": 25}
+        ],
+        "meal2": [
+          {"name": "딸기", "portion": "7개", "calories": 25},
+          {"name": "호두", "portion": "3개", "calories": 54}
+        ],
+        "meal3": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "생선찜", "portion": "90g", "calories": 155},
+          {"name": "아스파라거스", "portion": "1접시", "calories": 25},
+          {"name": "냉이국", "portion": "1그릇", "calories": 28}
+        ],
+        "meal4": [
+          {"name": "무가당두유", "portion": "180ml", "calories": 72},
+          {"name": "견과류", "portion": "6g", "calories": 36}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "1/3공기", "calories": 90},
+          {"name": "두부찜", "portion": "100g", "calories": 80},
+          {"name": "취나물", "portion": "1접시", "calories": 18},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20}
+        ],
+        "totalCalories": 1403
+      },
+      {
+        "id": 3,
+        "name": "여성 심혈관 복합질환 소량다회 유지 C",
+        "targetCalories": 1400,
+        "season": "summer",
+        "meal1": [
+          {"name": "보리밥", "portion": "1/3공기", "calories": 85},
+          {"name": "냉된장국", "portion": "1그릇", "calories": 20}
+        ],
+        "meal2": [
+          {"name": "수박", "portion": "1조각", "calories": 45},
+          {"name": "견과류", "portion": "6g", "calories": 36}
+        ],
+        "meal3": [
+          {"name": "메밀소바", "portion": "2/3그릇", "calories": 240},
+          {"name": "삶은달걀", "portion": "1개", "calories": 70},
+          {"name": "오이채", "portion": "1접시", "calories": 20}
+        ],
+        "meal4": [
+          {"name": "토마토", "portion": "1개", "calories": 35},
+          {"name": "무염치즈", "portion": "1장", "calories": 80}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "1/3공기", "calories": 90},
+          {"name": "닭가슴살샐러드", "portion": "80g", "calories": 100},
+          {"name": "상추쌈", "portion": "5장", "calories": 10},
+          {"name": "가지국", "portion": "1그릇", "calories": 35}
+        ],
+        "totalCalories": 1406
+      }
+      ],
+
+      "FCVF5SU": [
+      {
+        "id": 1,
+        "name": "여성 심혈관 복합질환 소량다회 증량 A",
+        "targetCalories": 1600,
+        "season": "all",
+        "meal1": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "무염다시마국", "portion": "1그릇", "calories": 20}
+        ],
+        "meal2": [
+          {"name": "사과", "portion": "2/3개", "calories": 53},
+          {"name": "견과류", "portion": "8g", "calories": 48}
+        ],
+        "meal3": [
+          {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+          {"name": "닭가슴살찜", "portion": "100g", "calories": 165},
+          {"name": "브로콜리찜", "portion": "1접시", "calories": 30},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20}
+        ],
+        "meal4": [
+          {"name": "무가당요구르트", "portion": "1개", "calories": 50},
+          {"name": "견과류", "portion": "8g", "calories": 48}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "생선찜", "portion": "110g", "calories": 190},
+          {"name": "시금치나물", "portion": "1접시", "calories": 20},
+          {"name": "조개맑은국", "portion": "1그릇", "calories": 25}
+        ],
+        "totalCalories": 1609
+      },
+      {
+        "id": 2,
+        "name": "여성 심혈관 복합질환 소량다회 증량 B",
+        "targetCalories": 1600,
+        "season": "spring",
+        "meal1": [
+          {"name": "잡곡밥", "portion": "1/2공기", "calories": 135},
+          {"name": "무염된장국", "portion": "1그릇", "calories": 25}
+        ],
+        "meal2": [
+          {"name": "딸기", "portion": "9개", "calories": 32},
+          {"name": "호두", "portion": "4개", "calories": 72}
+        ],
+        "meal3": [
+          {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+          {"name": "생선찜", "portion": "110g", "calories": 190},
+          {"name": "아스파라거스", "portion": "1접시", "calories": 25},
+          {"name": "냉이국", "portion": "1그릇", "calories": 28}
+        ],
+        "meal4": [
+          {"name": "무가당두유", "portion": "200ml", "calories": 80},
+          {"name": "견과류", "portion": "8g", "calories": 48}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "두부찜", "portion": "120g", "calories": 96},
+          {"name": "취나물", "portion": "1접시", "calories": 18},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20}
+        ],
+        "totalCalories": 1619
+      },
+      {
+        "id": 3,
+        "name": "여성 심혈관 복합질환 소량다회 증량 C",
+        "targetCalories": 1600,
+        "season": "summer",
+        "meal1": [
+          {"name": "보리밥", "portion": "1/2공기", "calories": 125},
+          {"name": "냉된장국", "portion": "1그릇", "calories": 20}
+        ],
+        "meal2": [
+          {"name": "수박", "portion": "2조각", "calories": 90},
+          {"name": "견과류", "portion": "8g", "calories": 48}
+        ],
+        "meal3": [
+          {"name": "메밀소바", "portion": "1그릇", "calories": 360},
+          {"name": "삶은달걀", "portion": "1개", "calories": 70},
+          {"name": "오이채", "portion": "1접시", "calories": 20}
+        ],
+        "meal4": [
+          {"name": "토마토", "portion": "1개", "calories": 35},
+          {"name": "무염치즈", "portion": "1.5장", "calories": 120}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "닭가슴살샐러드", "portion": "100g", "calories": 125},
+          {"name": "상추쌈", "portion": "5장", "calories": 10},
+          {"name": "가지국", "portion": "1그릇", "calories": 35}
+        ],
+        "totalCalories": 1628
+      }
+      ],
+
+      "FCVF5HE": [
+      {
+        "id": 1,
+        "name": "여성 심혈관 복합질환 소량다회 건강 A",
+        "targetCalories": 1500,
+        "season": "all",
+        "meal1": [
+          {"name": "현미밥", "portion": "2/5공기", "calories": 110},
+          {"name": "무염다시마국", "portion": "1그릇", "calories": 20}
+        ],
+        "meal2": [
+          {"name": "사과", "portion": "3/5개", "calories": 48},
+          {"name": "견과류", "portion": "7g", "calories": 42}
+        ],
+        "meal3": [
+          {"name": "현미밥", "portion": "3/5공기", "calories": 160},
+          {"name": "닭가슴살찜", "portion": "90g", "calories": 150},
+          {"name": "브로콜리찜", "portion": "1접시", "calories": 30},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20}
+        ],
+        "meal4": [
+          {"name": "무가당요구르트", "portion": "1개", "calories": 50},
+          {"name": "견과류", "portion": "7g", "calories": 42}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "2/5공기", "calories": 110},
+          {"name": "생선찜", "portion": "100g", "calories": 170},
+          {"name": "시금치나물", "portion": "1접시", "calories": 20},
+          {"name": "조개맑은국", "portion": "1그릇", "calories": 25}
+        ],
+        "totalCalories": 1497
+      },
+      {
+        "id": 2,
+        "name": "여성 심혈관 복합질환 소량다회 건강 B",
+        "targetCalories": 1500,
+        "season": "spring",
+        "meal1": [
+          {"name": "잡곡밥", "portion": "2/5공기", "calories": 115},
+          {"name": "무염된장국", "portion": "1그릇", "calories": 25}
+        ],
+        "meal2": [
+          {"name": "딸기", "portion": "8개", "calories": 28},
+          {"name": "호두", "portion": "3개", "calories": 54}
+        ],
+        "meal3": [
+          {"name": "현미밥", "portion": "3/5공기", "calories": 160},
+          {"name": "생선찜", "portion": "100g", "calories": 170},
+          {"name": "아스파라거스", "portion": "1접시", "calories": 25},
+          {"name": "냉이국", "portion": "1그릇", "calories": 28}
+        ],
+        "meal4": [
+          {"name": "무가당두유", "portion": "180ml", "calories": 72},
+          {"name": "견과류", "portion": "7g", "calories": 42}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "2/5공기", "calories": 110},
+          {"name": "두부찜", "portion": "110g", "calories": 88},
+          {"name": "취나물", "portion": "1접시", "calories": 18},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20}
+        ],
+        "totalCalories": 1495
+      },
+      {
+        "id": 3,
+        "name": "여성 심혈관 복합질환 소량다회 건강 C",
+        "targetCalories": 1500,
+        "season": "summer",
+        "meal1": [
+          {"name": "보리밥", "portion": "2/5공기", "calories": 105},
+          {"name": "냉된장국", "portion": "1그릇", "calories": 20}
+        ],
+        "meal2": [
+          {"name": "수박", "portion": "1.5조각", "calories": 67},
+          {"name": "견과류", "portion": "7g", "calories": 42}
+        ],
+        "meal3": [
+          {"name": "메밀소바", "portion": "4/5그릇", "calories": 288},
+          {"name": "삶은달걀", "portion": "1개", "calories": 70},
+          {"name": "오이채", "portion": "1접시", "calories": 20}
+        ],
+        "meal4": [
+          {"name": "토마토", "portion": "1개", "calories": 35},
+          {"name": "무염치즈", "portion": "1장", "calories": 80}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "2/5공기", "calories": 110},
+          {"name": "닭가슴살샐러드", "portion": "90g", "calories": 115},
+          {"name": "상추쌈", "portion": "5장", "calories": 10},
+          {"name": "가지국", "portion": "1그릇", "calories": 35}
+        ],
+        "totalCalories": 1497
+      }
+      ],
+
+      "FCVS2DE": [
+        {
+          "id": 1,
+          "name": "여성 심혈관 복합질환 간편식 감량 A",
+          "targetCalories": 1200,
+          "season": "all",
+          "meal1": [
+            {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+            {"name": "무염다시마국", "portion": "1그릇", "calories": 20},
+            {"name": "닭가슴살찜", "portion": "80g", "calories": 130},
+            {"name": "브로콜리찜", "portion": "1접시", "calories": 30},
+            {"name": "오이무침", "portion": "1접시", "calories": 15}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+            {"name": "생선찜", "portion": "90g", "calories": 155},
+            {"name": "시금치나물", "portion": "1접시", "calories": 20},
+            {"name": "조개맑은국", "portion": "1그릇", "calories": 25}
+          ],
+          "snack": [
+            {"name": "사과", "portion": "1/2개", "calories": 40},
+            {"name": "견과류", "portion": "6g", "calories": 36},
+            {"name": "무가당두유", "portion": "150ml", "calories": 60}
+          ],
+          "totalCalories": 1221
+        },
+        {
+          "id": 2,
+          "name": "여성 심혈관 복합질환 간편식 감량 B",
+          "targetCalories": 1200,
+          "season": "spring",
+          "meal1": [
+            {"name": "잡곡밥", "portion": "1/2공기", "calories": 135},
+            {"name": "무염된장국", "portion": "1그릇", "calories": 25},
+            {"name": "생선찜", "portion": "90g", "calories": 155},
+            {"name": "아스파라거스", "portion": "1접시", "calories": 25},
+            {"name": "도라지무침", "portion": "1접시", "calories": 22}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+            {"name": "두부찜", "portion": "100g", "calories": 80},
+            {"name": "취나물", "portion": "1접시", "calories": 18},
+            {"name": "냉이국", "portion": "1그릇", "calories": 28}
+          ],
+          "snack": [
+            {"name": "딸기", "portion": "6개", "calories": 21},
+            {"name": "호두", "portion": "3개", "calories": 54},
+            {"name": "무가당요구르트", "portion": "1개", "calories": 50}
+          ],
+          "totalCalories": 1243
+        },
+        {
+          "id": 3,
+          "name": "여성 심혈관 복합질환 간편식 감량 C",
+          "targetCalories": 1200,
+          "season": "summer",
+          "meal1": [
+            {"name": "메밀소바", "portion": "2/3그릇", "calories": 240},
+            {"name": "삶은달걀", "portion": "1개", "calories": 70},
+            {"name": "오이채", "portion": "1접시", "calories": 20}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+            {"name": "닭가슴살샐러드", "portion": "80g", "calories": 100},
+            {"name": "상추쌈", "portion": "5장", "calories": 10},
+            {"name": "가지국", "portion": "1그릇", "calories": 35}
+          ],
+          "snack": [
+            {"name": "수박", "portion": "1조각", "calories": 45},
+            {"name": "견과류", "portion": "6g", "calories": 36},
+            {"name": "보리차", "portion": "1잔", "calories": 0}
+          ],
+          "totalCalories": 1186
+        }
+      ],
+
+      "FCVS2MA": [
+        {
+          "id": 1,
+          "name": "여성 심혈관 복합질환 간편식 유지 A",
+          "targetCalories": 1400,
+          "season": "all",
+          "meal1": [
+            {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+            {"name": "무염다시마국", "portion": "1그릇", "calories": 20},
+            {"name": "닭가슴살찜", "portion": "100g", "calories": 165},
+            {"name": "브로콜리찜", "portion": "1접시", "calories": 30},
+            {"name": "오이무침", "portion": "1접시", "calories": 15}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+            {"name": "생선찜", "portion": "110g", "calories": 190},
+            {"name": "시금치나물", "portion": "1접시", "calories": 20},
+            {"name": "조개맑은국", "portion": "1그릇", "calories": 25}
+          ],
+          "snack": [
+            {"name": "사과", "portion": "2/3개", "calories": 53},
+            {"name": "견과류", "portion": "8g", "calories": 48},
+            {"name": "무가당두유", "portion": "200ml", "calories": 80}
+          ],
+          "totalCalories": 1406
+        },
+        {
+          "id": 2,
+          "name": "여성 심혈관 복합질환 간편식 유지 B",
+          "targetCalories": 1400,
+          "season": "spring",
+          "meal1": [
+            {"name": "잡곡밥", "portion": "2/3공기", "calories": 185},
+            {"name": "무염된장국", "portion": "1그릇", "calories": 25},
+            {"name": "생선찜", "portion": "110g", "calories": 190},
+            {"name": "아스파라거스", "portion": "1접시", "calories": 25},
+            {"name": "도라지무침", "portion": "1접시", "calories": 22}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+            {"name": "두부찜", "portion": "130g", "calories": 104},
+            {"name": "취나물", "portion": "1접시", "calories": 18},
+            {"name": "냉이국", "portion": "1그릇", "calories": 28}
+          ],
+          "snack": [
+            {"name": "딸기", "portion": "8개", "calories": 28},
+            {"name": "호두", "portion": "4개", "calories": 72},
+            {"name": "무가당요구르트", "portion": "1개", "calories": 50}
+          ],
+          "totalCalories": 1427
+        },
+        {
+          "id": 3,
+          "name": "여성 심혈관 복합질환 간편식 유지 C",
+          "targetCalories": 1400,
+          "season": "summer",
+          "meal1": [
+            {"name": "메밀소바", "portion": "1그릇", "calories": 360},
+            {"name": "삶은달걀", "portion": "1개", "calories": 70},
+            {"name": "오이채", "portion": "1접시", "calories": 20}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+            {"name": "닭가슴살샐러드", "portion": "100g", "calories": 125},
+            {"name": "상추쌈", "portion": "5장", "calories": 10},
+            {"name": "가지국", "portion": "1그릇", "calories": 35}
+          ],
+          "snack": [
+            {"name": "수박", "portion": "2조각", "calories": 90},
+            {"name": "견과류", "portion": "8g", "calories": 48},
+            {"name": "보리차", "portion": "1잔", "calories": 0}
+          ],
+          "totalCalories": 1438
+        }
+      ],
+
+      "FCVS2SU": [
+        {
+          "id": 1,
+          "name": "여성 심혈관 복합질환 간편식 증량 A",
+          "targetCalories": 1600,
+          "season": "all",
+          "meal1": [
+            {"name": "현미밥", "portion": "3/4공기", "calories": 200},
+            {"name": "무염다시마국", "portion": "1그릇", "calories": 20},
+            {"name": "닭가슴살찜", "portion": "120g", "calories": 200},
+            {"name": "브로콜리찜", "portion": "1접시", "calories": 30},
+            {"name": "오이무침", "portion": "1접시", "calories": 15}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "3/4공기", "calories": 200},
+            {"name": "생선찜", "portion": "130g", "calories": 225},
+            {"name": "시금치나물", "portion": "1접시", "calories": 20},
+            {"name": "조개맑은국", "portion": "1그릇", "calories": 25}
+          ],
+          "snack": [
+            {"name": "사과", "portion": "1개", "calories": 80},
+            {"name": "견과류", "portion": "10g", "calories": 60},
+            {"name": "무가당두유", "portion": "250ml", "calories": 100}
+          ],
+          "totalCalories": 1575
+        },
+        {
+          "id": 2,
+          "name": "여성 심혈관 복합질환 간편식 증량 B",
+          "targetCalories": 1600,
+          "season": "spring",
+          "meal1": [
+            {"name": "잡곡밥", "portion": "3/4공기", "calories": 205},
+            {"name": "무염된장국", "portion": "1그릇", "calories": 25},
+            {"name": "생선찜", "portion": "130g", "calories": 225},
+            {"name": "아스파라거스", "portion": "1접시", "calories": 25},
+            {"name": "도라지무침", "portion": "1접시", "calories": 22}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "3/4공기", "calories": 200},
+            {"name": "두부찜", "portion": "160g", "calories": 128},
+            {"name": "취나물", "portion": "1접시", "calories": 18},
+            {"name": "냉이국", "portion": "1그릇", "calories": 28}
+          ],
+          "snack": [
+            {"name": "딸기", "portion": "10개", "calories": 35},
+            {"name": "호두", "portion": "5개", "calories": 90},
+            {"name": "무가당요구르트", "portion": "1개", "calories": 50}
+          ],
+          "totalCalories": 1551
+        },
+        {
+          "id": 3,
+          "name": "여성 심혈관 복합질환 간편식 증량 C",
+          "targetCalories": 1600,
+          "season": "summer",
+          "meal1": [
+            {"name": "메밀소바", "portion": "1.2그릇", "calories": 432},
+            {"name": "삶은달걀", "portion": "1개", "calories": 70},
+            {"name": "오이채", "portion": "1접시", "calories": 20}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "3/4공기", "calories": 200},
+            {"name": "닭가슴살샐러드", "portion": "120g", "calories": 150},
+            {"name": "상추쌈", "portion": "5장", "calories": 10},
+            {"name": "가지국", "portion": "1그릇", "calories": 35}
+          ],
+          "snack": [
+            {"name": "수박", "portion": "3조각", "calories": 135},
+            {"name": "견과류", "portion": "10g", "calories": 60},
+            {"name": "보리차", "portion": "1잔", "calories": 0}
+          ],
+          "totalCalories": 1612
+        }
+      ],
+
+      "FCVS2HE": [
+        {
+          "id": 1,
+          "name": "여성 심혈관 복합질환 간편식 건강 A",
+          "targetCalories": 1500,
+          "season": "all",
+          "meal1": [
+            {"name": "현미밥", "portion": "7/10공기", "calories": 190},
+            {"name": "무염다시마국", "portion": "1그릇", "calories": 20},
+            {"name": "닭가슴살찜", "portion": "110g", "calories": 180},
+            {"name": "브로콜리찜", "portion": "1접시", "calories": 30},
+            {"name": "오이무침", "portion": "1접시", "calories": 15}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "7/10공기", "calories": 190},
+            {"name": "생선찜", "portion": "120g", "calories": 205},
+            {"name": "시금치나물", "portion": "1접시", "calories": 20},
+            {"name": "조개맑은국", "portion": "1그릇", "calories": 25}
+          ],
+          "snack": [
+            {"name": "사과", "portion": "3/4개", "calories": 60},
+            {"name": "견과류", "portion": "9g", "calories": 54},
+            {"name": "무가당두유", "portion": "200ml", "calories": 80}
+          ],
+          "totalCalories": 1569
+        },
+        {
+          "id": 2,
+          "name": "여성 심혈관 복합질환 간편식 건강 B",
+          "targetCalories": 1500,
+          "season": "spring",
+          "meal1": [
+            {"name": "잡곡밥", "portion": "7/10공기", "calories": 195},
+            {"name": "무염된장국", "portion": "1그릇", "calories": 25},
+            {"name": "생선찜", "portion": "120g", "calories": 205},
+            {"name": "아스파라거스", "portion": "1접시", "calories": 25},
+            {"name": "도라지무침", "portion": "1접시", "calories": 22}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "7/10공기", "calories": 190},
+            {"name": "두부찜", "portion": "140g", "calories": 112},
+            {"name": "취나물", "portion": "1접시", "calories": 18},
+            {"name": "냉이국", "portion": "1그릇", "calories": 28}
+          ],
+          "snack": [
+            {"name": "딸기", "portion": "8개", "calories": 28},
+            {"name": "호두", "portion": "4개", "calories": 72},
+            {"name": "무가당요구르트", "portion": "1개", "calories": 50}
+          ],
+          "totalCalories": 1470
+        },
+        {
+          "id": 3,
+          "name": "여성 심혈관 복합질환 간편식 건강 C",
+          "targetCalories": 1500,
+          "season": "summer",
+          "meal1": [
+            {"name": "메밀소바", "portion": "1그릇", "calories": 360},
+            {"name": "삶은달걀", "portion": "1개", "calories": 70},
+            {"name": "오이채", "portion": "1접시", "calories": 20}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "7/10공기", "calories": 190},
+            {"name": "닭가슴살샐러드", "portion": "110g", "calories": 140},
+            {"name": "상추쌈", "portion": "5장", "calories": 10},
+            {"name": "가지국", "portion": "1그릇", "calories": 35}
+          ],
+          "snack": [
+            {"name": "수박", "portion": "2조각", "calories": 90},
+            {"name": "견과류", "portion": "9g", "calories": 54},
+            {"name": "보리차", "portion": "1잔", "calories": 0}
+          ],
+          "totalCalories": 1469
+        }
+      ],
+
+      "FMXR3DE": [
+      {
+        "id": 1,
+        "name": "여성 기타 복합질환 감량 A",
+        "targetCalories": 1300,
+        "season": "all",
+        "breakfast": [
+          {"name": "현미밥", "portion": "1/3공기", "calories": 90},
+          {"name": "저나트륨된장국", "portion": "1그릇", "calories": 35},
+          {"name": "두부찜", "portion": "80g", "calories": 64},
+          {"name": "시금치나물", "portion": "1접시", "calories": 20}
+        ],
+        "lunch": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20},
+          {"name": "닭가슴살구이", "portion": "80g", "calories": 130},
+          {"name": "브로콜리볶음", "portion": "1접시", "calories": 35},
+          {"name": "오이무침", "portion": "1접시", "calories": 15}
+        ],
+        "dinner": [
+          {"name": "현미밥", "portion": "1/3공기", "calories": 90},
+          {"name": "조개맑은국", "portion": "1그릇", "calories": 25},
+          {"name": "생선구이", "portion": "80g", "calories": 140},
+          {"name": "애호박볶음", "portion": "1접시", "calories": 30}
+        ],
+        "snack": [
+          {"name": "사과", "portion": "1/2개", "calories": 40},
+          {"name": "아몬드", "portion": "6개", "calories": 42},
+          {"name": "저지방우유", "portion": "150ml", "calories": 68}
+        ],
+        "totalCalories": 1334
+      },
+      {
+        "id": 2,
+        "name": "여성 기타 복합질환 감량 B",
+        "targetCalories": 1300,
+        "season": "spring",
+        "breakfast": [
+          {"name": "잡곡밥", "portion": "1/3공기", "calories": 95},
+          {"name": "저나트륨된장국", "portion": "1그릇", "calories": 35},
+          {"name": "계란찜", "portion": "1접시", "calories": 80},
+          {"name": "취나물", "portion": "1접시", "calories": 18}
+        ],
+        "lunch": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20},
+          {"name": "생선찜", "portion": "90g", "calories": 155},
+          {"name": "아스파라거스", "portion": "1접시", "calories": 25},
+          {"name": "도라지무침", "portion": "1접시", "calories": 22}
+        ],
+        "dinner": [
+          {"name": "현미밥", "portion": "1/3공기", "calories": 90},
+          {"name": "냉이국", "portion": "1그릇", "calories": 28},
+          {"name": "두부조림", "portion": "100g", "calories": 90},
+          {"name": "콩나물무침", "portion": "1접시", "calories": 25}
+        ],
+        "snack": [
+          {"name": "딸기", "portion": "8개", "calories": 28},
+          {"name": "호두", "portion": "4개", "calories": 72},
+          {"name": "무가당요구르트", "portion": "1개", "calories": 50}
+        ],
+        "totalCalories": 1313
+      },
+      {
+        "id": 3,
+        "name": "여성 기타 복합질환 감량 C",
+        "targetCalories": 1300,
+        "season": "summer",
+        "breakfast": [
+          {"name": "보리밥", "portion": "1/3공기", "calories": 85},
+          {"name": "냉된장국", "portion": "1그릇", "calories": 25},
+          {"name": "두부샐러드", "portion": "80g", "calories": 68}
+        ],
+        "lunch": [
+          {"name": "메밀소바", "portion": "2/3그릇", "calories": 240},
+          {"name": "삶은달걀", "portion": "1개", "calories": 70},
+          {"name": "오이채", "portion": "1접시", "calories": 20}
+        ],
+        "dinner": [
+          {"name": "현미밥", "portion": "1/3공기", "calories": 90},
+          {"name": "가지국", "portion": "1그릇", "calories": 35},
+          {"name": "닭가슴살샐러드", "portion": "80g", "calories": 100},
+          {"name": "상추쌈", "portion": "5장", "calories": 10}
+        ],
+        "snack": [
+          {"name": "수박", "portion": "1조각", "calories": 45},
+          {"name": "견과류", "portion": "8g", "calories": 48},
+          {"name": "보리차", "portion": "1잔", "calories": 0}
+        ],
+        "totalCalories": 1296
+      }
+      ],
+
+      "FMXR3MA": [
+      {
+        "id": 1,
+        "name": "여성 기타 복합질환 유지 A",
+        "targetCalories": 1500,
+        "season": "all",
+        "breakfast": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "저나트륨된장국", "portion": "1그릇", "calories": 35},
+          {"name": "두부찜", "portion": "100g", "calories": 80},
+          {"name": "시금치나물", "portion": "1접시", "calories": 20}
+        ],
+        "lunch": [
+          {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20},
+          {"name": "닭가슴살구이", "portion": "100g", "calories": 165},
+          {"name": "브로콜리볶음", "portion": "1접시", "calories": 35},
+          {"name": "오이무침", "portion": "1접시", "calories": 15}
+        ],
+        "dinner": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "조개맑은국", "portion": "1그릇", "calories": 25},
+          {"name": "생선구이", "portion": "100g", "calories": 175},
+          {"name": "애호박볶음", "portion": "1접시", "calories": 30}
+        ],
+        "snack": [
+          {"name": "사과", "portion": "2/3개", "calories": 53},
+          {"name": "아몬드", "portion": "8개", "calories": 55},
+          {"name": "저지방우유", "portion": "200ml", "calories": 90}
+        ],
+        "totalCalories": 1518
+      },
+      {
+        "id": 2,
+        "name": "여성 기타 복합질환 유지 B",
+        "targetCalories": 1500,
+        "season": "spring",
+        "breakfast": [
+          {"name": "잡곡밥", "portion": "1/2공기", "calories": 135},
+          {"name": "저나트륨된장국", "portion": "1그릇", "calories": 35},
+          {"name": "계란찜", "portion": "1접시", "calories": 80},
+          {"name": "취나물", "portion": "1접시", "calories": 18}
+        ],
+        "lunch": [
+          {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20},
+          {"name": "생선찜", "portion": "110g", "calories": 185},
+          {"name": "아스파라거스", "portion": "1접시", "calories": 25},
+          {"name": "도라지무침", "portion": "1접시", "calories": 22}
+        ],
+        "dinner": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "냉이국", "portion": "1그릇", "calories": 28},
+          {"name": "두부조림", "portion": "120g", "calories": 108},
+          {"name": "콩나물무침", "portion": "1접시", "calories": 25}
+        ],
+        "snack": [
+          {"name": "딸기", "portion": "10개", "calories": 35},
+          {"name": "호두", "portion": "5개", "calories": 90},
+          {"name": "무가당요구르트", "portion": "1개", "calories": 50}
+        ],
+        "totalCalories": 1526
+      },
+      {
+        "id": 3,
+        "name": "여성 기타 복합질환 유지 C",
+        "targetCalories": 1500,
+        "season": "summer",
+        "breakfast": [
+          {"name": "보리밥", "portion": "1/2공기", "calories": 125},
+          {"name": "냉된장국", "portion": "1그릇", "calories": 25},
+          {"name": "두부샐러드", "portion": "100g", "calories": 85}
+        ],
+        "lunch": [
+          {"name": "메밀소바", "portion": "1그릇", "calories": 360},
+          {"name": "삶은달걀", "portion": "1개", "calories": 70},
+          {"name": "오이채", "portion": "1접시", "calories": 20}
+        ],
+        "dinner": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "가지국", "portion": "1그릇", "calories": 35},
+          {"name": "닭가슴살샐러드", "portion": "100g", "calories": 125},
+          {"name": "상추쌈", "portion": "5장", "calories": 10}
+        ],
+        "snack": [
+          {"name": "수박", "portion": "2조각", "calories": 90},
+          {"name": "견과류", "portion": "10g", "calories": 60},
+          {"name": "보리차", "portion": "1잔", "calories": 0}
+        ],
+        "totalCalories": 1535
+      }
+      ],
+
+      "FMXR3SU": [
+      {
+        "id": 1,
+        "name": "여성 기타 복합질환 증량 A",
+        "targetCalories": 1700,
+        "season": "all",
+        "breakfast": [
+          {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+          {"name": "저나트륨된장국", "portion": "1그릇", "calories": 35},
+          {"name": "두부찜", "portion": "120g", "calories": 96},
+          {"name": "시금치나물", "portion": "1접시", "calories": 20}
+        ],
+        "lunch": [
+          {"name": "현미밥", "portion": "3/4공기", "calories": 200},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20},
+          {"name": "닭가슴살구이", "portion": "120g", "calories": 200},
+          {"name": "브로콜리볶음", "portion": "1접시", "calories": 35},
+          {"name": "오이무침", "portion": "1접시", "calories": 15}
+        ],
+        "dinner": [
+          {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+          {"name": "조개맑은국", "portion": "1그릇", "calories": 25},
+          {"name": "생선구이", "portion": "120g", "calories": 210},
+          {"name": "애호박볶음", "portion": "1접시", "calories": 30}
+        ],
+        "snack": [
+          {"name": "사과", "portion": "1개", "calories": 80},
+          {"name": "아몬드", "portion": "10개", "calories": 70},
+          {"name": "저지방우유", "portion": "250ml", "calories": 112}
+        ],
+        "totalCalories": 1708
+      },
+      {
+        "id": 2,
+        "name": "여성 기타 복합질환 증량 B",
+        "targetCalories": 1700,
+        "season": "spring",
+        "breakfast": [
+          {"name": "잡곡밥", "portion": "2/3공기", "calories": 185},
+          {"name": "저나트륨된장국", "portion": "1그릇", "calories": 35},
+          {"name": "계란찜", "portion": "1접시", "calories": 80},
+          {"name": "취나물", "portion": "1접시", "calories": 18}
+        ],
+        "lunch": [
+          {"name": "현미밥", "portion": "3/4공기", "calories": 200},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20},
+          {"name": "생선찜", "portion": "130g", "calories": 220},
+          {"name": "아스파라거스", "portion": "1접시", "calories": 25},
+          {"name": "도라지무침", "portion": "1접시", "calories": 22}
+        ],
+        "dinner": [
+          {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+          {"name": "냉이국", "portion": "1그릇", "calories": 28},
+          {"name": "두부조림", "portion": "150g", "calories": 135},
+          {"name": "콩나물무침", "portion": "1접시", "calories": 25}
+        ],
+        "snack": [
+          {"name": "딸기", "portion": "12개", "calories": 42},
+          {"name": "호두", "portion": "6개", "calories": 108},
+          {"name": "무가당요구르트", "portion": "1개", "calories": 50}
+        ],
+        "totalCalories": 1733
+      },
+      {
+        "id": 3,
+        "name": "여성 기타 복합질환 증량 C",
+        "targetCalories": 1700,
+        "season": "summer",
+        "breakfast": [
+          {"name": "보리밥", "portion": "2/3공기", "calories": 165},
+          {"name": "냉된장국", "portion": "1그릇", "calories": 25},
+          {"name": "두부샐러드", "portion": "120g", "calories": 102}
+        ],
+        "lunch": [
+          {"name": "메밀소바", "portion": "1.2그릇", "calories": 432},
+          {"name": "삶은달걀", "portion": "1개", "calories": 70},
+          {"name": "오이채", "portion": "1접시", "calories": 20}
+        ],
+        "dinner": [
+          {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+          {"name": "가지국", "portion": "1그릇", "calories": 35},
+          {"name": "닭가슴살샐러드", "portion": "120g", "calories": 150},
+          {"name": "상추쌈", "portion": "5장", "calories": 10}
+        ],
+        "snack": [
+          {"name": "수박", "portion": "3조각", "calories": 135},
+          {"name": "견과류", "portion": "12g", "calories": 72},
+          {"name": "보리차", "portion": "1잔", "calories": 0}
+        ],
+        "totalCalories": 1696
+      }
+      ],
+
+      "FMXR3HE": [
+      {
+        "id": 1,
+        "name": "여성 기타 복합질환 건강 A",
+        "targetCalories": 1600,
+        "season": "all",
+        "breakfast": [
+          {"name": "현미밥", "portion": "3/5공기", "calories": 160},
+          {"name": "저나트륨된장국", "portion": "1그릇", "calories": 35},
+          {"name": "두부찜", "portion": "110g", "calories": 88},
+          {"name": "시금치나물", "portion": "1접시", "calories": 20}
+        ],
+        "lunch": [
+          {"name": "현미밥", "portion": "7/10공기", "calories": 190},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20},
+          {"name": "닭가슴살구이", "portion": "110g", "calories": 180},
+          {"name": "브로콜리볶음", "portion": "1접시", "calories": 35},
+          {"name": "오이무침", "portion": "1접시", "calories": 15}
+        ],
+        "dinner": [
+          {"name": "현미밥", "portion": "3/5공기", "calories": 160},
+          {"name": "조개맑은국", "portion": "1그릇", "calories": 25},
+          {"name": "생선구이", "portion": "110g", "calories": 190},
+          {"name": "애호박볶음", "portion": "1접시", "calories": 30}
+        ],
+        "snack": [
+          {"name": "사과", "portion": "3/4개", "calories": 60},
+          {"name": "아몬드", "portion": "9개", "calories": 63},
+          {"name": "저지방우유", "portion": "200ml", "calories": 90}
+        ],
+        "totalCalories": 1611
+      },
+      {
+        "id": 2,
+        "name": "여성 기타 복합질환 건강 B",
+        "targetCalories": 1600,
+        "season": "spring",
+        "breakfast": [
+          {"name": "잡곡밥", "portion": "3/5공기", "calories": 165},
+          {"name": "저나트륨된장국", "portion": "1그릇", "calories": 35},
+          {"name": "계란찜", "portion": "1접시", "calories": 80},
+          {"name": "취나물", "portion": "1접시", "calories": 18}
+        ],
+        "lunch": [
+          {"name": "현미밥", "portion": "7/10공기", "calories": 190},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20},
+          {"name": "생선찜", "portion": "120g", "calories": 200},
+          {"name": "아스파라거스", "portion": "1접시", "calories": 25},
+          {"name": "도라지무침", "portion": "1접시", "calories": 22}
+        ],
+        "dinner": [
+          {"name": "현미밥", "portion": "3/5공기", "calories": 160},
+          {"name": "냉이국", "portion": "1그릇", "calories": 28},
+          {"name": "두부조림", "portion": "130g", "calories": 117},
+          {"name": "콩나물무침", "portion": "1접시", "calories": 25}
+        ],
+        "snack": [
+          {"name": "딸기", "portion": "10개", "calories": 35},
+          {"name": "호두", "portion": "5개", "calories": 90},
+          {"name": "무가당요구르트", "portion": "1개", "calories": 50}
+        ],
+        "totalCalories": 1620
+      },
+      {
+        "id": 3,
+        "name": "여성 기타 복합질환 건강 C",
+        "targetCalories": 1600,
+        "season": "summer",
+        "breakfast": [
+          {"name": "보리밥", "portion": "3/5공기", "calories": 150},
+          {"name": "냉된장국", "portion": "1그릇", "calories": 25},
+          {"name": "두부샐러드", "portion": "110g", "calories": 94}
+        ],
+        "lunch": [
+          {"name": "메밀소바", "portion": "1그릇", "calories": 360},
+          {"name": "삶은달걀", "portion": "1개", "calories": 70},
+          {"name": "오이채", "portion": "1접시", "calories": 20}
+        ],
+        "dinner": [
+          {"name": "현미밥", "portion": "3/5공기", "calories": 160},
+          {"name": "가지국", "portion": "1그릇", "calories": 35},
+          {"name": "닭가슴살샐러드", "portion": "110g", "calories": 140},
+          {"name": "상추쌈", "portion": "5장", "calories": 10}
+        ],
+        "snack": [
+          {"name": "수박", "portion": "2조각", "calories": 90},
+          {"name": "견과류", "portion": "10g", "calories": 60},
+          {"name": "보리차", "portion": "1잔", "calories": 0}
+        ],
+        "totalCalories": 1614
+      }
+      ],
+
+      "FMXF5DE": [
+      {
+        "id": 1,
+        "name": "여성 기타 복합질환 소량다회 감량 A",
+        "targetCalories": 1300,
+        "season": "all",
+        "meal1": [
+          {"name": "현미밥", "portion": "1/4공기", "calories": 65},
+          {"name": "저나트륨된장국", "portion": "1그릇", "calories": 35}
+        ],
+        "meal2": [
+          {"name": "사과", "portion": "1/2개", "calories": 40},
+          {"name": "아몬드", "portion": "5개", "calories": 35}
+        ],
+        "meal3": [
+          {"name": "현미밥", "portion": "1/3공기", "calories": 90},
+          {"name": "닭가슴살구이", "portion": "70g", "calories": 115},
+          {"name": "브로콜리볶음", "portion": "1접시", "calories": 35},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20}
+        ],
+        "meal4": [
+          {"name": "무가당요구르트", "portion": "1개", "calories": 50},
+          {"name": "견과류", "portion": "6g", "calories": 36}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "1/4공기", "calories": 65},
+          {"name": "생선구이", "portion": "80g", "calories": 140},
+          {"name": "시금치나물", "portion": "1접시", "calories": 20},
+          {"name": "조개맑은국", "portion": "1그릇", "calories": 25}
+        ],
+        "totalCalories": 1306
+      },
+      {
+        "id": 2,
+        "name": "여성 기타 복합질환 소량다회 감량 B",
+        "targetCalories": 1300,
+        "season": "spring",
+        "meal1": [
+          {"name": "잡곡밥", "portion": "1/4공기", "calories": 68},
+          {"name": "저나트륨된장국", "portion": "1그릇", "calories": 35}
+        ],
+        "meal2": [
+          {"name": "딸기", "portion": "6개", "calories": 21},
+          {"name": "호두", "portion": "3개", "calories": 54}
+        ],
+        "meal3": [
+          {"name": "현미밥", "portion": "1/3공기", "calories": 90},
+          {"name": "생선찜", "portion": "80g", "calories": 135},
+          {"name": "아스파라거스", "portion": "1접시", "calories": 25},
+          {"name": "냉이국", "portion": "1그릇", "calories": 28}
+        ],
+        "meal4": [
+          {"name": "저지방우유", "portion": "150ml", "calories": 68},
+          {"name": "견과류", "portion": "6g", "calories": 36}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "1/4공기", "calories": 65},
+          {"name": "두부찜", "portion": "90g", "calories": 72},
+          {"name": "취나물", "portion": "1접시", "calories": 18},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20}
+        ],
+        "totalCalories": 1305
+      },
+      {
+        "id": 3,
+        "name": "여성 기타 복합질환 소량다회 감량 C",
+        "targetCalories": 1300,
+        "season": "summer",
+        "meal1": [
+          {"name": "보리밥", "portion": "1/4공기", "calories": 62},
+          {"name": "냉된장국", "portion": "1그릇", "calories": 25}
+        ],
+        "meal2": [
+          {"name": "수박", "portion": "1조각", "calories": 45},
+          {"name": "견과류", "portion": "6g", "calories": 36}
+        ],
+        "meal3": [
+          {"name": "메밀소바", "portion": "1/2그릇", "calories": 180},
+          {"name": "삶은달걀", "portion": "1개", "calories": 70},
+          {"name": "오이채", "portion": "1접시", "calories": 20}
+        ],
+        "meal4": [
+          {"name": "토마토", "portion": "1개", "calories": 35},
+          {"name": "무가당치즈", "portion": "1/2장", "calories": 40}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "1/4공기", "calories": 65},
+          {"name": "닭가슴살샐러드", "portion": "70g", "calories": 90},
+          {"name": "상추쌈", "portion": "5장", "calories": 10},
+          {"name": "가지국", "portion": "1그릇", "calories": 35}
+        ],
+        "totalCalories": 1313
+      }
+      ],
+
+      "FMXF5MA": [
+      {
+        "id": 1,
+        "name": "여성 기타 복합질환 소량다회 유지 A",
+        "targetCalories": 1500,
+        "season": "all",
+        "meal1": [
+          {"name": "현미밥", "portion": "1/3공기", "calories": 90},
+          {"name": "저나트륨된장국", "portion": "1그릇", "calories": 35}
+        ],
+        "meal2": [
+          {"name": "사과", "portion": "1/2개", "calories": 40},
+          {"name": "아몬드", "portion": "7개", "calories": 49}
+        ],
+        "meal3": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "닭가슴살구이", "portion": "90g", "calories": 150},
+          {"name": "브로콜리볶음", "portion": "1접시", "calories": 35},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20}
+        ],
+        "meal4": [
+          {"name": "무가당요구르트", "portion": "1개", "calories": 50},
+          {"name": "견과류", "portion": "8g", "calories": 48}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "1/3공기", "calories": 90},
+          {"name": "생선구이", "portion": "100g", "calories": 175},
+          {"name": "시금치나물", "portion": "1접시", "calories": 20},
+          {"name": "조개맑은국", "portion": "1그릇", "calories": 25}
+        ],
+        "totalCalories": 1497
+      },
+      {
+        "id": 2,
+        "name": "여성 기타 복합질환 소량다회 유지 B",
+        "targetCalories": 1500,
+        "season": "spring",
+        "meal1": [
+          {"name": "잡곡밥", "portion": "1/3공기", "calories": 95},
+          {"name": "저나트륨된장국", "portion": "1그릇", "calories": 35}
+        ],
+        "meal2": [
+          {"name": "딸기", "portion": "8개", "calories": 28},
+          {"name": "호두", "portion": "4개", "calories": 72}
+        ],
+        "meal3": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "생선찜", "portion": "100g", "calories": 170},
+          {"name": "아스파라거스", "portion": "1접시", "calories": 25},
+          {"name": "냉이국", "portion": "1그릇", "calories": 28}
+        ],
+        "meal4": [
+          {"name": "저지방우유", "portion": "180ml", "calories": 82},
+          {"name": "견과류", "portion": "8g", "calories": 48}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "1/3공기", "calories": 90},
+          {"name": "두부찜", "portion": "110g", "calories": 88},
+          {"name": "취나물", "portion": "1접시", "calories": 18},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20}
+        ],
+        "totalCalories": 1499
+      },
+      {
+        "id": 3,
+        "name": "여성 기타 복합질환 소량다회 유지 C",
+        "targetCalories": 1500,
+        "season": "summer",
+        "meal1": [
+          {"name": "보리밥", "portion": "1/3공기", "calories": 85},
+          {"name": "냉된장국", "portion": "1그릇", "calories": 25}
+        ],
+        "meal2": [
+          {"name": "수박", "portion": "1조각", "calories": 45},
+          {"name": "견과류", "portion": "8g", "calories": 48}
+        ],
+        "meal3": [
+          {"name": "메밀소바", "portion": "2/3그릇", "calories": 240},
+          {"name": "삶은달걀", "portion": "1개", "calories": 70},
+          {"name": "오이채", "portion": "1접시", "calories": 20}
+        ],
+        "meal4": [
+          {"name": "토마토", "portion": "1개", "calories": 35},
+          {"name": "무가당치즈", "portion": "1장", "calories": 80}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "1/3공기", "calories": 90},
+          {"name": "닭가슴살샐러드", "portion": "90g", "calories": 115},
+          {"name": "상추쌈", "portion": "5장", "calories": 10},
+          {"name": "가지국", "portion": "1그릇", "calories": 35}
+        ],
+        "totalCalories": 1498
+      }
+      ],
+
+      "FMXF5SU": [
+      {
+        "id": 1,
+        "name": "여성 기타 복합질환 소량다회 증량 A",
+        "targetCalories": 1700,
+        "season": "all",
+        "meal1": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "저나트륨된장국", "portion": "1그릇", "calories": 35}
+        ],
+        "meal2": [
+          {"name": "사과", "portion": "3/4개", "calories": 60},
+          {"name": "아몬드", "portion": "9개", "calories": 63}
+        ],
+        "meal3": [
+          {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+          {"name": "닭가슴살구이", "portion": "110g", "calories": 180},
+          {"name": "브로콜리볶음", "portion": "1접시", "calories": 35},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20}
+        ],
+        "meal4": [
+          {"name": "무가당요구르트", "portion": "1개", "calories": 50},
+          {"name": "견과류", "portion": "10g", "calories": 60}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "생선구이", "portion": "120g", "calories": 210},
+          {"name": "시금치나물", "portion": "1접시", "calories": 20},
+          {"name": "조개맑은국", "portion": "1그릇", "calories": 25}
+        ],
+        "totalCalories": 1698
+      },
+      {
+        "id": 2,
+        "name": "여성 기타 복합질환 소량다회 증량 B",
+        "targetCalories": 1700,
+        "season": "spring",
+        "meal1": [
+          {"name": "잡곡밥", "portion": "1/2공기", "calories": 135},
+          {"name": "저나트륨된장국", "portion": "1그릇", "calories": 35}
+        ],
+        "meal2": [
+          {"name": "딸기", "portion": "10개", "calories": 35},
+          {"name": "호두", "portion": "5개", "calories": 90}
+        ],
+        "meal3": [
+          {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+          {"name": "생선찜", "portion": "120g", "calories": 200},
+          {"name": "아스파라거스", "portion": "1접시", "calories": 25},
+          {"name": "냉이국", "portion": "1그릇", "calories": 28}
+        ],
+        "meal4": [
+          {"name": "저지방우유", "portion": "200ml", "calories": 90},
+          {"name": "견과류", "portion": "10g", "calories": 60}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "두부찜", "portion": "130g", "calories": 104},
+          {"name": "취나물", "portion": "1접시", "calories": 18},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20}
+        ],
+        "totalCalories": 1720
+      },
+      {
+        "id": 3,
+        "name": "여성 기타 복합질환 소량다회 증량 C",
+        "targetCalories": 1700,
+        "season": "summer",
+        "meal1": [
+          {"name": "보리밥", "portion": "1/2공기", "calories": 125},
+          {"name": "냉된장국", "portion": "1그릇", "calories": 25}
+        ],
+        "meal2": [
+          {"name": "수박", "portion": "2조각", "calories": 90},
+          {"name": "견과류", "portion": "10g", "calories": 60}
+        ],
+        "meal3": [
+          {"name": "메밀소바", "portion": "1그릇", "calories": 360},
+          {"name": "삶은달걀", "portion": "1개", "calories": 70},
+          {"name": "오이채", "portion": "1접시", "calories": 20}
+        ],
+        "meal4": [
+          {"name": "토마토", "portion": "1개", "calories": 35},
+          {"name": "무가당치즈", "portion": "1.5장", "calories": 120}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+          {"name": "닭가슴살샐러드", "portion": "110g", "calories": 140},
+          {"name": "상추쌈", "portion": "5장", "calories": 10},
+          {"name": "가지국", "portion": "1그릇", "calories": 35}
+        ],
+        "totalCalories": 1720
+      }
+      ],
+
+      "FMXF5HE": [
+      {
+        "id": 1,
+        "name": "여성 기타 복합질환 소량다회 건강 A",
+        "targetCalories": 1600,
+        "season": "all",
+        "meal1": [
+          {"name": "현미밥", "portion": "2/5공기", "calories": 110},
+          {"name": "저나트륨된장국", "portion": "1그릇", "calories": 35}
+        ],
+        "meal2": [
+          {"name": "사과", "portion": "2/3개", "calories": 53},
+          {"name": "아몬드", "portion": "8개", "calories": 55}
+        ],
+        "meal3": [
+          {"name": "현미밥", "portion": "3/5공기", "calories": 160},
+          {"name": "닭가슴살구이", "portion": "100g", "calories": 165},
+          {"name": "브로콜리볶음", "portion": "1접시", "calories": 35},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20}
+        ],
+        "meal4": [
+          {"name": "무가당요구르트", "portion": "1개", "calories": 50},
+          {"name": "견과류", "portion": "9g", "calories": 54}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "2/5공기", "calories": 110},
+          {"name": "생선구이", "portion": "110g", "calories": 190},
+          {"name": "시금치나물", "portion": "1접시", "calories": 20},
+          {"name": "조개맑은국", "portion": "1그릇", "calories": 25}
+        ],
+        "totalCalories": 1612
+      },
+      {
+        "id": 2,
+        "name": "여성 기타 복합질환 소량다회 건강 B",
+        "targetCalories": 1600,
+        "season": "spring",
+        "meal1": [
+          {"name": "잡곡밥", "portion": "2/5공기", "calories": 115},
+          {"name": "저나트륨된장국", "portion": "1그릇", "calories": 35}
+        ],
+        "meal2": [
+          {"name": "딸기", "portion": "9개", "calories": 32},
+          {"name": "호두", "portion": "4개", "calories": 72}
+        ],
+        "meal3": [
+          {"name": "현미밥", "portion": "3/5공기", "calories": 160},
+          {"name": "생선찜", "portion": "110g", "calories": 185},
+          {"name": "아스파라거스", "portion": "1접시", "calories": 25},
+          {"name": "냉이국", "portion": "1그릇", "calories": 28}
+        ],
+        "meal4": [
+          {"name": "저지방우유", "portion": "180ml", "calories": 82},
+          {"name": "견과류", "portion": "9g", "calories": 54}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "2/5공기", "calories": 110},
+          {"name": "두부찜", "portion": "120g", "calories": 96},
+          {"name": "취나물", "portion": "1접시", "calories": 18},
+          {"name": "맑은국", "portion": "1그릇", "calories": 20}
+        ],
+        "totalCalories": 1602
+      },
+      {
+        "id": 3,
+        "name": "여성 기타 복합질환 소량다회 건강 C",
+        "targetCalories": 1600,
+        "season": "summer",
+        "meal1": [
+          {"name": "보리밥", "portion": "2/5공기", "calories": 105},
+          {"name": "냉된장국", "portion": "1그릇", "calories": 25}
+        ],
+        "meal2": [
+          {"name": "수박", "portion": "1.5조각", "calories": 67},
+          {"name": "견과류", "portion": "9g", "calories": 54}
+        ],
+        "meal3": [
+          {"name": "메밀소바", "portion": "4/5그릇", "calories": 288},
+          {"name": "삶은달걀", "portion": "1개", "calories": 70},
+          {"name": "오이채", "portion": "1접시", "calories": 20}
+        ],
+        "meal4": [
+          {"name": "토마토", "portion": "1개", "calories": 35},
+          {"name": "무가당치즈", "portion": "1장", "calories": 80}
+        ],
+        "meal5": [
+          {"name": "현미밥", "portion": "2/5공기", "calories": 110},
+          {"name": "닭가슴살샐러드", "portion": "100g", "calories": 125},
+          {"name": "상추쌈", "portion": "5장", "calories": 10},
+          {"name": "가지국", "portion": "1그릇", "calories": 35}
+        ],
+        "totalCalories": 1594
+      }
+      ],
+
+      "FMXS2DE": [
+        {
+          "id": 1,
+          "name": "여성 기타 복합질환 간편식 감량 A",
+          "targetCalories": 1300,
+          "season": "all",
+          "meal1": [
+            {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+            {"name": "저나트륨된장국", "portion": "1그릇", "calories": 35},
+            {"name": "닭가슴살구이", "portion": "90g", "calories": 150},
+            {"name": "브로콜리볶음", "portion": "1접시", "calories": 35},
+            {"name": "오이무침", "portion": "1접시", "calories": 15}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+            {"name": "생선구이", "portion": "100g", "calories": 175},
+            {"name": "시금치나물", "portion": "1접시", "calories": 20},
+            {"name": "조개맑은국", "portion": "1그릇", "calories": 25}
+          ],
+          "snack": [
+            {"name": "사과", "portion": "1/2개", "calories": 40},
+            {"name": "견과류", "portion": "8g", "calories": 48},
+            {"name": "저지방우유", "portion": "150ml", "calories": 68}
+          ],
+          "totalCalories": 1321
+        },
+        {
+          "id": 2,
+          "name": "여성 기타 복합질환 간편식 감량 B",
+          "targetCalories": 1300,
+          "season": "spring",
+          "meal1": [
+            {"name": "잡곡밥", "portion": "1/2공기", "calories": 135},
+            {"name": "저나트륨된장국", "portion": "1그릇", "calories": 35},
+            {"name": "생선찜", "portion": "100g", "calories": 170},
+            {"name": "아스파라거스", "portion": "1접시", "calories": 25},
+            {"name": "도라지무침", "portion": "1접시", "calories": 22}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+            {"name": "두부찜", "portion": "120g", "calories": 96},
+            {"name": "취나물", "portion": "1접시", "calories": 18},
+            {"name": "냉이국", "portion": "1그릇", "calories": 28}
+          ],
+          "snack": [
+            {"name": "딸기", "portion": "8개", "calories": 28},
+            {"name": "호두", "portion": "4개", "calories": 72},
+            {"name": "무가당요구르트", "portion": "1개", "calories": 50}
+          ],
+          "totalCalories": 1309
+        },
+        {
+          "id": 3,
+          "name": "여성 기타 복합질환 간편식 감량 C",
+          "targetCalories": 1300,
+          "season": "summer",
+          "meal1": [
+            {"name": "메밀소바", "portion": "2/3그릇", "calories": 240},
+            {"name": "삶은달걀", "portion": "1개", "calories": 70},
+            {"name": "오이채", "portion": "1접시", "calories": 20}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "1/2공기", "calories": 130},
+            {"name": "닭가슴살샐러드", "portion": "90g", "calories": 115},
+            {"name": "상추쌈", "portion": "5장", "calories": 10},
+            {"name": "가지국", "portion": "1그릇", "calories": 35}
+          ],
+          "snack": [
+            {"name": "수박", "portion": "1조각", "calories": 45},
+            {"name": "견과류", "portion": "8g", "calories": 48},
+            {"name": "보리차", "portion": "1잔", "calories": 0}
+          ],
+          "totalCalories": 1313
+        }
+      ],
+
+      "FMXS2MA": [
+        {
+          "id": 1,
+          "name": "여성 기타 복합질환 간편식 유지 A",
+          "targetCalories": 1500,
+          "season": "all",
+          "meal1": [
+            {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+            {"name": "저나트륨된장국", "portion": "1그릇", "calories": 35},
+            {"name": "닭가슴살구이", "portion": "110g", "calories": 180},
+            {"name": "브로콜리볶음", "portion": "1접시", "calories": 35},
+            {"name": "오이무침", "portion": "1접시", "calories": 15}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+            {"name": "생선구이", "portion": "120g", "calories": 210},
+            {"name": "시금치나물", "portion": "1접시", "calories": 20},
+            {"name": "조개맑은국", "portion": "1그릇", "calories": 25}
+          ],
+          "snack": [
+            {"name": "사과", "portion": "2/3개", "calories": 53},
+            {"name": "견과류", "portion": "10g", "calories": 60},
+            {"name": "저지방우유", "portion": "200ml", "calories": 90}
+          ],
+          "totalCalories": 1533
+        },
+        {
+          "id": 2,
+          "name": "여성 기타 복합질환 간편식 유지 B",
+          "targetCalories": 1500,
+          "season": "spring",
+          "meal1": [
+            {"name": "잡곡밥", "portion": "2/3공기", "calories": 185},
+            {"name": "저나트륨된장국", "portion": "1그릇", "calories": 35},
+            {"name": "생선찜", "portion": "120g", "calories": 200},
+            {"name": "아스파라거스", "portion": "1접시", "calories": 25},
+            {"name": "도라지무침", "portion": "1접시", "calories": 22}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+            {"name": "두부찜", "portion": "150g", "calories": 120},
+            {"name": "취나물", "portion": "1접시", "calories": 18},
+            {"name": "냉이국", "portion": "1그릇", "calories": 28}
+          ],
+          "snack": [
+            {"name": "딸기", "portion": "10개", "calories": 35},
+            {"name": "호두", "portion": "5개", "calories": 90},
+            {"name": "무가당요구르트", "portion": "1개", "calories": 50}
+          ],
+          "totalCalories": 1488
+        },
+        {
+          "id": 3,
+          "name": "여성 기타 복합질환 간편식 유지 C",
+          "targetCalories": 1500,
+          "season": "summer",
+          "meal1": [
+            {"name": "메밀소바", "portion": "1그릇", "calories": 360},
+            {"name": "삶은달걀", "portion": "1개", "calories": 70},
+            {"name": "오이채", "portion": "1접시", "calories": 20}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "2/3공기", "calories": 180},
+            {"name": "닭가슴살샐러드", "portion": "110g", "calories": 140},
+            {"name": "상추쌈", "portion": "5장", "calories": 10},
+            {"name": "가지국", "portion": "1그릇", "calories": 35}
+          ],
+          "snack": [
+            {"name": "수박", "portion": "2조각", "calories": 90},
+            {"name": "견과류", "portion": "10g", "calories": 60},
+            {"name": "보리차", "portion": "1잔", "calories": 0}
+          ],
+          "totalCalories": 1465
+        }
+      ],
+
+      "FMXS2SU": [
+        {
+          "id": 1,
+          "name": "여성 기타 복합질환 간편식 증량 A",
+          "targetCalories": 1700,
+          "season": "all",
+          "meal1": [
+            {"name": "현미밥", "portion": "3/4공기", "calories": 200},
+            {"name": "저나트륨된장국", "portion": "1그릇", "calories": 35},
+            {"name": "닭가슴살구이", "portion": "130g", "calories": 215},
+            {"name": "브로콜리볶음", "portion": "1접시", "calories": 35},
+            {"name": "오이무침", "portion": "1접시", "calories": 15}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "3/4공기", "calories": 200},
+            {"name": "생선구이", "portion": "140g", "calories": 245},
+            {"name": "시금치나물", "portion": "1접시", "calories": 20},
+            {"name": "조개맑은국", "portion": "1그릇", "calories": 25}
+          ],
+          "snack": [
+            {"name": "사과", "portion": "1개", "calories": 80},
+            {"name": "견과류", "portion": "12g", "calories": 72},
+            {"name": "저지방우유", "portion": "250ml", "calories": 112}
+          ],
+          "totalCalories": 1754
+        },
+        {
+          "id": 2,
+          "name": "여성 기타 복합질환 간편식 증량 B",
+          "targetCalories": 1700,
+          "season": "spring",
+          "meal1": [
+            {"name": "잡곡밥", "portion": "3/4공기", "calories": 205},
+            {"name": "저나트륨된장국", "portion": "1그릇", "calories": 35},
+            {"name": "생선찜", "portion": "140g", "calories": 235},
+            {"name": "아스파라거스", "portion": "1접시", "calories": 25},
+            {"name": "도라지무침", "portion": "1접시", "calories": 22}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "3/4공기", "calories": 200},
+            {"name": "두부찜", "portion": "180g", "calories": 144},
+            {"name": "취나물", "portion": "1접시", "calories": 18},
+            {"name": "냉이국", "portion": "1그릇", "calories": 28}
+          ],
+          "snack": [
+            {"name": "딸기", "portion": "12개", "calories": 42},
+            {"name": "호두", "portion": "6개", "calories": 108},
+            {"name": "무가당요구르트", "portion": "1개", "calories": 50}
+          ],
+          "totalCalories": 1712
+        },
+        {
+          "id": 3,
+          "name": "여성 기타 복합질환 간편식 증량 C",
+          "targetCalories": 1700,
+          "season": "summer",
+          "meal1": [
+            {"name": "메밀소바", "portion": "1.2그릇", "calories": 432},
+            {"name": "삶은달걀", "portion": "1개", "calories": 70},
+            {"name": "오이채", "portion": "1접시", "calories": 20}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "3/4공기", "calories": 200},
+            {"name": "닭가슴살샐러드", "portion": "130g", "calories": 165},
+            {"name": "상추쌈", "portion": "5장", "calories": 10},
+            {"name": "가지국", "portion": "1그릇", "calories": 35}
+          ],
+          "snack": [
+            {"name": "수박", "portion": "3조각", "calories": 135},
+            {"name": "견과류", "portion": "12g", "calories": 72},
+            {"name": "보리차", "portion": "1잔", "calories": 0}
+          ],
+          "totalCalories": 1739
+        }
+      ],
+
+      "FMXS2HE": [
+        {
+          "id": 1,
+          "name": "여성 기타 복합질환 간편식 건강 A",
+          "targetCalories": 1600,
+          "season": "all",
+          "meal1": [
+            {"name": "현미밥", "portion": "7/10공기", "calories": 190},
+            {"name": "저나트륨된장국", "portion": "1그릇", "calories": 35},
+            {"name": "닭가슴살구이", "portion": "120g", "calories": 200},
+            {"name": "브로콜리볶음", "portion": "1접시", "calories": 35},
+            {"name": "오이무침", "portion": "1접시", "calories": 15}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "7/10공기", "calories": 190},
+            {"name": "생선구이", "portion": "130g", "calories": 225},
+            {"name": "시금치나물", "portion": "1접시", "calories": 20},
+            {"name": "조개맑은국", "portion": "1그릇", "calories": 25}
+          ],
+          "snack": [
+            {"name": "사과", "portion": "3/4개", "calories": 60},
+            {"name": "견과류", "portion": "10g", "calories": 60},
+            {"name": "저지방우유", "portion": "200ml", "calories": 90}
+          ],
+          "totalCalories": 1645
+        },
+        {
+          "id": 2,
+          "name": "여성 기타 복합질환 간편식 건강 B",
+          "targetCalories": 1600,
+          "season": "spring",
+          "meal1": [
+            {"name": "잡곡밥", "portion": "7/10공기", "calories": 195},
+            {"name": "저나트륨된장국", "portion": "1그릇", "calories": 35},
+            {"name": "생선찜", "portion": "130g", "calories": 220},
+            {"name": "아스파라거스", "portion": "1접시", "calories": 25},
+            {"name": "도라지무침", "portion": "1접시", "calories": 22}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "7/10공기", "calories": 190},
+            {"name": "두부찜", "portion": "160g", "calories": 128},
+            {"name": "취나물", "portion": "1접시", "calories": 18},
+            {"name": "냉이국", "portion": "1그릇", "calories": 28}
+          ],
+          "snack": [
+            {"name": "딸기", "portion": "10개", "calories": 35},
+            {"name": "호두", "portion": "5개", "calories": 90},
+            {"name": "무가당요구르트", "portion": "1개", "calories": 50}
+          ],
+          "totalCalories": 1536
+        },
+        {
+          "id": 3,
+          "name": "여성 기타 복합질환 간편식 건강 C",
+          "targetCalories": 1600,
+          "season": "summer",
+          "meal1": [
+            {"name": "메밀소바", "portion": "1그릇", "calories": 360},
+            {"name": "삶은달걀", "portion": "1개", "calories": 70},
+            {"name": "오이채", "portion": "1접시", "calories": 20}
+          ],
+          "meal2": [
+            {"name": "현미밥", "portion": "7/10공기", "calories": 190},
+            {"name": "닭가슴살샐러드", "portion": "120g", "calories": 150},
+            {"name": "상추쌈", "portion": "5장", "calories": 10},
+            {"name": "가지국", "portion": "1그릇", "calories": 35}
+          ],
+          "snack": [
+            {"name": "수박", "portion": "2조각", "calories": 90},
+            {"name": "견과류", "portion": "10g", "calories": 60},
+            {"name": "보리차", "portion": "1잔", "calories": 0}
+          ],
+          "totalCalories": 1485
+        }
+      ]
     }
   }
 }
